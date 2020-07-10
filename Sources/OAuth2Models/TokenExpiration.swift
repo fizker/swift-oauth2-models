@@ -1,18 +1,43 @@
 import Foundation
 
-public enum TokenExpiration: Codable, Equatable, Comparable {
-	case seconds(Int)
-	case minutes(Int)
-	case hours(Int)
-	case days(Int)
+public struct TokenExpiration: Codable, Equatable, Comparable {
+	var seconds: Int
 
-	public static let oneHour: Self = .hours(1)
-	public static let oneDay: Self = .days(1)
-
-	public enum DateGeneration {
-		case thePast, theFuture
+	public init(seconds: Int) {
+		self.seconds = seconds
 	}
-	public func date(in direction: DateGeneration) -> Date {
+	public init(minutes: Int) {
+		self = .init(seconds: minutes * 60)
+	}
+	public init(hours: Int) {
+		self = .init(minutes: hours * 60)
+	}
+	public init(days: Int) {
+		self = .init(hours: days * 24)
+	}
+
+	public static func seconds(_ seconds: Int) -> TokenExpiration {
+		.init(seconds: seconds)
+	}
+	public static func minutes(_ minutes: Int) -> TokenExpiration {
+		.init(minutes: minutes)
+	}
+	public static func hours(_ hours: Int) -> TokenExpiration {
+		.init(hours: hours)
+	}
+	public static func days(_ days: Int) -> TokenExpiration {
+		.init(days: days)
+	}
+
+	public static let oneHour: TokenExpiration = .hours(1)
+	public static let oneDay: TokenExpiration = .days(1)
+
+	public enum RelativeDateDirection {
+		case thePast
+		case theFuture
+	}
+
+	public func date(in direction: RelativeDateDirection) -> Date {
 		switch direction {
 		case .thePast:
 			return Date(timeIntervalSinceNow: -asTimeInterval)
@@ -21,22 +46,13 @@ public enum TokenExpiration: Codable, Equatable, Comparable {
 		}
 	}
 
-	public var inSeconds: Int {
-		switch self {
-		case let .seconds(s):
-			return s
-		case let .minutes(min):
-			return Self.seconds(min * 60).inSeconds
-		case let .hours(h):
-			return Self.minutes(h * 60).inSeconds
-		case let .days(d):
-			return Self.hours(24 * d).inSeconds
-		}
-	}
+	public var inSeconds: Int { seconds }
 	public var asTimeInterval: TimeInterval {
 		return TimeInterval(inSeconds)
 	}
+}
 
+extension TokenExpiration {
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.singleValueContainer()
 		let timeInterval = try container.decode(TimeInterval.self)
@@ -46,7 +62,9 @@ public enum TokenExpiration: Codable, Equatable, Comparable {
 		var container = encoder.singleValueContainer()
 		try container.encode(inSeconds)
 	}
+}
 
+extension TokenExpiration {
 	public static func ==(lhs: Self, rhs: Self) -> Bool {
 		return lhs.inSeconds == rhs.inSeconds
 	}
