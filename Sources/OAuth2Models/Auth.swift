@@ -76,6 +76,30 @@ public struct AuthRequest: Codable {
 		self.state = state
 		self.scope = scope
 	}
+
+	/// Creates a new `AuthResponse` based on this request.
+	///
+	/// - Parameter code: The authorization code to use when requesting an access token.
+	public func response(code: String) -> AuthResponse {
+		AuthResponse(code: code, request: self)
+	}
+
+	/// Creates a new `AuthError` based on this request.
+	///
+	/// - Parameter error: A machine-readable error code.
+	/// - Parameter description: A human-readable description.
+	/// - Parameter url: A URL to a human-readable web page.
+	public func error(error: AuthError.ErrorCode, description: String?, url: URL) -> AuthError {
+		AuthError(error: error, request: self, description: description, url: url)
+	}
+
+	/// Creates a new `AuthError` without an error page URL  based on this request.
+	///
+	/// - Parameter error: A machine-readable error code.
+	/// - Parameter description: A human-readable description.
+	public func error(error: AuthError.ErrorCode, description: String?) -> AuthError {
+		AuthError(error: error, request: self, description: description)
+	}
 }
 
 /// [4.1.2.](https://tools.ietf.org/html/rfc6749#section-4.1.2) Authorization Response
@@ -111,10 +135,10 @@ public struct AuthResponse: Codable {
 	/// Creates a new AuthResponse.
 	///
 	/// - Parameter code: The authorization code to use when requesting an access token.
-	/// - Parameter state: The state that was included in the `AuthRequest`.
-	public init(code: String, state: String?) {
+	/// - Parameter request: The `AuthRequest` that spawned the response.
+	public init(code: String, request: AuthRequest) {
 		self.code = code
-		self.state = state
+		self.state = request.state
 	}
 }
 
@@ -201,34 +225,34 @@ public struct AuthError: Codable {
 	/// Creates a new `AuthError`.
 	///
 	/// - Parameter error: A machine-readable error code.
+	/// - Parameter request: The `AuthRequest` that spawned the error.
 	/// - Parameter description: A human-readable description.
 	/// - Parameter url: A URL to a human-readable web page.
-	/// - Parameter state: The state included in the `AuthRequest`.
 	public init(
 		error: ErrorCode,
+		request: AuthRequest,
 		description: String?,
-		url: URL,
-		state: String?
+		url: URL
 	) {
 		self.error = error
 		self.description = description
 		self.url = url
-		self.state = state
+		self.state = request.state
 	}
 
-	/// Creates a new `AuthError` without a redirect URL.
+	/// Creates a new `AuthError` without an error page URL.
 	///
 	/// - Parameter error: A machine-readable error code.
+	/// - Parameter request: The `AuthRequest` that spawned the error.
 	/// - Parameter description: A human-readable description.
-	/// - Parameter state: The state included in the `AuthRequest`.
 	public init(
 		error: ErrorCode,
-		description: String?,
-		state: String?
+		request: AuthRequest,
+		description: String?
 	) {
 		self.error = error
 		self.description = description
 		self.url = nil
-		self.state = state
+		self.state = request.state
 	}
 }

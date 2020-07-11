@@ -4,6 +4,7 @@ import OAuth2Models
 final class AuthErrorTests: XCTestCase {
 	typealias JSON = [AuthError.CodingKeys: String]
 	var json: JSON = [:]
+	var request = AuthRequest(clientID: "", state: nil, scope: nil)
 
 	override func setUpWithError() throws {
 		json = [
@@ -12,6 +13,8 @@ final class AuthErrorTests: XCTestCase {
 			.url: "https://example.com",
 			.state: "some state",
 		]
+
+		request = AuthRequest(clientID: "client id", state: nil, scope: nil)
 	}
 
 	func test__decodable__fullObject__decodesAsExpected() throws {
@@ -39,11 +42,12 @@ final class AuthErrorTests: XCTestCase {
 	}
 
 	func test__encodable__fullObject__encodesAsExpected() throws {
+		request.state = "some state"
 		let object = AuthError(
 			error: .accessDenied,
+			request: request,
 			description: "some description",
-			url: URL(string: "https://example.com")!,
-			state: "some state"
+			url: URL(string: "https://example.com")!
 		)
 		let data = try encode(object)
 
@@ -60,10 +64,11 @@ final class AuthErrorTests: XCTestCase {
 	}
 
 	func test__encodable__minimalObject__encodesAsExpected() throws {
+		request.state = nil
 		let object = AuthError(
 			error: .accessDenied,
-			description: nil,
-			state: nil
+			request: request,
+			description: nil
 		)
 		let data = try encode(object)
 

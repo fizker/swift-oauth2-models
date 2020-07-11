@@ -93,4 +93,106 @@ final class AuthRequestTests: XCTestCase {
 
 		XCTAssertEqual(actual, expected)
 	}
+
+	func test__response__minimalObject__returnsAuthResponse() throws {
+		let request = AuthRequest(
+			clientID: "client id",
+			state: nil,
+			scope: nil
+		)
+
+		let response = request.response(code: "response code")
+
+		XCTAssertEqual(response.code, "response code")
+		XCTAssertNil(response.state)
+	}
+
+	func test__response__fullObject__returnsAuthResponse() throws {
+		let request = AuthRequest(
+			clientID: "client id",
+			redirectURL: URL(string: "https://example.com")!,
+			state: "some state",
+			scope: "some scope"
+		)
+
+		let response = request.response(code: "response code")
+
+		XCTAssertEqual(response.code, "response code")
+		XCTAssertEqual(response.state, "some state")
+	}
+
+	func test__error__minimalObject_minimalError__returnsAuthError() throws {
+		let request = AuthRequest(
+			clientID: "client id",
+			state: nil,
+			scope: nil
+		)
+
+		let error = request.error(
+			error: .temporarilyUnavailable,
+			description: nil
+		)
+
+		XCTAssertEqual(error.error, .temporarilyUnavailable)
+		XCTAssertNil(error.description)
+		XCTAssertNil(error.url)
+		XCTAssertNil(error.state)
+	}
+
+	func test__error__fullObject_minimalError__returnsAuthError() throws {
+		let request = AuthRequest(
+			clientID: "client id",
+			redirectURL: URL(string: "https://example.com")!,
+			state: "some state",
+			scope: "some scope"
+		)
+
+		let error = request.error(
+			error: .temporarilyUnavailable,
+			description: nil
+		)
+
+		XCTAssertEqual(error.error, .temporarilyUnavailable)
+		XCTAssertNil(error.description)
+		XCTAssertNil(error.url)
+		XCTAssertEqual(error.state, "some state")
+	}
+
+	func test__error__minimalObject_fullError__returnsAuthError() throws {
+		let request = AuthRequest(
+			clientID: "client id",
+			state: nil,
+			scope: nil
+		)
+
+		let error = request.error(
+			error: .temporarilyUnavailable,
+			description: "error description",
+			url: URL(string: "https://eaxmple.com/error")!
+		)
+
+		XCTAssertEqual(error.error, .temporarilyUnavailable)
+		XCTAssertEqual(error.description, "error description")
+		XCTAssertEqual(error.url, URL(string: "https://eaxmple.com/error")!)
+		XCTAssertNil(error.state)
+	}
+
+	func test__error__fullObject_fullError__returnsAuthError() throws {
+		let request = AuthRequest(
+			clientID: "client id",
+			state: "some state",
+			scope: "some scope"
+		)
+
+		let error = request.error(
+			error: .temporarilyUnavailable,
+			description: "error description",
+			url: URL(string: "https://eaxmple.com/error")!
+		)
+
+		XCTAssertEqual(error.error, .temporarilyUnavailable)
+		XCTAssertEqual(error.description, "error description")
+		XCTAssertEqual(error.url, URL(string: "https://eaxmple.com/error")!)
+		XCTAssertEqual(error.state, "some state")
+	}
 }

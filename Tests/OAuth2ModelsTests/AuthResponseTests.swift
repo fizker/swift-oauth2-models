@@ -4,12 +4,15 @@ import OAuth2Models
 final class AuthResponseTests: XCTestCase {
 	typealias JSON = [AuthResponse.CodingKeys: String]
 	var json: JSON = [:]
+	var request = AuthRequest(clientID: "", state: nil, scope: nil)
 
 	override func setUpWithError() throws {
 		json = [
 			.code: "some code",
 			.state: "some state",
 		]
+
+		request = AuthRequest(clientID: "client id", state: nil, scope: nil)
 	}
 
 	func test__decodable__fullObject__decodesAsExpected() throws {
@@ -30,7 +33,8 @@ final class AuthResponseTests: XCTestCase {
 	}
 
 	func test__encodable__minimalObject__encodesAsExpected() throws {
-		let object = AuthResponse(code: "some code", state: nil)
+		request.state = nil
+		let object = AuthResponse(code: "some code", request: request)
 		let data = try encode(object)
 		let actual = try decode(data) as [String: String]
 
@@ -42,7 +46,8 @@ final class AuthResponseTests: XCTestCase {
 	}
 
 	func test__encodable__fullObject__encodesAsExpected() throws {
-		let object = AuthResponse(code: "some code", state: "some state")
+		request.state = "some state"
+		let object = AuthResponse(code: "some code", request: request)
 		let data = try encode(object)
 		let actual = try decode(data) as [String: String]
 
