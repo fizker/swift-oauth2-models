@@ -33,6 +33,15 @@ final class AccessTokenRequestTests: XCTestCase {
 		XCTAssertThrowsError(try decode(data))
 	}
 
+	func test__decodable__invalidRedirectURL__throws() throws {
+		throw XCTSkip("Should throw if URL is invalid. It currently simply decodes to nil")
+
+		json[.redirectURI] = "invalid"
+		let data = try encode(json)
+
+		XCTAssertThrowsError(try decode(data))
+	}
+
 	private func decode(_ data: Data) throws -> AccessTokenRequest {
 		return try OAuth2ModelsTests.decode(data)
 	}

@@ -38,6 +38,11 @@ final class AccessTokenResponseTests: XCTestCase {
 		XCTAssertEqual(object.tokenType, .mac)
 	}
 
+	func test__decodable__invalidExpiresIn__throws() throws {
+		let data = try json(expiresIn: #""abc""#)
+		XCTAssertThrowsError(try decode(data))
+	}
+
 	func test__encodable__fullObject_macTokenType__returnsValidJSON() throws {
 		let object = AccessTokenResponse(accessToken: "foo", tokenType: .mac, expiresIn: .oneDay, refreshToken: "ref tok", scope: "scope")
 		let json = try encode(object)
@@ -66,7 +71,22 @@ final class AccessTokenResponseTests: XCTestCase {
 	private func json(
 		accessToken: String = "access token value",
 		tokenType: String = "bearer",
-		expiresIn: Double? = 123,
+		expiresIn: Double,
+		refreshToken: String? = "refresh token value",
+		scope: String? = "some scope"
+	) throws -> Data {
+		try json(
+			accessToken: accessToken,
+			tokenType: tokenType,
+			expiresIn: "\(expiresIn)",
+			refreshToken: refreshToken,
+			scope: scope
+		)
+	}
+	private func json(
+		accessToken: String = "access token value",
+		tokenType: String = "bearer",
+		expiresIn: String? = "123",
 		refreshToken: String? = "refresh token value",
 		scope: String? = "some scope"
 	) throws -> Data {
@@ -82,7 +102,7 @@ final class AccessTokenResponseTests: XCTestCase {
 		]
 
 		if let expiresIn = expiresIn {
-			values.append(#""expires_in": \#(try encode(expiresIn))"#)
+			values.append(#""expires_in": \#(expiresIn)"#)
 		}
 		if let refreshToken = refreshToken {
 			values.append(#""refresh_token": \#(try encode(refreshToken))"#)
