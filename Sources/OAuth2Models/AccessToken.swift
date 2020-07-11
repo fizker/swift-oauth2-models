@@ -196,8 +196,8 @@ public struct AccessTokenResponse: Codable, Equatable {
 public struct AccessTokenError: Codable {
 	public enum CodingKeys: String, CodingKey {
 		case error
-		case errorDescription = "error_description"
-		case errorURI = "error_uri"
+		case description = "error_description"
+		case url = "error_uri"
 	}
 
 	/// The available error codes.
@@ -248,7 +248,7 @@ public struct AccessTokenError: Codable {
 	/// understanding the error that occurred.
 	/// Values for the "error_description" parameter MUST NOT include
 	/// characters outside the set %x20-21 / %x23-5B / %x5D-7E.
-	public var errorDescription: String?
+	public var description: String?
 
 	/// OPTIONAL.  A URI identifying a human-readable web page with
 	/// information about the error, used to provide the client
@@ -256,16 +256,16 @@ public struct AccessTokenError: Codable {
 	/// Values for the "error_uri" parameter MUST conform to the
 	/// URI-reference syntax and thus MUST NOT include characters
 	/// outside the set %x21 / %x23-5B / %x5D-7E.
-	public var errorURI: URL?
+	public var url: URL?
 
 	/// Creates a new AccessTokenError.
 	///
 	/// - Parameter error: Machine-readable error code.
-	/// - Parameter errorDescription: Human-readable description of the error.
-	/// - Parameter errorURI: URL for human-readable error page.
-	public init(error: ErrorCode, errorDescription: String?, errorURI: URL?) {
+	/// - Parameter description: Human-readable description of the error.
+	/// - Parameter url: URL for human-readable error page.
+	public init(error: ErrorCode, description: String?, url: URL?) {
 		self.error = error
-		self.errorDescription = errorDescription
-		self.errorURI = errorURI
+		self.description = description
+		self.url = url
 	}
 }

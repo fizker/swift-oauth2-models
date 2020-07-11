@@ -8,8 +8,8 @@ final class AccessTokenErrorTests: XCTestCase {
 	override func setUpWithError() throws {
 		json = [
 			.error: "invalid_request",
-			.errorDescription: "Some description",
-			.errorURI: "https://example.com",
+			.description: "Some description",
+			.url: "https://example.com",
 		]
 	}
 
@@ -18,19 +18,19 @@ final class AccessTokenErrorTests: XCTestCase {
 		let object = try decode(data) as AccessTokenError
 
 		XCTAssertEqual(object.error, .invalidRequest)
-		XCTAssertEqual(object.errorDescription, "Some description")
-		XCTAssertEqual(object.errorURI, URL(string: "https://example.com")!)
+		XCTAssertEqual(object.description, "Some description")
+		XCTAssertEqual(object.url, URL(string: "https://example.com")!)
 	}
 
 	func test__decodable__minimumObject__decodesAsExpected() throws {
-		json.removeValue(forKey: .errorDescription)
-		json.removeValue(forKey: .errorURI)
+		json.removeValue(forKey: .description)
+		json.removeValue(forKey: .url)
 		let data = try encode(json)
 		let object = try decode(data) as AccessTokenError
 
 		XCTAssertEqual(object.error, .invalidRequest)
-		XCTAssertNil(object.errorDescription)
-		XCTAssertNil(object.errorURI)
+		XCTAssertNil(object.description)
+		XCTAssertNil(object.url)
 	}
 
 	func test__decodable__noErrorCode__throws() throws {
@@ -40,7 +40,7 @@ final class AccessTokenErrorTests: XCTestCase {
 	}
 
 	func test__encodable__minimumObject__returnsExpectedJSON() throws {
-		let object = AccessTokenError(error: .invalidRequest, errorDescription: nil, errorURI: nil)
+		let object = AccessTokenError(error: .invalidRequest, description: nil, url: nil)
 		let data = try encode(object)
 
 		XCTAssertEqual(
@@ -50,7 +50,7 @@ final class AccessTokenErrorTests: XCTestCase {
 	}
 
 	func test__encodable__fullObject__returnsExpectedJSON() throws {
-		let object = AccessTokenError(error: .invalidRequest, errorDescription: "Some description", errorURI: URL(string: "https://example.com/foo"))
+		let object = AccessTokenError(error: .invalidRequest, description: "Some description", url: URL(string: "https://example.com/foo"))
 		let data = try encode(object)
 
 		XCTAssertEqual(
