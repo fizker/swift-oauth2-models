@@ -1,5 +1,40 @@
 import Foundation
 
+/// Convenience Decodable to make it easier to have a single endpoint support all grant types.
+public enum GrantRequest: Decodable, Equatable {
+	/// The grant is for AccessTokenRequest.
+	case accessToken(AccessTokenRequest)
+	/// The grant is for AccessTokenRefreshRequest.
+	case refreshAccessToken(AccessTokenRefreshRequest)
+
+	/// The errors that can happen when decoding a GrantRequest.
+	public enum GrantRequestError: Error {
+		/// Error thrown when the grant_type does not match a known grant type.
+		case unknownGrantType(String)
+	}
+
+	private struct GrantTypeWrapper: Codable {
+		enum CodingKeys: String, CodingKey {
+			case type = "grant_type"
+		}
+		var type: String
+	}
+
+	public init(from decoder: Decoder) throws {
+		let wrapper = try GrantTypeWrapper(from: decoder)
+
+		if let _ = AccessTokenRequest.GrantType(rawValue: wrapper.type) {
+			let req = try AccessTokenRequest(from: decoder)
+			self = .accessToken(req)
+		} else if let _ = AccessTokenRefreshRequest.GrantType(rawValue: wrapper.type) {
+			let req = try AccessTokenRefreshRequest(from: decoder)
+			self = .refreshAccessToken(req)
+		} else {
+			throw GrantRequestError.unknownGrantType(wrapper.type)
+		}
+	}
+}
+
 /// [4.1.3](https://tools.ietf.org/html/rfc6749#section-4.1.3).  Access Token Request
 ///
 /// The client makes a request to the token endpoint by sending the
