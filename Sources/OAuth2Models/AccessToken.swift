@@ -194,6 +194,14 @@ public struct AccessTokenResponse: Codable, Equatable {
 
 /// [5.2.](https://tools.ietf.org/html/rfc6749#section-5.2) Error Response
 public struct AccessTokenError: Codable {
+	/// Error thrown during the init function
+	public enum Error: Swift.Error {
+		/// Thrown when the description contains invalid characters.
+		case invalidCharacterInDescription
+		/// Thrown when the URL contains invalid characters.
+		case invalidCharacterInURL
+	}
+
 	public enum CodingKeys: String, CodingKey {
 		case error
 		case description = "error_description"
@@ -238,6 +246,9 @@ public struct AccessTokenError: Codable {
 		case invalidScope = "invalid_scope"
 	}
 
+	let validCharacters = CharacterSet(charactersIn: Unicode.Scalar(0x20)...Unicode.Scalar(0x7e))
+		.subtracting(CharacterSet(arrayLiteral: Unicode.Scalar(0x22), Unicode.Scalar(0x5c)))
+
 	/// REQUIRED.  A single ASCII [USASCII] error code.
 	/// Values for the "error" parameter MUST NOT include characters
 	/// outside the set %x20-21 / %x23-5B / %x5D-7E.
@@ -263,9 +274,19 @@ public struct AccessTokenError: Codable {
 	/// - Parameter error: Machine-readable error code.
 	/// - Parameter description: Human-readable description of the error.
 	/// - Parameter url: URL for human-readable error page.
-	public init(error: ErrorCode, description: String?, url: URL?) {
+	public init(error: ErrorCode, description: String?, url: URL?) throws {
 		self.error = error
 		self.description = description
 		self.url = url
+
+		if let description = description?.unicodeScalars {
+			guard description.allSatisfy(validCharacters.contains)
+			else { throw Error.invalidCharacterInDescription }
+		}
+
+		if let url = url?.absoluteString.unicodeScalars {
+			guard url.allSatisfy(validCharacters.subtracting(CharacterSet(arrayLiteral: Unicode.Scalar(0x20))).contains)
+			else { throw Error.invalidCharacterInURL }
+		}
 	}
 }
