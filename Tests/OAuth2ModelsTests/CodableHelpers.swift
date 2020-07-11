@@ -12,7 +12,7 @@ func encode<T:RawRepresentable>(_ data: [T:String]) throws -> Data where T.RawVa
 	}
 	return try encode(codableData)
 }
-func encode(_ data: [String:String]) throws -> Data {
+func encode<T: Encodable>(_ data: T) throws -> Data {
 	let encoder = JSONEncoder()
 	let json = try encoder.encode(data)
 	return json
