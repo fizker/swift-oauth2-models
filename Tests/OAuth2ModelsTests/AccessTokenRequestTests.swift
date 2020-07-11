@@ -26,29 +26,6 @@ final class AccessTokenRequestTests: XCTestCase {
 		XCTAssertNil(request.redirectURI)
 	}
 
-	func test__decodable__missingGrantType__throws() throws {
-		json.removeValue(forKey: .grantType)
-		let data = try encodeData()
-
-		XCTAssertThrowsError(try decode(data))
-	}
-
-	func test__decodable__missingCode__throws() throws {
-		json.removeValue(forKey: .code)
-		let data = try encodeData()
-
-		XCTAssertThrowsError(try decode(data))
-	}
-
-	func test__decodable__missingClientID__returnsDecodedObject() throws {
-		json.removeValue(forKey: .clientID)
-		let data = try encodeData()
-
-		let request = try decode(data)
-
-		XCTAssertNil(request.clientID)
-	}
-
 	func test__decodable__invalidGrantType__throws() throws {
 		json[.grantType] = "foo"
 		let data = try encodeData()
@@ -57,17 +34,10 @@ final class AccessTokenRequestTests: XCTestCase {
 	}
 
 	private func decode(_ data: Data) throws -> AccessTokenRequest {
-		let decoder = JSONDecoder()
-		return try decoder.decode(AccessTokenRequest.self, from: data)
+		return try OAuth2ModelsTests.decode(data)
 	}
 
 	private func encodeData() throws -> Data {
-		var codableData = [String:String]()
-		for (k, v) in json {
-			codableData[k.rawValue] = v
-		}
-		let encoder = JSONEncoder()
-		let json = try encoder.encode(codableData)
-		return json
+		return try encode(json)
 	}
 }

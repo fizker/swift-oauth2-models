@@ -47,17 +47,10 @@ final class AccessTokenRefreshRequestTests: XCTestCase {
 	}
 
 	private func decode(_ data: Data) throws -> AccessTokenRefreshRequest {
-		let decoder = JSONDecoder()
-		return try decoder.decode(AccessTokenRefreshRequest.self, from: data)
+		return try OAuth2ModelsTests.decode(data)
 	}
 
 	private func encodeData() throws -> Data {
-		var codableData = [String:String]()
-		for (k, v) in json {
-			codableData[k.rawValue] = v
-		}
-		let encoder = JSONEncoder()
-		let json = try encoder.encode(codableData)
-		return json
+		return try encode(json)
 	}
 }
