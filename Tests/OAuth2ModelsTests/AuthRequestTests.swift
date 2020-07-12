@@ -274,12 +274,12 @@ final class AuthRequestTests: XCTestCase {
 		)
 
 		let error = request.error(
-			error: .temporarilyUnavailable,
+			code: .temporarilyUnavailable,
 			description: nil
 		)
 
 		XCTAssertEqual(error, AuthError(
-			error: .temporarilyUnavailable,
+			code: .temporarilyUnavailable,
 			description: nil,
 			state: nil
 		))
@@ -294,12 +294,12 @@ final class AuthRequestTests: XCTestCase {
 		)
 
 		let error = request.error(
-			error: .temporarilyUnavailable,
+			code: .temporarilyUnavailable,
 			description: nil
 		)
 
 		XCTAssertEqual(error, AuthError(
-			error: .temporarilyUnavailable,
+			code: .temporarilyUnavailable,
 			description: nil,
 			state: "some state"
 		))
@@ -313,13 +313,13 @@ final class AuthRequestTests: XCTestCase {
 		)
 
 		let error = request.error(
-			error: .temporarilyUnavailable,
+			code: .temporarilyUnavailable,
 			description: "error description",
 			url: URL(string: "https://example.com/error")!
 		)
 
 		XCTAssertEqual(error, AuthError(
-			error: .temporarilyUnavailable,
+			code: .temporarilyUnavailable,
 			description: "error description",
 			url: URL(string: "https://example.com/error")!,
 			state: nil
@@ -334,13 +334,13 @@ final class AuthRequestTests: XCTestCase {
 		)
 
 		let error = request.error(
-			error: .temporarilyUnavailable,
+			code: .temporarilyUnavailable,
 			description: "error description",
 			url: URL(string: "https://example.com/error")!
 		)
 
 		XCTAssertEqual(error, AuthError(
-			error: .temporarilyUnavailable,
+			code: .temporarilyUnavailable,
 			description: "error description",
 			url: URL(string: "https://example.com/error")!,
 			state: "some state"

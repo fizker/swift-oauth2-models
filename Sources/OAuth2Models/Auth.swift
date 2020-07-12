@@ -86,19 +86,19 @@ public struct AuthRequest: Codable, Equatable {
 
 	/// Creates a new `AuthError` based on this request.
 	///
-	/// - Parameter error: A machine-readable error code.
+	/// - Parameter code: A machine-readable error code.
 	/// - Parameter description: A human-readable description.
 	/// - Parameter url: A URL to a human-readable web page.
-	public func error(error: AuthError.ErrorCode, description: String?, url: URL) -> AuthError {
-		AuthError(error: error, request: self, description: description, url: url)
+	public func error(code: AuthError.ErrorCode, description: String?, url: URL) -> AuthError {
+		AuthError(code: code, request: self, description: description, url: url)
 	}
 
 	/// Creates a new `AuthError` without an error page URL  based on this request.
 	///
-	/// - Parameter error: A machine-readable error code.
+	/// - Parameter code: A machine-readable error code.
 	/// - Parameter description: A human-readable description.
-	public func error(error: AuthError.ErrorCode, description: String?) -> AuthError {
-		AuthError(error: error, request: self, description: description)
+	public func error(code: AuthError.ErrorCode, description: String?) -> AuthError {
+		AuthError(code: code, request: self, description: description)
 	}
 }
 
@@ -157,7 +157,7 @@ public struct AuthResponse: Codable, Equatable {
 /// "application/x-www-form-urlencoded" format, per Appendix B.
 public struct AuthError: Codable, Equatable {
 	public enum CodingKeys: String, CodingKey {
-		case error
+		case code = "error"
 		case description = "error_description"
 		case url = "error_uri"
 		case state
@@ -200,7 +200,7 @@ public struct AuthError: Codable, Equatable {
 	}
 
 	/// REQUIRED.  A single ASCII [USASCII] error code
-	public var error: ErrorCode
+	public var code: ErrorCode
 
 	/// OPTIONAL.  Human-readable ASCII [USASCII] text providing
 	/// additional information, used to assist the client developer in
@@ -224,17 +224,17 @@ public struct AuthError: Codable, Equatable {
 
 	/// Creates a new `AuthError`.
 	///
-	/// - Parameter error: A machine-readable error code.
+	/// - Parameter code: A machine-readable error code.
 	/// - Parameter request: The `AuthRequest` that spawned the error.
 	/// - Parameter description: A human-readable description.
 	/// - Parameter url: A URL to a human-readable web page.
 	public init(
-		error: ErrorCode,
+		code: ErrorCode,
 		request: AuthRequest,
 		description: String?,
 		url: URL
 	) {
-		self.error = error
+		self.code = code
 		self.description = description
 		self.url = url
 		self.state = request.state
@@ -242,15 +242,15 @@ public struct AuthError: Codable, Equatable {
 
 	/// Creates a new `AuthError` without an error page URL.
 	///
-	/// - Parameter error: A machine-readable error code.
+	/// - Parameter code: A machine-readable error code.
 	/// - Parameter request: The `AuthRequest` that spawned the error.
 	/// - Parameter description: A human-readable description.
 	public init(
-		error: ErrorCode,
+		code: ErrorCode,
 		request: AuthRequest,
 		description: String?
 	) {
-		self.error = error
+		self.code = code
 		self.description = description
 		self.url = nil
 		self.state = request.state
