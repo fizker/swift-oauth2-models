@@ -8,7 +8,7 @@ public enum GrantRequest: Decodable, Equatable {
 	case refreshAccessToken(AccessTokenRefreshRequest)
 
 	/// The errors that can happen when decoding a GrantRequest.
-	public enum GrantRequestError: Error {
+	public enum Error: Swift.Error {
 		/// Error thrown when the grant_type does not match a known grant type.
 		case unknownGrantType(String)
 	}
@@ -30,7 +30,7 @@ public enum GrantRequest: Decodable, Equatable {
 			let req = try AccessTokenRefreshRequest(from: decoder)
 			self = .refreshAccessToken(req)
 		} else {
-			throw GrantRequestError.unknownGrantType(wrapper.type)
+			throw Error.unknownGrantType(wrapper.type)
 		}
 	}
 }
@@ -45,7 +45,7 @@ public struct AccessTokenRequest: Codable, Equatable {
 	public enum CodingKeys: String, CodingKey {
 		case grantType = "grant_type"
 		case code
-		case redirectURI = "redirect_uri"
+		case redirectURL = "redirect_uri"
 		case clientID = "client_id"
 	}
 
@@ -61,7 +61,7 @@ public struct AccessTokenRequest: Codable, Equatable {
 	/// REQUIRED, if the "redirect_uri" parameter was included in the
 	/// authorization request as described in Section 4.1.1, and their
 	/// values MUST be identical.
-	public var redirectURI: URL?
+	public var redirectURL: URL?
 
 	/// REQUIRED, if the client is not authenticating with the
 	/// authorization server as described in Section 3.2.1.
@@ -71,17 +71,17 @@ public struct AccessTokenRequest: Codable, Equatable {
 	///
 	/// - Parameter grantType: The type. Defaults to `GrantType.authorizationCode`.
 	/// - Parameter code: The authorization code.
-	/// - Parameter redirectURI: The URL that a successful AccessToken must be delivered to.
+	/// - Parameter redirectURL: The URL that a successful AccessToken must be delivered to.
 	/// - Parameter clientID: The ID of the client that is requesting the AccessToken.
 	public init(
 		grantType: GrantType = .authorizationCode,
 		code: String,
-		redirectURI: URL?,
+		redirectURL: URL?,
 		clientID: String?
 	) {
 		self.grantType = grantType
 		self.code = code
-		self.redirectURI = redirectURI
+		self.redirectURL = redirectURL
 		self.clientID = clientID
 	}
 }
@@ -135,8 +135,8 @@ public struct AccessTokenRefreshRequest: Codable, Equatable {
 public struct AccessTokenResponse: Codable, Equatable {
 	public enum CodingKeys: String, CodingKey {
 		case accessToken = "access_token"
-		case tokenType = "token_type"
-		case expiresIn = "expires_in"
+		case type = "token_type"
+		case expiration = "expires_in"
 		case refreshToken = "refresh_token"
 		case scope
 	}
@@ -151,14 +151,14 @@ public struct AccessTokenResponse: Codable, Equatable {
 
 	/// REQUIRED.  The type of the token issued as described in
 	/// Section 7.1.  Value is case insensitive.
-	public var tokenType: AccessTokenType
+	public var type: AccessTokenType
 
 	/// RECOMMENDED.  The lifetime in seconds of the access token.  For
 	/// example, the value "3600" denotes that the access token will
 	/// expire in one hour from the time the response was generated.
 	/// If omitted, the authorization server SHOULD provide the
 	/// expiration time via other means or document the default value.
-	public var expiresIn: TokenExpiration?
+	public var expiration: TokenExpiration?
 
 	/// OPTIONAL.  The refresh token, which can be used to obtain new
 	/// access tokens using the same authorization grant as described
@@ -173,20 +173,20 @@ public struct AccessTokenResponse: Codable, Equatable {
 	/// Creates a new `AccessTokenResponse`.
 	///
 	/// - Parameter accessToken: The access token issued by the authorization server.
-	/// - Parameter tokenType: The type of access token.
+	/// - Parameter type: The type of access token.
 	/// - Parameter expiresIn: The expiration time for the token.
 	/// - Parameter refreshToken: The refresh token.
 	/// - Parameter scope: The scope.
 	public init(
 		accessToken: String,
-		tokenType: AccessTokenType,
+		type: AccessTokenType,
 		expiresIn: TokenExpiration?,
 		refreshToken: String? = nil,
 		scope: String? = nil
 	) {
 		self.accessToken = accessToken
-		self.tokenType = tokenType
-		self.expiresIn = expiresIn
+		self.type = type
+		self.expiration = expiresIn
 		self.refreshToken = refreshToken
 		self.scope = scope
 	}
@@ -203,7 +203,7 @@ public struct AccessTokenError: Codable {
 	}
 
 	public enum CodingKeys: String, CodingKey {
-		case error
+		case code = "error"
 		case description = "error_description"
 		case url = "error_uri"
 	}
@@ -252,7 +252,7 @@ public struct AccessTokenError: Codable {
 	/// REQUIRED.  A single ASCII [USASCII] error code.
 	/// Values for the "error" parameter MUST NOT include characters
 	/// outside the set %x20-21 / %x23-5B / %x5D-7E.
-	public var error: ErrorCode
+	public var code: ErrorCode
 
 	/// OPTIONAL.  Human-readable ASCII [USASCII] text providing
 	/// additional information, used to assist the client developer in
@@ -271,11 +271,11 @@ public struct AccessTokenError: Codable {
 
 	/// Creates a new AccessTokenError.
 	///
-	/// - Parameter error: Machine-readable error code.
+	/// - Parameter code: Machine-readable error code.
 	/// - Parameter description: Human-readable description of the error.
 	/// - Parameter url: URL for human-readable error page.
-	public init(error: ErrorCode, description: String?, url: URL?) throws {
-		self.error = error
+	public init(code: ErrorCode, description: String?, url: URL?) throws {
+		self.code = code
 		self.description = description
 		self.url = url
 

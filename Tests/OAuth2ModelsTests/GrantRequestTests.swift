@@ -9,7 +9,7 @@ final class GrantRequestTests: XCTestCase {
 		accessTokenJSON = [
 			.grantType: "authorization_code",
 			.code: "abc",
-			.redirectURI: "https://example.com/a",
+			.redirectURL: "https://example.com/a",
 			.clientID: "def",
 		]
 		accessTokenRefreshJSON = [
@@ -24,7 +24,7 @@ final class GrantRequestTests: XCTestCase {
 		let data = try encode(accessTokenRefreshJSON)
 
 		XCTAssertThrowsError(try decode(data) as GrantRequest) { e in
-			if let e = e as? GrantRequest.GrantRequestError {
+			if let e = e as? GrantRequest.Error {
 				switch e {
 				case .unknownGrantType(let type):
 					XCTAssertEqual("foo", type)
@@ -61,7 +61,7 @@ final class GrantRequestTests: XCTestCase {
 	}
 
 	func test__decodable__AccessTokenRequest_minimumData__returnsObject() throws {
-		accessTokenJSON.removeValue(forKey: .redirectURI)
+		accessTokenJSON.removeValue(forKey: .redirectURL)
 		let data = try encode(accessTokenJSON)
 		let expected = try decode(data) as AccessTokenRequest
 		let actual = try decode(data) as GrantRequest

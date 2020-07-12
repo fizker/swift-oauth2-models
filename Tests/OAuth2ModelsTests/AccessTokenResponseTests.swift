@@ -7,8 +7,8 @@ final class AccessTokenResponseTests: XCTestCase {
 		let object = try decode(data)
 
 		XCTAssertEqual(object.accessToken, "access token value")
-		XCTAssertEqual(object.tokenType, .bearer)
-		XCTAssertEqual(object.expiresIn, .seconds(123))
+		XCTAssertEqual(object.type, .bearer)
+		XCTAssertEqual(object.expiration, .seconds(123))
 		XCTAssertEqual(object.refreshToken, "refresh token value")
 		XCTAssertEqual(object.scope, "some scope")
 	}
@@ -18,8 +18,8 @@ final class AccessTokenResponseTests: XCTestCase {
 		let object = try decode(data)
 
 		XCTAssertEqual(object.accessToken, "access token value")
-		XCTAssertEqual(object.tokenType, .bearer)
-		XCTAssertNil(object.expiresIn)
+		XCTAssertEqual(object.type, .bearer)
+		XCTAssertNil(object.expiration)
 		XCTAssertNil(object.refreshToken)
 		XCTAssertNil(object.scope)
 	}
@@ -28,14 +28,14 @@ final class AccessTokenResponseTests: XCTestCase {
 		let data = try json(expiresIn: 123.8)
 		let object = try decode(data)
 
-		XCTAssertEqual(object.expiresIn, .seconds(123))
+		XCTAssertEqual(object.expiration, .seconds(123))
 	}
 
 	func test__decodable__macTokenType__decodesAsExpected() throws {
 		let data = try json(tokenType: "mac")
 		let object = try decode(data)
 
-		XCTAssertEqual(object.tokenType, .mac)
+		XCTAssertEqual(object.type, .mac)
 	}
 
 	func test__decodable__invalidExpiresIn__throws() throws {
@@ -44,7 +44,7 @@ final class AccessTokenResponseTests: XCTestCase {
 	}
 
 	func test__encodable__fullObject_macTokenType__returnsValidJSON() throws {
-		let object = AccessTokenResponse(accessToken: "foo", tokenType: .mac, expiresIn: .oneDay, refreshToken: "ref tok", scope: "scope")
+		let object = AccessTokenResponse(accessToken: "foo", type: .mac, expiresIn: .oneDay, refreshToken: "ref tok", scope: "scope")
 		let json = try encode(object)
 		let jsonObject = try JSONSerialization.jsonObject(with: json, options: []) as! NSDictionary
 
@@ -58,7 +58,7 @@ final class AccessTokenResponseTests: XCTestCase {
 	}
 
 	func test__encodable__minimumObject_macTokenType__returnsValidJSON() throws {
-		let object = AccessTokenResponse(accessToken: "foo", tokenType: .mac, expiresIn: nil)
+		let object = AccessTokenResponse(accessToken: "foo", type: .mac, expiresIn: nil)
 		let json = try encode(object)
 		let jsonObject = try JSONSerialization.jsonObject(with: json, options: []) as! NSDictionary
 

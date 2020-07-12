@@ -7,7 +7,7 @@ final class AccessTokenErrorTests: XCTestCase {
 
 	override func setUpWithError() throws {
 		json = [
-			.error: "invalid_request",
+			.code: "invalid_request",
 			.description: "Some description",
 			.url: "https://example.com",
 		]
@@ -17,7 +17,7 @@ final class AccessTokenErrorTests: XCTestCase {
 		let data = try encode(json)
 		let object = try decode(data) as AccessTokenError
 
-		XCTAssertEqual(object.error, .invalidRequest)
+		XCTAssertEqual(object.code, .invalidRequest)
 		XCTAssertEqual(object.description, "Some description")
 		XCTAssertEqual(object.url, URL(string: "https://example.com")!)
 	}
@@ -28,19 +28,19 @@ final class AccessTokenErrorTests: XCTestCase {
 		let data = try encode(json)
 		let object = try decode(data) as AccessTokenError
 
-		XCTAssertEqual(object.error, .invalidRequest)
+		XCTAssertEqual(object.code, .invalidRequest)
 		XCTAssertNil(object.description)
 		XCTAssertNil(object.url)
 	}
 
 	func test__decodable__noErrorCode__throws() throws {
-		json.removeValue(forKey: .error)
+		json.removeValue(forKey: .code)
 		let data = try encode(json)
 		XCTAssertThrowsError(try decode(data) as AccessTokenError)
 	}
 
 	func test__encodable__minimumObject__returnsExpectedJSON() throws {
-		let object = try AccessTokenError(error: .invalidRequest, description: nil, url: nil)
+		let object = try AccessTokenError(code: .invalidRequest, description: nil, url: nil)
 		let data = try encode(object)
 
 		XCTAssertEqual(
@@ -50,7 +50,7 @@ final class AccessTokenErrorTests: XCTestCase {
 	}
 
 	func test__encodable__fullObject__returnsExpectedJSON() throws {
-		let object = try AccessTokenError(error: .invalidRequest, description: "Some description", url: URL(string: "https://example.com/foo"))
+		let object = try AccessTokenError(code: .invalidRequest, description: "Some description", url: URL(string: "https://example.com/foo"))
 		let data = try encode(object)
 
 		XCTAssertEqual(
@@ -60,7 +60,7 @@ final class AccessTokenErrorTests: XCTestCase {
 	}
 
 	func test__init__invalidCharactersInDescription__throws() throws {
-		XCTAssertThrowsError(try AccessTokenError(error: .invalidClient, description: "å", url: nil)) { error in
+		XCTAssertThrowsError(try AccessTokenError(code: .invalidClient, description: "å", url: nil)) { error in
 			XCTAssertEqual(error as? AccessTokenError.Error, .invalidCharacterInDescription)
 		}
 	}

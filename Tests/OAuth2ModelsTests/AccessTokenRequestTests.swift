@@ -8,7 +8,7 @@ final class AccessTokenRequestTests: XCTestCase {
 		json = [
 			.grantType: "authorization_code",
 			.code: "abc",
-			.redirectURI: "https://example.com/a",
+			.redirectURL: "https://example.com/a",
 			.clientID: "def",
 		]
 	}
@@ -19,11 +19,11 @@ final class AccessTokenRequestTests: XCTestCase {
 	}
 
 	func test__decodable__missingRedirectURI__returnsDecodedObject() throws {
-		json.removeValue(forKey: .redirectURI)
+		json.removeValue(forKey: .redirectURL)
 		let data = try encodeData()
 		let request = try decode(data)
 
-		XCTAssertNil(request.redirectURI)
+		XCTAssertNil(request.redirectURL)
 	}
 
 	func test__decodable__invalidGrantType__throws() throws {
@@ -36,7 +36,7 @@ final class AccessTokenRequestTests: XCTestCase {
 	func test__decodable__invalidRedirectURL__throws() throws {
 		throw XCTSkip("Should throw if URL is invalid. It currently simply decodes to nil")
 
-		json[.redirectURI] = "invalid"
+		json[.redirectURL] = "invalid"
 		let data = try encode(json)
 
 		XCTAssertThrowsError(try decode(data))
