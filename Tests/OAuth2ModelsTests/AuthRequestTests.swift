@@ -15,6 +15,150 @@ final class AuthRequestTests: XCTestCase {
 		]
 	}
 
+	func test__equalsOperator() throws {
+		let tests = [
+			(
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				true
+			),
+			(
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				AuthRequest(
+					clientID: "client2",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				false
+			),
+			(
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				AuthRequest(
+					clientID: "client",
+					state: "some state",
+					scope: "some scope"
+				),
+				false
+			),
+			(
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com/foo")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				false
+			),
+			(
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://foo.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				false
+			),
+			(
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some other state",
+					scope: "some scope"
+				),
+				false
+			),
+			(
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: nil,
+					scope: "some scope"
+				),
+				false
+			),
+			(
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some other scope"
+				),
+				false
+			),
+			(
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				AuthRequest(
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: nil
+				),
+				false
+			),
+		]
+
+		for (lhs, rhs, expected) in tests {
+			XCTAssertEqual(lhs == rhs, expected, "\(lhs) == \(rhs)")
+			XCTAssertEqual(lhs == rhs, rhs == lhs, "order of operands")
+		}
+	}
+
 	func test__decodable__minimumObject__decodesAsExpected() throws {
 		json.removeValue(forKey: .redirectURL)
 		json.removeValue(forKey: .scope)
@@ -23,22 +167,25 @@ final class AuthRequestTests: XCTestCase {
 		let data = try encode(json)
 		let object = try decode(data) as AuthRequest
 
-		XCTAssertEqual(object.clientID, "client")
-		XCTAssertEqual(object.responseType, .code)
-		XCTAssertNil(object.redirectURL)
-		XCTAssertNil(object.state)
-		XCTAssertNil(object.scope)
+		XCTAssertEqual(object, AuthRequest(
+			responseType: .code,
+			clientID: "client",
+			state: nil,
+			scope: nil
+		))
 	}
 
 	func test__decodable__fullObject__decodesAsExpected() throws {
 		let data = try encode(json)
 		let object = try decode(data) as AuthRequest
 
-		XCTAssertEqual(object.clientID, "client")
-		XCTAssertEqual(object.responseType, .code)
-		XCTAssertEqual(object.redirectURL, URL(string: "https://example.com")!)
-		XCTAssertEqual(object.state, "some state")
-		XCTAssertEqual(object.scope, "some scope")
+		XCTAssertEqual(object, AuthRequest(
+			responseType: .code,
+			clientID: "client",
+			redirectURL: URL(string: "https://example.com")!,
+			state: "some state",
+			scope: "some scope"
+		))
 	}
 
 	func test__decodable__invalidRedirectURL__throws() throws {
@@ -103,8 +250,7 @@ final class AuthRequestTests: XCTestCase {
 
 		let response = request.response(code: "response code")
 
-		XCTAssertEqual(response.code, "response code")
-		XCTAssertNil(response.state)
+		XCTAssertEqual(response, AuthResponse(code: "response code", state: nil))
 	}
 
 	func test__response__fullObject__returnsAuthResponse() throws {
@@ -117,8 +263,7 @@ final class AuthRequestTests: XCTestCase {
 
 		let response = request.response(code: "response code")
 
-		XCTAssertEqual(response.code, "response code")
-		XCTAssertEqual(response.state, "some state")
+		XCTAssertEqual(response, AuthResponse(code: "response code", state: "some state"))
 	}
 
 	func test__error__minimalObject_minimalError__returnsAuthError() throws {
@@ -133,10 +278,11 @@ final class AuthRequestTests: XCTestCase {
 			description: nil
 		)
 
-		XCTAssertEqual(error.error, .temporarilyUnavailable)
-		XCTAssertNil(error.description)
-		XCTAssertNil(error.url)
-		XCTAssertNil(error.state)
+		XCTAssertEqual(error, AuthError(
+			error: .temporarilyUnavailable,
+			description: nil,
+			state: nil
+		))
 	}
 
 	func test__error__fullObject_minimalError__returnsAuthError() throws {
@@ -152,10 +298,11 @@ final class AuthRequestTests: XCTestCase {
 			description: nil
 		)
 
-		XCTAssertEqual(error.error, .temporarilyUnavailable)
-		XCTAssertNil(error.description)
-		XCTAssertNil(error.url)
-		XCTAssertEqual(error.state, "some state")
+		XCTAssertEqual(error, AuthError(
+			error: .temporarilyUnavailable,
+			description: nil,
+			state: "some state"
+		))
 	}
 
 	func test__error__minimalObject_fullError__returnsAuthError() throws {
@@ -168,13 +315,15 @@ final class AuthRequestTests: XCTestCase {
 		let error = request.error(
 			error: .temporarilyUnavailable,
 			description: "error description",
-			url: URL(string: "https://eaxmple.com/error")!
+			url: URL(string: "https://example.com/error")!
 		)
 
-		XCTAssertEqual(error.error, .temporarilyUnavailable)
-		XCTAssertEqual(error.description, "error description")
-		XCTAssertEqual(error.url, URL(string: "https://eaxmple.com/error")!)
-		XCTAssertNil(error.state)
+		XCTAssertEqual(error, AuthError(
+			error: .temporarilyUnavailable,
+			description: "error description",
+			url: URL(string: "https://example.com/error")!,
+			state: nil
+		))
 	}
 
 	func test__error__fullObject_fullError__returnsAuthError() throws {
@@ -187,12 +336,14 @@ final class AuthRequestTests: XCTestCase {
 		let error = request.error(
 			error: .temporarilyUnavailable,
 			description: "error description",
-			url: URL(string: "https://eaxmple.com/error")!
+			url: URL(string: "https://example.com/error")!
 		)
 
-		XCTAssertEqual(error.error, .temporarilyUnavailable)
-		XCTAssertEqual(error.description, "error description")
-		XCTAssertEqual(error.url, URL(string: "https://eaxmple.com/error")!)
-		XCTAssertEqual(error.state, "some state")
+		XCTAssertEqual(error, AuthError(
+			error: .temporarilyUnavailable,
+			description: "error description",
+			url: URL(string: "https://example.com/error")!,
+			state: "some state"
+		))
 	}
 }

@@ -5,7 +5,7 @@ import Foundation
 /// The client constructs the request URI by adding the following
 /// parameters to the query component of the authorization endpoint URI
 /// using the "application/x-www-form-urlencoded" format, per Appendix B.
-public struct AuthRequest: Codable {
+public struct AuthRequest: Codable, Equatable {
 	public enum CodingKeys: String, CodingKey {
 		case clientID = "client_id"
 		case responseType = "response_type"
@@ -109,7 +109,7 @@ public struct AuthRequest: Codable {
 /// adding the following parameters to the query component of th
 /// redirection URI using the "application/x-www-form-urlencoded" format
 /// per Appendix B.
-public struct AuthResponse: Codable {
+public struct AuthResponse: Codable, Equatable {
 	public enum CodingKeys: String, CodingKey {
 		case code, state
 	}
@@ -155,7 +155,7 @@ public struct AuthResponse: Codable {
 /// the authorization server informs the client by adding the following
 /// parameters to the query component of the redirection URI using the
 /// "application/x-www-form-urlencoded" format, per Appendix B.
-public struct AuthError: Codable {
+public struct AuthError: Codable, Equatable {
 	public enum CodingKeys: String, CodingKey {
 		case error
 		case description = "error_description"
