@@ -89,16 +89,18 @@ public struct AuthRequest: Codable, Equatable {
 	/// - Parameter code: A machine-readable error code.
 	/// - Parameter description: A human-readable description.
 	/// - Parameter url: A URL to a human-readable web page.
-	public func error(code: AuthError.ErrorCode, description: String?, url: URL) -> AuthError {
-		AuthError(code: code, request: self, description: description, url: url)
+	/// - Throws: `AuthError.CharacterSetError` if the description or URL contains invalid characters.
+	public func error(code: AuthError.ErrorCode, description: String?, url: URL) throws -> AuthError {
+		try AuthError(code: code, request: self, description: description, url: url)
 	}
 
 	/// Creates a new `AuthError` without an error page URL  based on this request.
 	///
 	/// - Parameter code: A machine-readable error code.
 	/// - Parameter description: A human-readable description.
-	public func error(code: AuthError.ErrorCode, description: String?) -> AuthError {
-		AuthError(code: code, request: self, description: description)
+	/// - Throws: `AuthError.CharacterSetError` if the description contains invalid characters.
+	public func error(code: AuthError.ErrorCode, description: String?) throws -> AuthError {
+		try AuthError(code: code, request: self, description: description)
 	}
 }
 
@@ -156,6 +158,14 @@ public struct AuthResponse: Codable, Equatable {
 /// parameters to the query component of the redirection URI using the
 /// "application/x-www-form-urlencoded" format, per Appendix B.
 public struct AuthError: Codable, Equatable {
+	/// Error thrown during the init function
+	public enum CharacterSetError: Swift.Error {
+		/// Thrown when the description contains invalid characters.
+		case invalidCharacterInDescription
+		/// Thrown when the URL contains invalid characters.
+		case invalidCharacterInURL
+	}
+
 	public enum CodingKeys: String, CodingKey {
 		case code = "error"
 		case description = "error_description"
@@ -222,22 +232,42 @@ public struct AuthError: Codable, Equatable {
 	/// client.
 	public var state: String?
 
+	private init(
+		code: ErrorCode,
+		request: AuthRequest,
+		description: String?,
+		url: URL?
+	) throws {
+		self.code = code
+		self.description = description
+		self.url = url
+		self.state = request.state
+
+		if let description = description {
+			guard ValidCharacterSet.text.isValid(description)
+			else { throw CharacterSetError.invalidCharacterInDescription }
+		}
+
+		if let url = url?.absoluteString {
+			guard ValidCharacterSet.url.isValid(url)
+			else { throw CharacterSetError.invalidCharacterInURL }
+		}
+	}
+
 	/// Creates a new `AuthError`.
 	///
 	/// - Parameter code: A machine-readable error code.
 	/// - Parameter request: The `AuthRequest` that spawned the error.
 	/// - Parameter description: A human-readable description.
 	/// - Parameter url: A URL to a human-readable web page.
+	/// - Throws: `AuthError.CharacterSetError` if the description or URL contains invalid characters.
 	public init(
 		code: ErrorCode,
 		request: AuthRequest,
 		description: String?,
 		url: URL
-	) {
-		self.code = code
-		self.description = description
-		self.url = url
-		self.state = request.state
+	) throws {
+		try self.init(code: code, request: request, description: description, url: url as URL?)
 	}
 
 	/// Creates a new `AuthError` without an error page URL.
@@ -245,14 +275,12 @@ public struct AuthError: Codable, Equatable {
 	/// - Parameter code: A machine-readable error code.
 	/// - Parameter request: The `AuthRequest` that spawned the error.
 	/// - Parameter description: A human-readable description.
+	/// - Throws: `AuthError.CharacterSetError` if the description contains invalid characters.
 	public init(
 		code: ErrorCode,
 		request: AuthRequest,
 		description: String?
-	) {
-		self.code = code
-		self.description = description
-		self.url = nil
-		self.state = request.state
+	) throws {
+		try self.init(code: code, request: request, description: description, url: nil)
 	}
 }

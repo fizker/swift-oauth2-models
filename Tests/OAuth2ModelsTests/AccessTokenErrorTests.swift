@@ -40,7 +40,7 @@ final class AccessTokenErrorTests: XCTestCase {
 	}
 
 	func test__encodable__minimumObject__returnsExpectedJSON() throws {
-		let object = try AccessTokenError(code: .invalidRequest, description: nil, url: nil)
+		let object = try AccessTokenError(code: .invalidRequest, description: nil)
 		let data = try encode(object)
 
 		XCTAssertEqual(
@@ -50,7 +50,7 @@ final class AccessTokenErrorTests: XCTestCase {
 	}
 
 	func test__encodable__fullObject__returnsExpectedJSON() throws {
-		let object = try AccessTokenError(code: .invalidRequest, description: "Some description", url: URL(string: "https://example.com/foo"))
+		let object = try AccessTokenError(code: .invalidRequest, description: "Some description", url: URL(string: "https://example.com/foo")!)
 		let data = try encode(object)
 
 		XCTAssertEqual(
@@ -60,8 +60,8 @@ final class AccessTokenErrorTests: XCTestCase {
 	}
 
 	func test__init__invalidCharactersInDescription__throws() throws {
-		XCTAssertThrowsError(try AccessTokenError(code: .invalidClient, description: "å", url: nil)) { error in
-			XCTAssertEqual(error as? AccessTokenError.Error, .invalidCharacterInDescription)
+		XCTAssertThrowsError(try AccessTokenError(code: .invalidClient, description: "å")) { error in
+			XCTAssertEqual(error as? AccessTokenError.CharacterSetError, .invalidCharacterInDescription)
 		}
 	}
 }

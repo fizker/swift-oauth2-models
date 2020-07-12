@@ -2,14 +2,14 @@ import XCTest
 import OAuth2Models
 
 extension AuthError {
-	init(code: ErrorCode, description: String?, state: String?) {
+	init(code: ErrorCode, description: String?, state: String?) throws {
 		let r = AuthRequest(clientID: "", state: state, scope: nil)
-		self = r.error(code: code, description: description)
+		self = try r.error(code: code, description: description)
 	}
 
-	init(code: ErrorCode, description: String?, url: URL, state: String?) {
+	init(code: ErrorCode, description: String?, url: URL, state: String?) throws {
 		let r = AuthRequest(clientID: "", state: state, scope: nil)
-		self = r.error(code: code, description: description, url: url)
+		self = try r.error(code: code, description: description, url: url)
 	}
 }
 
@@ -32,7 +32,7 @@ final class AuthErrorTests: XCTestCase {
 	func test__equalsOperator() throws {
 		let tests = [
 			(
-				AuthError(
+				try AuthError(
 					code: .accessDenied,
 					request: AuthRequest(
 						clientID: "clietn 1",
@@ -42,7 +42,7 @@ final class AuthErrorTests: XCTestCase {
 					),
 					description: nil
 				),
-				AuthError(
+				try AuthError(
 					code: .accessDenied,
 					request: AuthRequest(
 						clientID: "client 2",
@@ -54,7 +54,7 @@ final class AuthErrorTests: XCTestCase {
 				true
 			),
 			(
-				AuthError(
+				try AuthError(
 					code: .accessDenied,
 					request: AuthRequest(
 						clientID: "clietn 1",
@@ -64,7 +64,7 @@ final class AuthErrorTests: XCTestCase {
 					),
 					description: nil
 				),
-				AuthError(
+				try AuthError(
 					code: .accessDenied,
 					description: nil,
 					state: "the state"
@@ -72,12 +72,12 @@ final class AuthErrorTests: XCTestCase {
 				true
 			),
 			(
-				AuthError(
+				try AuthError(
 					code: .accessDenied,
 					description: "foo",
 					state: "bar"
 				),
-				AuthError(
+				try AuthError(
 					code: .accessDenied,
 					description: "foo",
 					state: "bar"
@@ -85,13 +85,13 @@ final class AuthErrorTests: XCTestCase {
 				true
 			),
 			(
-				AuthError(
+				try AuthError(
 					code: .accessDenied,
 					description: "foo",
 					url: URL(string: "https://example.com")!,
 					state: "bar"
 				),
-				AuthError(
+				try AuthError(
 					code: .accessDenied,
 					description: "foo",
 					url: URL(string: "http://example.com")!,
@@ -100,13 +100,13 @@ final class AuthErrorTests: XCTestCase {
 				false
 			),
 			(
-				AuthError(
+				try AuthError(
 					code: .invalidScope,
 					description: "foo",
 					url: URL(string: "https://example.com")!,
 					state: "bar"
 				),
-				AuthError(
+				try AuthError(
 					code: .invalidScope,
 					description: "foo",
 					state: "bar"
@@ -114,12 +114,12 @@ final class AuthErrorTests: XCTestCase {
 				false
 			),
 			(
-				AuthError(
+				try AuthError(
 					code: .invalidRequest,
 					description: "foo",
 					state: "bar"
 				),
-				AuthError(
+				try AuthError(
 					code: .invalidRequest,
 					description: "foo",
 					state: nil
@@ -127,12 +127,12 @@ final class AuthErrorTests: XCTestCase {
 				false
 			),
 			(
-				AuthError(
+				try AuthError(
 					code: .serverError,
 					description: nil,
 					state: nil
 				),
-				AuthError(
+				try AuthError(
 					code: .serverError,
 					description: nil,
 					state: nil
@@ -140,12 +140,12 @@ final class AuthErrorTests: XCTestCase {
 				true
 			),
 			(
-				AuthError(
+				try AuthError(
 					code: .accessDenied,
 					description: "foo",
 					state: nil
 				),
-				AuthError(
+				try AuthError(
 					code: .accessDenied,
 					description: nil,
 					state: nil
@@ -164,7 +164,7 @@ final class AuthErrorTests: XCTestCase {
 		let data = try encode(json)
 		let object = try decode(data) as AuthError
 
-		XCTAssertEqual(object, AuthError(
+		XCTAssertEqual(object, try AuthError(
 			code: .serverError,
 			description: "some description",
 			url: URL(string: "https://example.com")!,
@@ -180,7 +180,7 @@ final class AuthErrorTests: XCTestCase {
 		let data = try encode(json)
 		let object = try decode(data) as AuthError
 
-		XCTAssertEqual(object, AuthError(
+		XCTAssertEqual(object, try AuthError(
 			code: .serverError,
 			description: nil,
 			state: nil
@@ -189,7 +189,7 @@ final class AuthErrorTests: XCTestCase {
 
 	func test__encodable__fullObject__encodesAsExpected() throws {
 		request.state = "some state"
-		let object = AuthError(
+		let object = try AuthError(
 			code: .accessDenied,
 			request: request,
 			description: "some description",
@@ -211,7 +211,7 @@ final class AuthErrorTests: XCTestCase {
 
 	func test__encodable__minimalObject__encodesAsExpected() throws {
 		request.state = nil
-		let object = AuthError(
+		let object = try AuthError(
 			code: .accessDenied,
 			request: request,
 			description: nil
@@ -225,5 +225,11 @@ final class AuthErrorTests: XCTestCase {
 		]
 
 		XCTAssertEqual(actual, expected)
+	}
+
+	func test__init__invalidCharactersInDescription__throws() throws {
+		XCTAssertThrowsError(try AuthError(code: .accessDenied, description: "å", state: nil)) { error in
+			XCTAssertEqual(error as? AuthError.CharacterSetError, .invalidCharacterInDescription)
+		}
 	}
 }
