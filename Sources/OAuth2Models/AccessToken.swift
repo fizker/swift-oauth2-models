@@ -266,38 +266,14 @@ public struct AccessTokenError: Codable {
 	/// outside the set %x21 / %x23-5B / %x5D-7E.
 	public var url: URL?
 
-	private init(code: ErrorCode, description: String?, url: URL?) throws {
-		self.code = code
-		self.description = description
-		self.url = url
-
-		if let description = description {
-			guard ValidCharacterSet.text.isValid(description)
-			else { throw CharacterSetError.invalidCharacterInDescription }
-		}
-
-		if let url = url?.absoluteString {
-			guard ValidCharacterSet.url.isValid(url)
-			else { throw CharacterSetError.invalidCharacterInURL }
-		}
-	}
-
 	/// Creates a new AccessTokenError.
 	///
 	/// - Parameter code: Machine-readable error code.
 	/// - Parameter description: Human-readable description of the error.
 	/// - Parameter url: URL for human-readable error page.
-	/// - Throws: `AccessTokenError.CharacterSetError` if the description or URL contains invalid characters.
-	public init(code: ErrorCode, description: String?, url: URL) throws {
-		try self.init(code: code, description: description, url: url as URL?)
-	}
-
-	/// Creates a new AccessTokenError.
-	///
-	/// - Parameter code: Machine-readable error code.
-	/// - Parameter description: Human-readable description of the error.
-	/// - Throws: `AccessTokenError.CharacterSetError` if the description contains invalid characters.
-	public init(code: ErrorCode, description: String?) throws {
-		try self.init(code: code, description: description, url: nil)
+	public init(code: ErrorCode, description: ErrorDescription?, url: ErrorURL?) {
+		self.code = code
+		self.description = description?.value
+		self.url = url?.value
 	}
 }
