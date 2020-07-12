@@ -1,18 +1,6 @@
 import XCTest
 import OAuth2Models
 
-extension AuthError {
-	init(code: ErrorCode, description: String?, state: String?) {
-		let r = AuthRequest(clientID: "", state: state, scope: nil)
-		self = r.error(code: code, description: try! description.map(ErrorDescription.init(_:)), url: nil)
-	}
-
-	init(code: ErrorCode, description: String?, url: URL, state: String?) {
-		let r = AuthRequest(clientID: "", state: state, scope: nil)
-		self = r.error(code: code, description: try! description.map(ErrorDescription.init(_:)), url: try! ErrorURL(url))
-	}
-}
-
 final class AuthErrorTests: XCTestCase {
 	typealias JSON = [AuthError.CodingKeys: String]
 	var json: JSON = [:]

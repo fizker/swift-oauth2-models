@@ -1,12 +1,6 @@
 import XCTest
 import OAuth2Models
 
-extension URL: ExpressibleByStringLiteral {
-	public init(stringLiteral value: StringLiteralType) {
-		self.init(string: value)!
-	}
-}
-
 final class AccessTokenRequestTests: XCTestCase {
 	var json: [AccessTokenRequest.CodingKeys: String] = [:]
 

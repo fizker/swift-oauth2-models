@@ -1,13 +1,6 @@
 import XCTest
 import OAuth2Models
 
-extension AuthResponse {
-	init(code: String, state: String?) {
-		let r = AuthRequest(clientID: "", state: state, scope: nil)
-		self = r.response(code: code)
-	}
-}
-
 final class AuthResponseTests: XCTestCase {
 	typealias JSON = [AuthResponse.CodingKeys: String]
 	var json: JSON = [:]
