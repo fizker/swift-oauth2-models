@@ -2,8 +2,8 @@ import XCTest
 import OAuth2Models
 
 final class GrantRequestTests: XCTestCase {
-	var accessTokenJSON: [AccessTokenRequest.CodingKeys: String] = [:]
-	var accessTokenRefreshJSON: [AccessTokenRefreshRequest.CodingKeys: String] = [:]
+	var accessTokenJSON: [AuthCodeAccessTokenRequest.CodingKeys: String] = [:]
+	var accessTokenRefreshJSON: [AuthCodeAccessTokenRefreshRequest.CodingKeys: String] = [:]
 
 	override func setUpWithError() throws {
 		accessTokenJSON = [
@@ -35,37 +35,37 @@ final class GrantRequestTests: XCTestCase {
 		}
 	}
 
-	func test__decodable__AccessTokenRefreshRequest_FullData__returnsObject() throws {
+	func test__decodable__AuthCodeGrantAccessTokenRefreshRequest_FullData__returnsObject() throws {
 		let data = try encode(accessTokenRefreshJSON)
-		let expected = try decode(data) as AccessTokenRefreshRequest
+		let expected = try decode(data) as AuthCodeAccessTokenRefreshRequest
 		let actual = try decode(data) as GrantRequest
 
-		XCTAssertEqual(.refreshAccessToken(expected), actual)
+		XCTAssertEqual(.authCodeRefreshAccessToken(expected), actual)
 	}
 
-	func test__decodable__AccessTokenRefreshRequest_minimumData__returnsObject() throws {
+	func test__decodable__AuthCodeGrantAccessTokenRefreshRequest_minimumData__returnsObject() throws {
 		accessTokenRefreshJSON.removeValue(forKey: .scope)
 		let data = try encode(accessTokenRefreshJSON)
-		let expected = try decode(data) as AccessTokenRefreshRequest
+		let expected = try decode(data) as AuthCodeAccessTokenRefreshRequest
 		let actual = try decode(data) as GrantRequest
 
-		XCTAssertEqual(.refreshAccessToken(expected), actual)
+		XCTAssertEqual(.authCodeRefreshAccessToken(expected), actual)
 	}
 
-	func test__decodable__AccessTokenRequest_FullData__returnsObject() throws {
+	func test__decodable__AuthCodeGrantAccessTokenRequest_FullData__returnsObject() throws {
 		let data = try encode(accessTokenJSON)
-		let expected = try decode(data) as AccessTokenRequest
+		let expected = try decode(data) as AuthCodeAccessTokenRequest
 		let actual = try decode(data) as GrantRequest
 
-		XCTAssertEqual(.accessToken(expected), actual)
+		XCTAssertEqual(.authCodeAccessToken(expected), actual)
 	}
 
-	func test__decodable__AccessTokenRequest_minimumData__returnsObject() throws {
+	func test__decodable__AuthCodeGrantAccessTokenRequest_minimumData__returnsObject() throws {
 		accessTokenJSON.removeValue(forKey: .redirectURL)
 		let data = try encode(accessTokenJSON)
-		let expected = try decode(data) as AccessTokenRequest
+		let expected = try decode(data) as AuthCodeAccessTokenRequest
 		let actual = try decode(data) as GrantRequest
 
-		XCTAssertEqual(.accessToken(expected), actual)
+		XCTAssertEqual(.authCodeAccessToken(expected), actual)
 	}
 }

@@ -1,7 +1,7 @@
 import Foundation
 import OAuth2Models
 
-extension AuthError {
+extension ErrorResponse {
 	init(code: ErrorCode, description: String?, state: String?) {
 		let r = AuthRequest(clientID: "", state: state, scope: Scope())
 		self = r.error(code: code, description: try! description.map(ErrorDescription.init(_:)), url: nil)
@@ -13,7 +13,7 @@ extension AuthError {
 	}
 }
 
-extension AuthResponse {
+extension AuthCodeAuthResponse {
 	init(code: String, state: String?) {
 		let r = AuthRequest(clientID: "", state: state, scope: Scope())
 		self = r.response(code: code)

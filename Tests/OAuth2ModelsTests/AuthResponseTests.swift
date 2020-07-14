@@ -2,7 +2,7 @@ import XCTest
 import OAuth2Models
 
 final class AuthResponseTests: XCTestCase {
-	typealias JSON = [AuthResponse.CodingKeys: String]
+	typealias JSON = [AuthCodeAuthResponse.CodingKeys: String]
 	var json: JSON = [:]
 	var request = AuthRequest(clientID: "", state: nil)
 
@@ -18,7 +18,7 @@ final class AuthResponseTests: XCTestCase {
 	func test__equalsOperator() throws {
 		let tests = [
 			(
-				AuthResponse(
+				AuthCodeAuthResponse(
 					code: "code",
 					request: AuthRequest(
 						clientID: "foo",
@@ -26,7 +26,7 @@ final class AuthResponseTests: XCTestCase {
 						scope: Scope()
 					)
 				),
-				AuthResponse(
+				AuthCodeAuthResponse(
 					code: "code",
 					request: AuthRequest(
 						clientID: "bar",
@@ -38,28 +38,28 @@ final class AuthResponseTests: XCTestCase {
 				true
 			),
 			(
-				AuthResponse(code: "code", state: "state"),
-				AuthResponse(code: "code", state: "state"),
+				AuthCodeAuthResponse(code: "code", state: "state"),
+				AuthCodeAuthResponse(code: "code", state: "state"),
 				true
 			),
 			(
-				AuthResponse(code: "code", state: nil),
-				AuthResponse(code: "code", state: nil),
+				AuthCodeAuthResponse(code: "code", state: nil),
+				AuthCodeAuthResponse(code: "code", state: nil),
 				true
 			),
 			(
-				AuthResponse(code: "code", state: "state"),
-				AuthResponse(code: "code2", state: "state"),
+				AuthCodeAuthResponse(code: "code", state: "state"),
+				AuthCodeAuthResponse(code: "code2", state: "state"),
 				false
 			),
 			(
-				AuthResponse(code: "code", state: "state"),
-				AuthResponse(code: "code", state: "state2"),
+				AuthCodeAuthResponse(code: "code", state: "state"),
+				AuthCodeAuthResponse(code: "code", state: "state2"),
 				false
 			),
 			(
-				AuthResponse(code: "code", state: "state"),
-				AuthResponse(code: "code", state: nil),
+				AuthCodeAuthResponse(code: "code", state: "state"),
+				AuthCodeAuthResponse(code: "code", state: nil),
 				false
 			),
 		]
@@ -72,22 +72,22 @@ final class AuthResponseTests: XCTestCase {
 
 	func test__decodable__fullObject__decodesAsExpected() throws {
 		let data = try encode(json)
-		let object = try decode(data) as AuthResponse
+		let object = try decode(data) as AuthCodeAuthResponse
 
-		XCTAssertEqual(object, AuthResponse(code: "some code", state: "some state"))
+		XCTAssertEqual(object, AuthCodeAuthResponse(code: "some code", state: "some state"))
 	}
 
 	func test__decodable__minimalObject__decodesAsExpected() throws {
 		json.removeValue(forKey: .state)
 		let data = try encode(json)
-		let object = try decode(data) as AuthResponse
+		let object = try decode(data) as AuthCodeAuthResponse
 
-		XCTAssertEqual(object, AuthResponse(code: "some code", state: nil))
+		XCTAssertEqual(object, AuthCodeAuthResponse(code: "some code", state: nil))
 	}
 
 	func test__encodable__minimalObject__encodesAsExpected() throws {
 		request.state = nil
-		let object = AuthResponse(code: "some code", request: request)
+		let object = AuthCodeAuthResponse(code: "some code", request: request)
 		let data = try encode(object)
 		let actual = try decode(data) as [String: String]
 
@@ -100,7 +100,7 @@ final class AuthResponseTests: XCTestCase {
 
 	func test__encodable__fullObject__encodesAsExpected() throws {
 		request.state = "some state"
-		let object = AuthResponse(code: "some code", request: request)
+		let object = AuthCodeAuthResponse(code: "some code", request: request)
 		let data = try encode(object)
 		let actual = try decode(data) as [String: String]
 

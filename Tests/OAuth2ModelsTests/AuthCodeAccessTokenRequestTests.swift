@@ -1,8 +1,8 @@
 import XCTest
 import OAuth2Models
 
-final class AccessTokenRequestTests: XCTestCase {
-	var json: [AccessTokenRequest.CodingKeys: String] = [:]
+final class AuthCodeGrantAccessTokenRequestTests: XCTestCase {
+	var json: [AuthCodeAccessTokenRequest.CodingKeys: String] = [:]
 
 	override func setUpWithError() throws {
 		json = [
@@ -15,13 +15,13 @@ final class AccessTokenRequestTests: XCTestCase {
 
 	func test__setUp__noChanges__decodesCorrectly() throws {
 		let data = try encode(json)
-		XCTAssertNoThrow(try decode(data) as AccessTokenRequest)
+		XCTAssertNoThrow(try decode(data) as AuthCodeAccessTokenRequest)
 	}
 
 	func test__decodable__missingRedirectURI__returnsDecodedObject() throws {
 		json.removeValue(forKey: .redirectURL)
 		let data = try encode(json)
-		let request = try decode(data) as AccessTokenRequest
+		let request = try decode(data) as AuthCodeAccessTokenRequest
 
 		XCTAssertNil(request.redirectURL)
 	}
@@ -30,7 +30,7 @@ final class AccessTokenRequestTests: XCTestCase {
 		json[.grantType] = "foo"
 		let data = try encode(json)
 
-		XCTAssertThrowsError(try decode(data) as AccessTokenRequest)
+		XCTAssertThrowsError(try decode(data) as AuthCodeAccessTokenRequest)
 	}
 
 	func test__decodable__invalidRedirectURL__throws() throws {
@@ -39,11 +39,11 @@ final class AccessTokenRequestTests: XCTestCase {
 		json[.redirectURL] = "invalid"
 		let data = try encode(json)
 
-		XCTAssertThrowsError(try decode(data) as AccessTokenRequest)
+		XCTAssertThrowsError(try decode(data) as AuthCodeAccessTokenRequest)
 	}
 
 	func test__encodable__fullObject__encodesAsExpected() throws {
-		let object = AccessTokenRequest(
+		let object = AuthCodeAccessTokenRequest(
 			grantType: .authorizationCode,
 			code: "foo",
 			redirectURL: "https://example.com",
@@ -63,7 +63,7 @@ final class AccessTokenRequestTests: XCTestCase {
 	}
 
 	func test__encodable__minimalObject__encodesAsExpected() throws {
-		let object = AccessTokenRequest(
+		let object = AuthCodeAccessTokenRequest(
 			code: "foo",
 			redirectURL: nil,
 			clientID: nil

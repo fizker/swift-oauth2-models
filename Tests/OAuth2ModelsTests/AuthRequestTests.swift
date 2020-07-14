@@ -273,7 +273,7 @@ final class AuthRequestTests: XCTestCase {
 
 		let response = request.response(code: "response code")
 
-		XCTAssertEqual(response, AuthResponse(code: "response code", state: nil))
+		XCTAssertEqual(response, AuthCodeAuthResponse(code: "response code", state: nil))
 	}
 
 	func test__response__fullObject__returnsAuthResponse() throws {
@@ -286,10 +286,10 @@ final class AuthRequestTests: XCTestCase {
 
 		let response = request.response(code: "response code")
 
-		XCTAssertEqual(response, AuthResponse(code: "response code", state: "some state"))
+		XCTAssertEqual(response, AuthCodeAuthResponse(code: "response code", state: "some state"))
 	}
 
-	func test__error__minimalObject_minimalError__returnsAuthError() throws {
+	func test__error__minimalObject_minimalError__returnsErrorResponse() throws {
 		let request = AuthRequest(
 			clientID: "client id",
 			state: nil,
@@ -302,14 +302,14 @@ final class AuthRequestTests: XCTestCase {
 			url: nil
 		)
 
-		XCTAssertEqual(error, AuthError(
+		XCTAssertEqual(error, ErrorResponse(
 			code: .temporarilyUnavailable,
 			description: nil,
 			state: nil
 		))
 	}
 
-	func test__error__fullObject_minimalError__returnsAuthError() throws {
+	func test__error__fullObject_minimalError__returnsErrorResponse() throws {
 		let request = AuthRequest(
 			clientID: "client id",
 			redirectURL: URL(string: "https://example.com")!,
@@ -323,14 +323,14 @@ final class AuthRequestTests: XCTestCase {
 			url: nil
 		)
 
-		XCTAssertEqual(error, AuthError(
+		XCTAssertEqual(error, ErrorResponse(
 			code: .temporarilyUnavailable,
 			description: nil,
 			state: "some state"
 		))
 	}
 
-	func test__error__minimalObject_fullError__returnsAuthError() throws {
+	func test__error__minimalObject_fullError__returnsErrorResponse() throws {
 		let request = AuthRequest(
 			clientID: "client id",
 			state: nil,
@@ -343,7 +343,7 @@ final class AuthRequestTests: XCTestCase {
 			url: "https://example.com/error"
 		)
 
-		XCTAssertEqual(error, AuthError(
+		XCTAssertEqual(error, ErrorResponse(
 			code: .temporarilyUnavailable,
 			description: "error description",
 			url: URL(string: "https://example.com/error")!,
@@ -351,7 +351,7 @@ final class AuthRequestTests: XCTestCase {
 		))
 	}
 
-	func test__error__fullObject_fullError__returnsAuthError() throws {
+	func test__error__fullObject_fullError__returnsErrorResponse() throws {
 		let request = AuthRequest(
 			clientID: "client id",
 			state: "some state",
@@ -364,7 +364,7 @@ final class AuthRequestTests: XCTestCase {
 			url: "https://example.com/error"
 		)
 
-		XCTAssertEqual(error, AuthError(
+		XCTAssertEqual(error, ErrorResponse(
 			code: .temporarilyUnavailable,
 			description: "error description",
 			url: URL(string: "https://example.com/error")!,
