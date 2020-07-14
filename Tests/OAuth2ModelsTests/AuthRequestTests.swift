@@ -231,17 +231,20 @@ final class AuthRequestTests: XCTestCase {
 			scope: "some scope"
 		)
 		let data = try encode(object)
-		let actual = try decode(data) as [String: String]
+		var actual = try decode(data) as [String: String]
 
 		let expected: [String: String] = [
 			"client_id": "client",
 			"response_type": "code",
 			"redirect_uri": "https://example.com",
-			"scope": "some scope",
 			"state": "some state",
 		]
 
+		let expectedScope = ["some", "scope"]
+		let actualScope = actual.removeValue(forKey: "scope")?.split(separator: " ").map(String.init)
+
 		XCTAssertEqual(actual, expected)
+		XCTAssertEqual(actualScope?.sorted(), expectedScope.sorted())
 	}
 
 	func test__encodable__minimumObject__encodesAsJSON() throws {

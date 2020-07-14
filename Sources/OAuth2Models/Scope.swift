@@ -12,26 +12,31 @@ public struct Scope {
 	fileprivate init(unvalidatedString: String) {
 		items = Self.splitStringInput(unvalidatedString)
 	}
+
 	public init(string: String) throws {
 		let items = Self.splitStringInput(string)
 		try self.init(items: items)
 	}
+
 	public init<T: Sequence>(items: T) throws where T.Element == String {
 		try self.init(items: Set(items))
 	}
 	public init(items: Set<String>) throws {
 		for item in items {
-			try assert(item, matchesOnly: .url)
+			try Self.assert(item)
 		}
 
 		self.items = items
 	}
+
+	fileprivate static func assert(_ item: String) throws { try OAuth2Models.assert(item, charset: Self.validCharacters) }
+	fileprivate static let validCharacters = ValidCharacterSet.excludingSpace
 }
 
 public extension Scope {
 	func contains(_ value: String) -> Bool { items.contains(value) }
 	mutating func insert(_ newElement: String) throws -> (Bool, String) {
-		try assert(newElement, matchesOnly: .url)
+		try Self.assert(newElement)
 		return items.insert(newElement)
 	}
 }

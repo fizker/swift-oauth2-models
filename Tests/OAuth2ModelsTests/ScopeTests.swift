@@ -2,14 +2,14 @@ import XCTest
 import OAuth2Models
 
 final class ScopeTests: XCTestCase {
-	func test__equalsOperator__scopesAreEqual__returnsTru() throws {
+	func test__equalsOperator__scopesAreEqual__returnsTrue() throws {
 		let scope1 = try Scope(string: "foo bar baz")
 		let scope2 = try Scope(string: "baz foo bar")
 
 		XCTAssertTrue(scope1 == scope2)
 	}
 
-	func test__equalsOperator__scopesAreNotEqual__returnsTru() throws {
+	func test__equalsOperator__scopesAreNotEqual__returnsTrue() throws {
 		let scope1 = try Scope(string: "foo bar baz")
 		let scope2 = try Scope(string: "bazfoo bar")
 

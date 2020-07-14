@@ -1,22 +1,22 @@
 import Foundation
 
-private let validTextCharacters = CharacterSet(charactersIn: Unicode.Scalar(0x20)...Unicode.Scalar(0x7e))
+private let validCharactersIncludingSpace = CharacterSet(charactersIn: Unicode.Scalar(0x20)...Unicode.Scalar(0x7e))
 	.subtracting(CharacterSet(arrayLiteral: Unicode.Scalar(0x22), Unicode.Scalar(0x5c)))
-private let validURLCharacters = validTextCharacters.subtracting(CharacterSet(arrayLiteral: Unicode.Scalar(0x20)))
+private let validCharactersExcludingSpace = validCharactersIncludingSpace.subtracting(CharacterSet(arrayLiteral: Unicode.Scalar(0x20)))
 
 enum ValidCharacterSet {
-	case url
-	case text
+	case includingSpace
+	case excludingSpace
 
 	var characterSet: CharacterSet {
 		switch self {
-		case .url: return validURLCharacters
-		case .text: return validTextCharacters
+		case .excludingSpace: return validCharactersExcludingSpace
+		case .includingSpace: return validCharactersIncludingSpace
 		}
 	}
 }
 
-func assert(_ value: String, matchesOnly charset: ValidCharacterSet) throws {
+func assert(_ value: String, charset: ValidCharacterSet) throws {
 	let invalidCharacters = value.unicodeScalars.filter(charset.characterSet.inverted.contains)
 	guard invalidCharacters.isEmpty
 	else { throw CharacterSetValidationError.containsInvalidCharacters(String(invalidCharacters)) }
@@ -39,7 +39,7 @@ public struct ErrorDescription {
 	public init(_ string: String) throws {
 		self.value = string
 
-		try assert(string, matchesOnly: .text)
+		try assert(string, charset: .includingSpace)
 	}
 }
 
@@ -54,6 +54,6 @@ public struct ErrorURL {
 	public init(_ url: URL) throws {
 		self.value = url
 
-		try assert(url.absoluteString, matchesOnly: .url)
+		try assert(url.absoluteString, charset: .excludingSpace)
 	}
 }
