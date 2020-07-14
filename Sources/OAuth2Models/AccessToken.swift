@@ -114,16 +114,34 @@ public struct AccessTokenRefreshRequest: Codable, Equatable {
 	/// not originally granted by the resource owner, and if omitted is
 	/// treated as equal to the scope originally granted by the
 	/// resource owner.
-	public var scope: String?
+	public var scope: Scope
 
 	/// Creates a new `AccessTokenRefreshRequest`.
 	/// - Parameter grantType: The type of grant.
 	/// - Parameter refreshToken: The refresh token issued to the client.
 	/// - Parameter scope: The scope of the access request.
-	public init(grantType: GrantType = .refreshToken, refreshToken: String, scope: String? = nil) {
+	public init(grantType: GrantType = .refreshToken, refreshToken: String, scope: Scope = Scope()) {
 		self.grantType = grantType
 		self.refreshToken = refreshToken
 		self.scope = scope
+	}
+
+	public init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+
+		grantType = try container.decode(forKey: .grantType)
+		refreshToken = try container.decode(forKey: .refreshToken)
+		scope = try container.decodeIfPresent(forKey: .scope) ?? Scope()
+	}
+
+	public func encode(to encoder: Encoder) throws {
+		var container = encoder.container(keyedBy: CodingKeys.self)
+
+		try container.encode(grantType, forKey: .grantType)
+		try container.encode(refreshToken, forKey: .refreshToken)
+		if !scope.isEmpty {
+			try container.encode(scope, forKey: .scope)
+		}
 	}
 }
 
@@ -168,7 +186,7 @@ public struct AccessTokenResponse: Codable, Equatable {
 	/// OPTIONAL, if identical to the scope requested by the client;
 	/// otherwise, REQUIRED.  The scope of the access token as
 	/// described by Section 3.3.
-	public var scope: String?
+	public var scope: Scope
 
 	/// Creates a new `AccessTokenResponse`.
 	///
@@ -182,13 +200,34 @@ public struct AccessTokenResponse: Codable, Equatable {
 		type: AccessTokenType,
 		expiresIn: TokenExpiration?,
 		refreshToken: String? = nil,
-		scope: String? = nil
+		scope: Scope = Scope()
 	) {
 		self.accessToken = accessToken
 		self.type = type
 		self.expiration = expiresIn
 		self.refreshToken = refreshToken
 		self.scope = scope
+	}
+
+	public init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+
+		accessToken = try container.decode(forKey: .accessToken)
+		type = try container.decode(forKey: .type)
+		expiration = try container.decodeIfPresent(forKey: .expiration)
+		refreshToken = try container.decodeIfPresent(forKey: .refreshToken)
+		scope = try container.decodeIfPresent(forKey: .scope) ?? Scope()
+	}
+
+	public func encode(to encoder: Encoder) throws {
+		var container = encoder.container(keyedBy: CodingKeys.self)
+		try container.encode(accessToken, forKey: .accessToken)
+		try container.encode(type, forKey: .type)
+		try expiration.map { try container.encode($0, forKey: .expiration) }
+		try refreshToken.map { try container.encode($0, forKey: .refreshToken) }
+		if !scope.isEmpty {
+			try container.encode(scope, forKey: .scope)
+		}
 	}
 }
 

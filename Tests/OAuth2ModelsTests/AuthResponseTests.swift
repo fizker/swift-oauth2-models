@@ -4,7 +4,7 @@ import OAuth2Models
 final class AuthResponseTests: XCTestCase {
 	typealias JSON = [AuthResponse.CodingKeys: String]
 	var json: JSON = [:]
-	var request = AuthRequest(clientID: "", state: nil, scope: nil)
+	var request = AuthRequest(clientID: "", state: nil)
 
 	override func setUpWithError() throws {
 		json = [
@@ -12,7 +12,7 @@ final class AuthResponseTests: XCTestCase {
 			.state: "some state",
 		]
 
-		request = AuthRequest(clientID: "client id", state: nil, scope: nil)
+		request = AuthRequest(clientID: "client id", state: nil)
 	}
 
 	func test__equalsOperator() throws {
@@ -23,7 +23,7 @@ final class AuthResponseTests: XCTestCase {
 					request: AuthRequest(
 						clientID: "foo",
 						state: "the state",
-						scope: nil
+						scope: Scope()
 					)
 				),
 				AuthResponse(

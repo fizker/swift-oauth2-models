@@ -27,7 +27,7 @@ public struct AuthRequest: Codable, Equatable {
 	public var redirectURL: URL?
 
 	/// OPTIONAL.  The scope of the access request as described by Section 3.3.
-	public var scope: String?
+	public var scope: Scope
 
 	/// RECOMMENDED.  An opaque value used by the client to maintain
 	/// state between the request and callback.
@@ -49,7 +49,7 @@ public struct AuthRequest: Codable, Equatable {
 		clientID: String,
 		redirectURL: URL,
 		state: String?,
-		scope: String?
+		scope: Scope = Scope()
 	) {
 		self.responseType = responseType
 		self.clientID = clientID
@@ -68,7 +68,7 @@ public struct AuthRequest: Codable, Equatable {
 		responseType: ResponseType = .code,
 		clientID: String,
 		state: String?,
-		scope: String?
+		scope: Scope = Scope()
 	) {
 		self.responseType = responseType
 		self.clientID = clientID
@@ -91,6 +91,27 @@ public struct AuthRequest: Codable, Equatable {
 	/// - Parameter url: A URL to a human-readable web page.
 	public func error(code: AuthError.ErrorCode, description: ErrorDescription?, url: ErrorURL?) -> AuthError {
 		AuthError(code: code, request: self, description: description, url: url)
+	}
+
+	public init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+
+		responseType = try container.decode(forKey: .responseType)
+		clientID = try container.decode(forKey: .clientID)
+		redirectURL = try container.decodeIfPresent(forKey: .redirectURL)
+		state = try container.decodeIfPresent(forKey: .state)
+		scope = try container.decodeIfPresent(forKey: .scope) ?? Scope()
+	}
+	public func encode(to encoder: Encoder) throws {
+		var container = encoder.container(keyedBy: CodingKeys.self)
+
+		try container.encode(responseType, forKey: .responseType)
+		try container.encode(clientID, forKey: .clientID)
+		try redirectURL.map { try container.encode($0, forKey: .redirectURL) }
+		try state.map { try container.encode($0, forKey: .state) }
+		if !scope.isEmpty {
+			try container.encode(scope, forKey: .scope)
+		}
 	}
 }
 

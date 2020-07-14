@@ -3,19 +3,19 @@ import OAuth2Models
 
 extension AuthError {
 	init(code: ErrorCode, description: String?, state: String?) {
-		let r = AuthRequest(clientID: "", state: state, scope: nil)
+		let r = AuthRequest(clientID: "", state: state, scope: Scope())
 		self = r.error(code: code, description: try! description.map(ErrorDescription.init(_:)), url: nil)
 	}
 
 	init(code: ErrorCode, description: String?, url: URL, state: String?) {
-		let r = AuthRequest(clientID: "", state: state, scope: nil)
+		let r = AuthRequest(clientID: "", state: state, scope: Scope())
 		self = r.error(code: code, description: try! description.map(ErrorDescription.init(_:)), url: try! ErrorURL(url))
 	}
 }
 
 extension AuthResponse {
 	init(code: String, state: String?) {
-		let r = AuthRequest(clientID: "", state: state, scope: nil)
+		let r = AuthRequest(clientID: "", state: state, scope: Scope())
 		self = r.response(code: code)
 	}
 }

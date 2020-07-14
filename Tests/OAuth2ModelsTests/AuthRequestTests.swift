@@ -147,7 +147,7 @@ final class AuthRequestTests: XCTestCase {
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
-					scope: nil
+					scope: Scope()
 				),
 				false
 			),
@@ -157,6 +157,26 @@ final class AuthRequestTests: XCTestCase {
 			XCTAssertEqual(lhs == rhs, expected, "\(lhs) == \(rhs)")
 			XCTAssertEqual(lhs == rhs, rhs == lhs, "order of operands")
 		}
+	}
+
+	func test__decodable__scopeSetToNull__decodesAsExpected() throws {
+		let json = """
+		{
+			"response_type": "code",
+			"client_id": "client",
+			"scope": null
+		}
+		"""
+
+		let data = json.data(using: .utf8)!
+		let object = try decode(data) as AuthRequest
+
+		XCTAssertEqual(object, AuthRequest(
+			responseType: .code,
+			clientID: "client",
+			state: nil,
+			scope: Scope()
+		))
 	}
 
 	func test__decodable__minimumObject__decodesAsExpected() throws {
@@ -171,7 +191,7 @@ final class AuthRequestTests: XCTestCase {
 			responseType: .code,
 			clientID: "client",
 			state: nil,
-			scope: nil
+			scope: Scope()
 		))
 	}
 
@@ -228,7 +248,7 @@ final class AuthRequestTests: XCTestCase {
 		let object = AuthRequest(
 			clientID: "client",
 			state: nil,
-			scope: nil
+			scope: Scope()
 		)
 		let data = try encode(object)
 		let actual = try decode(data) as [String: String]
@@ -245,7 +265,7 @@ final class AuthRequestTests: XCTestCase {
 		let request = AuthRequest(
 			clientID: "client id",
 			state: nil,
-			scope: nil
+			scope: Scope()
 		)
 
 		let response = request.response(code: "response code")
@@ -270,7 +290,7 @@ final class AuthRequestTests: XCTestCase {
 		let request = AuthRequest(
 			clientID: "client id",
 			state: nil,
-			scope: nil
+			scope: Scope()
 		)
 
 		let error = request.error(
@@ -311,7 +331,7 @@ final class AuthRequestTests: XCTestCase {
 		let request = AuthRequest(
 			clientID: "client id",
 			state: nil,
-			scope: nil
+			scope: Scope()
 		)
 
 		let error = request.error(

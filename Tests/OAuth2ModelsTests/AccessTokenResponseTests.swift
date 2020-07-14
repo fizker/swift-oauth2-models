@@ -1,6 +1,12 @@
 import XCTest
 import OAuth2Models
 
+extension Scope: ExpressibleByStringLiteral {
+	public init(stringLiteral value: StringLiteralType) {
+		try! self.init(string: value)
+	}
+}
+
 final class AccessTokenResponseTests: XCTestCase {
 	func test__decodable__fullObject__decodesAsExpected() throws {
 		let data = try json()
@@ -21,7 +27,7 @@ final class AccessTokenResponseTests: XCTestCase {
 		XCTAssertEqual(object.type, .bearer)
 		XCTAssertNil(object.expiration)
 		XCTAssertNil(object.refreshToken)
-		XCTAssertNil(object.scope)
+		XCTAssertTrue(object.scope.isEmpty)
 	}
 
 	func test__decodable__decimalExpiration__decodesAsExpected() throws {

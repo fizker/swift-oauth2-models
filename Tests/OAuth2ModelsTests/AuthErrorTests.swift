@@ -4,7 +4,7 @@ import OAuth2Models
 final class AuthErrorTests: XCTestCase {
 	typealias JSON = [AuthError.CodingKeys: String]
 	var json: JSON = [:]
-	var request = AuthRequest(clientID: "", state: nil, scope: nil)
+	var request = AuthRequest(clientID: "", state: nil)
 
 	override func setUpWithError() throws {
 		json = [
@@ -14,7 +14,7 @@ final class AuthErrorTests: XCTestCase {
 			.state: "some state",
 		]
 
-		request = AuthRequest(clientID: "client id", state: nil, scope: nil)
+		request = AuthRequest(clientID: "client id", state: nil)
 	}
 
 	func test__equalsOperator() throws {
@@ -36,7 +36,7 @@ final class AuthErrorTests: XCTestCase {
 					request: AuthRequest(
 						clientID: "client 2",
 						state: "the state",
-						scope: nil
+						scope: Scope()
 					),
 					description: nil,
 					url: nil

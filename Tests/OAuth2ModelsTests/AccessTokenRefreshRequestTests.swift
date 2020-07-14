@@ -17,12 +17,26 @@ final class AccessTokenRefreshRequestTests: XCTestCase {
 		XCTAssertNoThrow(try decode(data) as AccessTokenRefreshRequest)
 	}
 
+	func test__decodable__scopeSetToNull__returnsDecodedObject() throws {
+		json[.scope] = nil
+		let data = """
+		{
+			"grant_type": "refresh_token",
+			"refresh_token": "foo",
+			"scope": null
+		}
+		""".data(using: .utf8)!
+		let request = try decode(data) as AccessTokenRefreshRequest
+
+		XCTAssertTrue(request.scope.isEmpty)
+	}
+
 	func test__decodable__missingScope__returnsDecodedObject() throws {
 		json.removeValue(forKey: .scope)
 		let data = try encode(json)
 		let request = try decode(data) as AccessTokenRefreshRequest
 
-		XCTAssertNil(request.scope)
+		XCTAssertTrue(request.scope.isEmpty)
 	}
 
 	func test__decodable__invalidGrantType__throws() throws {
