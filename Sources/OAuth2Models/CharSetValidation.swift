@@ -14,6 +14,10 @@ enum ValidCharacterSet {
 		case .includingSpace: return validCharactersIncludingSpace
 		}
 	}
+
+	func isValid(_ str: String) -> Bool {
+		str.unicodeScalars.allSatisfy(characterSet.contains(_:))
+	}
 }
 
 func assert(_ value: String, charset: ValidCharacterSet) throws {

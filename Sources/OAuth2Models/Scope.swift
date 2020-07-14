@@ -31,6 +31,8 @@ public struct Scope {
 
 	fileprivate static func assert(_ item: String) throws { try OAuth2Models.assert(item, charset: Self.validCharacters) }
 	fileprivate static let validCharacters = ValidCharacterSet.excludingSpace
+
+	public var isValid: Bool { items.allSatisfy(Self.validCharacters.isValid(_:)) }
 }
 
 public extension Scope {

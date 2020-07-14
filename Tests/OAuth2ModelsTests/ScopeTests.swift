@@ -266,4 +266,18 @@ final class ScopeTests: XCTestCase {
 
 		XCTAssertEqual("null", json)
 	}
+
+	func test__isValid__multipleScopes_allValid__returnsTrue() throws {
+		let scope = try Scope(string: "foo bar baz")
+
+		XCTAssertTrue(scope.isValid)
+	}
+
+	func test__isValid__multipleScopes_oneIsInvalid__returnsFalse() throws {
+		let json = "foo baår baz"
+		let data = try encode(json)
+		let scope: Scope = try decode(data)
+
+		XCTAssertFalse(scope.isValid)
+	}
 }
