@@ -14,6 +14,10 @@ public struct Scope {
 	}
 
 	public init(string: String) throws {
+		if string.isEmpty {
+			throw CharacterSetValidationError.emptyValue
+		}
+
 		let items = Self.splitStringInput(string)
 		try self.init(items: items)
 	}

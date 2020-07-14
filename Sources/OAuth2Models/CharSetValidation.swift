@@ -21,6 +21,10 @@ enum ValidCharacterSet {
 }
 
 func assert(_ value: String, charset: ValidCharacterSet) throws {
+	if value.isEmpty {
+		throw CharacterSetValidationError.emptyValue
+	}
+
 	let invalidCharacters = value.unicodeScalars.filter(charset.characterSet.inverted.contains)
 	guard invalidCharacters.isEmpty
 	else { throw CharacterSetValidationError.containsInvalidCharacters(String(invalidCharacters)) }
@@ -30,6 +34,9 @@ func assert(_ value: String, charset: ValidCharacterSet) throws {
 public enum CharacterSetValidationError: Swift.Error {
 	/// Error thrown when a string includes invalid characters. The associated value is the characters that were invalid.
 	case containsInvalidCharacters(String)
+
+	/// Error thrown when a string is empty.
+	case emptyValue
 }
 
 /// Wraps the description field of the error models and ensures that it contains only the characters that the spec allows.

@@ -30,6 +30,10 @@ final class ScopeTests: XCTestCase {
 		XCTAssertTrue(scope.isEmpty)
 	}
 
+	func test__initWithString__stringIsEmpty__throws() throws {
+		XCTAssertThrowsError(try Scope(string: ""))
+	}
+
 	func test__initWithString__validSingleScope__hasSingleItem() throws {
 		let scope = try Scope(string: "foo")
 
@@ -74,6 +78,16 @@ final class ScopeTests: XCTestCase {
 		let scope = try Scope(string: " foo  bar ")
 
 		XCTAssertEqual(["foo", "bar"].sorted(), scope.sorted())
+	}
+
+	func test__initWithItems__emptyArray__hasZeroItems() throws {
+		let scope = try Scope(items: [])
+
+		XCTAssertTrue(scope.isEmpty)
+	}
+
+	func test__initWithItems__singleEmptyString__throws() throws {
+		XCTAssertThrowsError(try Scope(items: [""]))
 	}
 
 	func test__initWithItems__validSingleScope__hasSingleItem() throws {
