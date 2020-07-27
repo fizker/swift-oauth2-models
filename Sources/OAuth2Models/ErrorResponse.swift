@@ -12,7 +12,7 @@ import Foundation
 /// See [4.2.2.1](https://tools.ietf.org/html/rfc6749#section-4.2.2.1) for the error response in use for Implicit Grant.
 ///
 /// See [5.2](https://tools.ietf.org/html/rfc6749#section-5.2) for the generic Error Response used for unspecified types.
-public struct ErrorResponse: Codable, Equatable {
+public struct ErrorResponse: Error, Codable, Equatable {
 	public enum CodingKeys: String, CodingKey {
 		case code = "error"
 		case description = "error_description"
