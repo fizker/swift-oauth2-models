@@ -1,18 +1,17 @@
 import Foundation
 
-/// [4.1.2.1.](https://tools.ietf.org/html/rfc6749#section-4.1.2.1)  Error Response
+/// Error Response for all error codes in use by RFC 6749.
+/// This covers [4.1.2.1 Authorization Code Grant](https://tools.ietf.org/html/rfc6749#section-4.1.2.1),
+/// [4.2.2.1 Implicit Grant](https://tools.ietf.org/html/rfc6749#section-4.2.2.1) and [5.2 for other uses](https://tools.ietf.org/html/rfc6749#section-5.2).
 ///
-/// If the request fails due to a missing, invalid, or mismatching
-/// redirection URI, or if the client identifier is missing or invalid,
-/// the authorization server SHOULD inform the resource owner of the
-/// error and MUST NOT automatically redirect the user-agent to the
-/// invalid redirection URI.
+/// The authorization server responds with an HTTP 400 (Bad Request)
+/// status code (unless specified otherwise).
 ///
-/// If the resource owner denies the access request or if the request
-/// fails for reasons other than a missing or invalid redirection URI,
-/// the authorization server informs the client by adding the following
-/// parameters to the query component of the redirection URI using the
-/// "application/x-www-form-urlencoded" format, per Appendix B.
+/// See [4.1.2.1](https://tools.ietf.org/html/rfc6749#section-4.1.2.1) for the error response in use for Authorization Code Grant.
+///
+/// See [4.2.2.1](https://tools.ietf.org/html/rfc6749#section-4.2.2.1) for the error response in use for Implicit Grant.
+///
+/// See [5.2](https://tools.ietf.org/html/rfc6749#section-5.2) for the generic Error Response used for unspecified types.
 public struct ErrorResponse: Codable, Equatable {
 	public enum CodingKeys: String, CodingKey {
 		case code = "error"
@@ -23,14 +22,75 @@ public struct ErrorResponse: Codable, Equatable {
 
 	/// The available error codes.
 	public enum ErrorCode: String, Codable {
+		/// The codes that are valid according to section [5.2 Error Response](https://tools.ietf.org/html/rfc6749#section-5.2)
+		public var valid5_2Codes: [ErrorCode] {
+			[
+				.invalidRequest,
+				.invalidClient,
+				.invalidGrant,
+				.unauthorizedClient,
+				.unsupportedGrantType,
+				.invalidScope,
+			]
+		}
+		/// The codes that are valid according to section [4.1.2.1 Authorization Code Grant Error Response](https://tools.ietf.org/html/rfc6749#section-4.1.2.1)
+		public var valid4_1_2_1Codes: [ErrorCode] {
+			[
+				.invalidRequest,
+				.unauthorizedClient,
+				.accessDenied,
+				.unsupportedResponseType,
+				.invalidScope,
+				.serverError,
+				.temporarilyUnavailable,
+			]
+		}
+		/// The codes that are valid according to section [4.2.2.1 Implicit Grant Error Response](https://tools.ietf.org/html/rfc6749#section-4.2.2.1)
+		public var valid4_2_2_1Codes: [ErrorCode] {
+			[
+				.invalidRequest,
+				.unauthorizedClient,
+				.accessDenied,
+				.unsupportedResponseType,
+				.invalidScope,
+				.serverError,
+				.temporarilyUnavailable,
+			]
+		}
+
 		/// The request is missing a required parameter, includes an
-		/// invalid parameter value, includes a parameter more than
-		/// once, or is otherwise malformed.
+		/// unsupported parameter value (other than grant type),
+		/// repeats a parameter, includes multiple credentials,
+		/// utilizes more than one mechanism for authenticating the
+		/// client, or is otherwise malformed.
 		case invalidRequest = "invalid_request"
+
+		/// Client authentication failed (e.g., unknown client, no
+		/// client authentication included, or unsupported
+		/// authentication method).  The authorization server MAY
+		/// return an HTTP 401 (Unauthorized) status code to indicate
+		/// which HTTP authentication schemes are supported.  If the
+		/// client attempted to authenticate via the "Authorization"
+		/// request header field, the authorization server MUST
+		/// respond with an HTTP 401 (Unauthorized) status code and
+		/// include the "WWW-Authenticate" response header field
+		/// matching the authentication scheme used by the client.
+		case invalidClient = "invalid_client"
+
+		/// The provided authorization grant (e.g., authorization
+		/// code, resource owner credentials) or refresh token is
+		/// invalid, expired, revoked, does not match the redirection
+		/// URI used in the authorization request, or was issued to
+		/// another client.
+		case invalidGrant = "invalid_grant"
 
 		/// The client is not authorized to request an authorization
 		/// code using this method.
 		case unauthorizedClient = "unauthorized_client"
+
+		/// The authorization grant type is not supported by the
+		/// authorization server.
+		case unsupportedGrantType = "unsupported_grant_type"
 
 		/// The resource owner or authorization server denied the request.
 		case accessDenied = "access_denied"
@@ -39,7 +99,8 @@ public struct ErrorResponse: Codable, Equatable {
 		/// authorization code using this method.
 		case unsupportedResponseType = "unsupported_response_type"
 
-		/// The requested scope is invalid, unknown, or malformed.
+		/// The requested scope is invalid, unknown, or malformed, or
+		/// exceeds the scope granted by the resource owner.
 		case invalidScope = "invalid_scope"
 
 		/// The authorization server encountered an unexpected
