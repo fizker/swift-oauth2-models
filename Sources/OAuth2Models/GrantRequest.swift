@@ -4,8 +4,8 @@ import Foundation
 public enum GrantRequest: Decodable, Equatable {
 	/// The grant is for AccessTokenRequest.
 	case authCodeAccessToken(AuthCodeAccessTokenRequest)
-	/// The grant is for AccessTokenRefreshRequest.
-	case authCodeRefreshAccessToken(AuthCodeAccessTokenRefreshRequest)
+	/// The grant is for RefreshTokenRequest.
+	case refreshToken(RefreshTokenRequest)
 	/// The grant is for PasswordAccessTokenRequest.
 	case passwordAccessToken(PasswordAccessTokenRequest)
 
@@ -28,9 +28,9 @@ public enum GrantRequest: Decodable, Equatable {
 		if let _ = AuthCodeAccessTokenRequest.GrantType(rawValue: wrapper.type) {
 			let req = try AuthCodeAccessTokenRequest(from: decoder)
 			self = .authCodeAccessToken(req)
-		} else if let _ = AuthCodeAccessTokenRefreshRequest.GrantType(rawValue: wrapper.type) {
-			let req = try AuthCodeAccessTokenRefreshRequest(from: decoder)
-			self = .authCodeRefreshAccessToken(req)
+		} else if let _ = RefreshTokenRequest.GrantType(rawValue: wrapper.type) {
+			let req = try RefreshTokenRequest(from: decoder)
+			self = .refreshToken(req)
 		} else if let _ = PasswordAccessTokenRequest.GrantType(rawValue: wrapper.type) {
 			let req = try PasswordAccessTokenRequest(from: decoder)
 			self = .passwordAccessToken(req)

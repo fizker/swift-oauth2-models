@@ -1,8 +1,8 @@
 import XCTest
 import OAuth2Models
 
-final class AuthCodeGrantAccessTokenRefreshRequestTests: XCTestCase {
-	var json: [AuthCodeAccessTokenRefreshRequest.CodingKeys: String] = [:]
+final class AuthCodeGrantRefreshTokenRequestTests: XCTestCase {
+	var json: [RefreshTokenRequest.CodingKeys: String] = [:]
 
 	override func setUpWithError() throws {
 		json = [
@@ -14,7 +14,7 @@ final class AuthCodeGrantAccessTokenRefreshRequestTests: XCTestCase {
 
 	func test__setUp__noChanges__decodesCorrectly() throws {
 		let data = try encode(json)
-		XCTAssertNoThrow(try decode(data) as AuthCodeAccessTokenRefreshRequest)
+		XCTAssertNoThrow(try decode(data) as RefreshTokenRequest)
 	}
 
 	func test__decodable__scopeSetToNull__returnsDecodedObject() throws {
@@ -26,7 +26,7 @@ final class AuthCodeGrantAccessTokenRefreshRequestTests: XCTestCase {
 			"scope": null
 		}
 		""".data(using: .utf8)!
-		let request = try decode(data) as AuthCodeAccessTokenRefreshRequest
+		let request = try decode(data) as RefreshTokenRequest
 
 		XCTAssertTrue(request.scope.isEmpty)
 	}
@@ -34,7 +34,7 @@ final class AuthCodeGrantAccessTokenRefreshRequestTests: XCTestCase {
 	func test__decodable__missingScope__returnsDecodedObject() throws {
 		json.removeValue(forKey: .scope)
 		let data = try encode(json)
-		let request = try decode(data) as AuthCodeAccessTokenRefreshRequest
+		let request = try decode(data) as RefreshTokenRequest
 
 		XCTAssertTrue(request.scope.isEmpty)
 	}
@@ -43,25 +43,25 @@ final class AuthCodeGrantAccessTokenRefreshRequestTests: XCTestCase {
 		json[.grantType] = "foo"
 		let data = try encode(json)
 
-		XCTAssertThrowsError(try decode(data) as AuthCodeAccessTokenRefreshRequest)
+		XCTAssertThrowsError(try decode(data) as RefreshTokenRequest)
 	}
 
 	func test__decodable__missingGrantType__throws() throws {
 		json.removeValue(forKey: .grantType)
 		let data = try encode(json)
 
-		XCTAssertThrowsError(try decode(data) as AuthCodeAccessTokenRefreshRequest)
+		XCTAssertThrowsError(try decode(data) as RefreshTokenRequest)
 	}
 
 	func test__decodable__missingRefreshToken__throws() throws {
 		json.removeValue(forKey: .refreshToken)
 		let data = try encode(json)
 
-		XCTAssertThrowsError(try decode(data) as AuthCodeAccessTokenRefreshRequest)
+		XCTAssertThrowsError(try decode(data) as RefreshTokenRequest)
 	}
 
 	func test__encodable__fullObject__encodesAsExpected() throws {
-		let object = AuthCodeAccessTokenRefreshRequest(refreshToken: "foo", scope: "bar")
+		let object = RefreshTokenRequest(refreshToken: "foo", scope: "bar")
 		let data = try encode(object)
 		let actual = try decode(data) as [String: String]
 
@@ -75,7 +75,7 @@ final class AuthCodeGrantAccessTokenRefreshRequestTests: XCTestCase {
 	}
 
 	func test__encodable__minimalObject__encodesAsExpected() throws {
-		let object = AuthCodeAccessTokenRefreshRequest(refreshToken: "foo")
+		let object = RefreshTokenRequest(refreshToken: "foo")
 		let data = try encode(object)
 		let actual = try decode(data) as [String: String]
 

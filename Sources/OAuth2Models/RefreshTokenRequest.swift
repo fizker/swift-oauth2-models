@@ -7,7 +7,7 @@ import Foundation
 /// following parameters using the "application/x-www-form-urlencoded"
 /// format per Appendix B with a character encoding of UTF-8 in the HTTP
 /// request entity-body:
-public struct AuthCodeAccessTokenRefreshRequest: Codable, Equatable {
+public struct RefreshTokenRequest: Codable, Equatable {
 	public enum CodingKeys: String, CodingKey {
 		case grantType = "grant_type"
 		case refreshToken = "refresh_token"
@@ -30,7 +30,7 @@ public struct AuthCodeAccessTokenRefreshRequest: Codable, Equatable {
 	/// resource owner.
 	public var scope: Scope
 
-	/// Creates a new `AccessTokenRefreshRequest`.
+	/// Creates a new `RefreshTokenRequest`.
 	/// - Parameter grantType: The type of grant.
 	/// - Parameter refreshToken: The refresh token issued to the client.
 	/// - Parameter scope: The scope of the access request.
