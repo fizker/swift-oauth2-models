@@ -1,12 +1,6 @@
 import XCTest
 import OAuth2Models
 
-extension Scope: ExpressibleByStringLiteral {
-	public init(stringLiteral value: StringLiteralType) {
-		try! self.init(string: value)
-	}
-}
-
 final class AccessTokenResponseTests: XCTestCase {
 	func test__decodable__fullObject__decodesAsExpected() throws {
 		let data = try json()

@@ -26,5 +26,42 @@ public struct PasswordAccessTokenRequest: Codable, Equatable {
 	public var password: String
 
 	/// OPTIONAL.  The scope of the access request as described by Section 3.3.
-	public var scope: Scope?
+	public var scope: Scope
+
+	/// Creates a new `PasswordAccessTokenRequest`.
+	/// - Parameter grantType: Value MUST be set to "password".
+	/// - Parameter username: The resource owner username.
+	/// - Parameter password: The resource owner password.
+	/// - Parameter scope: The scope of the access request as described by Section 3.3.
+	public init(
+		grantType: GrantType = .password,
+		username: String,
+		password: String,
+		scope: Scope = Scope()
+	) {
+		self.grantType = grantType
+		self.username = username
+		self.password = password
+		self.scope = scope
+	}
+
+	public init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+
+		grantType = try container.decode(forKey: .grantType)
+		username = try container.decode(forKey: .username)
+		password = try container.decode(forKey: .password)
+		scope = try container.decodeIfPresent(forKey: .scope) ?? Scope()
+	}
+
+	public func encode(to encoder: Encoder) throws {
+		var container = encoder.container(keyedBy: CodingKeys.self)
+
+		try container.encode(grantType, forKey: .grantType)
+		try container.encode(username, forKey: .username)
+		try container.encode(password, forKey: .password)
+		if !scope.isEmpty {
+			try container.encode(scope, forKey: .scope)
+		}
+	}
 }
