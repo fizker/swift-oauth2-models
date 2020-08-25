@@ -16,4 +16,9 @@ There is no logic outside of validations for data content and parsing of the raw
 
 For examples, see the content of the [Examples playground](Examples.playground).
 
-- [4.5 Extension Grants](Examples.playground/Pages/4.5%20Extension%20Grant.xcplaygroundpage/Contents.swift) - Shows how to use custom or unsupported types.
+- [4.5 Extension Grants](Examples.playground/Pages/4.5%20Extension%20Grant.xcplaygroundpage/Contents.swift) - Shows how to use custom types or types otherwise not supported by this library.
+- [Decoding Custom Properties](Examples.playground/Pages/4.5%20Extension%20Grant.xcplaygroundpage/Contents.swift) - Shows how to decode custom properties.
+  Short version: Simply call `decoder.decode(type, from: data)` multiple times with different `type` values and the same `data` value.
+
+- [Encoding Custom Properties](Examples.playground/Pages/4.5%20Extension%20Grant.xcplaygroundpage/Contents.swift) - Shows how to encode custom properties.
+  Short version: Use a custom `Encodable` type with an array of `Encodable` items, and a custom `encode(to:)` encoding the items one after another.
