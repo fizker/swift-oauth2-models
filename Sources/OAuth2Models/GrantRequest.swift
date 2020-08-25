@@ -4,10 +4,12 @@ import Foundation
 public enum GrantRequest: Decodable, Equatable {
 	/// The grant is for AccessTokenRequest.
 	case authCodeAccessToken(AuthCodeAccessTokenRequest)
-	/// The grant is for RefreshTokenRequest.
-	case refreshToken(RefreshTokenRequest)
+	/// The grant is for ClientCredentialsAccessTokenRequest
+	case clientCredentialsAccessToken(ClientCredentialsAccessTokenRequest)
 	/// The grant is for PasswordAccessTokenRequest.
 	case passwordAccessToken(PasswordAccessTokenRequest)
+	/// The grant is for RefreshTokenRequest.
+	case refreshToken(RefreshTokenRequest)
 
 	/// The errors that can happen when decoding a GrantRequest.
 	public enum Error: Swift.Error {
@@ -34,6 +36,9 @@ public enum GrantRequest: Decodable, Equatable {
 		} else if let _ = PasswordAccessTokenRequest.GrantType(rawValue: wrapper.type) {
 			let req = try PasswordAccessTokenRequest(from: decoder)
 			self = .passwordAccessToken(req)
+		} else if let _ = ClientCredentialsAccessTokenRequest.GrantType(rawValue: wrapper.type) {
+			let req = try ClientCredentialsAccessTokenRequest(from: decoder)
+			self = .clientCredentialsAccessToken(req)
 		} else {
 			throw Error.unknownGrantType(wrapper.type)
 		}

@@ -5,6 +5,7 @@ final class GrantRequestTests: XCTestCase {
 	var accessTokenJSON: [AuthCodeAccessTokenRequest.CodingKeys: String] = [:]
 	var accessTokenRefreshJSON: [RefreshTokenRequest.CodingKeys: String] = [:]
 	var passwordAccessTokenJSON: [PasswordAccessTokenRequest.CodingKeys: String] = [:]
+	var clientCredentialsAccessTokenRequestJSON: [ClientCredentialsAccessTokenRequest.CodingKeys: String] = [:]
 
 	override func setUpWithError() throws {
 		accessTokenJSON = [
@@ -23,6 +24,10 @@ final class GrantRequestTests: XCTestCase {
 			.username: "foo",
 			.password: "bar",
 			.scope: "baz",
+		]
+		clientCredentialsAccessTokenRequestJSON = [
+			.grantType: "client_credentials",
+			.scope: "foo bar",
 		]
 	}
 
@@ -76,7 +81,7 @@ final class GrantRequestTests: XCTestCase {
 		XCTAssertEqual(.authCodeAccessToken(expected), actual)
 	}
 
-	func test__decodable__PasswordAccessTokenRequest__fullData() throws {
+	func test__decodable__PasswordAccessTokenRequest_fullData__decodesAsExpected() throws {
 		let data = try encode(passwordAccessTokenJSON)
 		let expected = try decode(data) as PasswordAccessTokenRequest
 		let actual = try decode(data) as GrantRequest
@@ -84,12 +89,29 @@ final class GrantRequestTests: XCTestCase {
 		XCTAssertEqual(.passwordAccessToken(expected), actual)
 	}
 
-	func test__decodable__PasswordAccessTokenRequest__minimumData() throws {
+	func test__decodable__PasswordAccessTokenRequest_minimumData__decodesAsExpected() throws {
 		passwordAccessTokenJSON.removeValue(forKey: .scope)
 		let data = try encode(passwordAccessTokenJSON)
 		let expected = try decode(data) as PasswordAccessTokenRequest
 		let actual = try decode(data) as GrantRequest
 
 		XCTAssertEqual(.passwordAccessToken(expected), actual)
+	}
+
+	func test__decodable__ClientCredentialsAccessTokenRequest_fullData__decodesAsExpected() throws {
+		let data = try encode(clientCredentialsAccessTokenRequestJSON)
+		let expected = try decode(data) as ClientCredentialsAccessTokenRequest
+		let actual = try decode(data) as GrantRequest
+
+		XCTAssertEqual(.clientCredentialsAccessToken(expected), actual)
+	}
+
+	func test__decodable__ClientCredentialsAccessTokenRequest_minimumData__decodesAsExpected() throws {
+		clientCredentialsAccessTokenRequestJSON.removeValue(forKey: .scope)
+		let data = try encode(clientCredentialsAccessTokenRequestJSON)
+		let expected = try decode(data) as ClientCredentialsAccessTokenRequest
+		let actual = try decode(data) as GrantRequest
+
+		XCTAssertEqual(.clientCredentialsAccessToken(expected), actual)
 	}
 }

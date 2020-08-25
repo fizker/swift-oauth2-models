@@ -97,7 +97,6 @@ class PasswordAccessTokenRequestTests: XCTestCase {
 			"grant_type": "password",
 			"username": "abc",
 			"password": "def",
-			"scope": "foo bar",
 		]
 
 		// Scope is unsorted, so we need to convert to an unsorted storage

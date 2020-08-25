@@ -18,7 +18,6 @@ final class AuthCodeGrantRefreshTokenRequestTests: XCTestCase {
 	}
 
 	func test__decodable__scopeSetToNull__returnsDecodedObject() throws {
-		json[.scope] = nil
 		let data = """
 		{
 			"grant_type": "refresh_token",
