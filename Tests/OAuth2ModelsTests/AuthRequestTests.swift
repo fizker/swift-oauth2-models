@@ -346,7 +346,7 @@ final class AuthRequestTests: XCTestCase {
 		XCTAssertEqual(error, ErrorResponse(
 			code: .temporarilyUnavailable,
 			description: "error description",
-			url: URL(string: "https://example.com/error")!,
+			url: "https://example.com/error",
 			state: nil
 		))
 	}
@@ -367,7 +367,7 @@ final class AuthRequestTests: XCTestCase {
 		XCTAssertEqual(error, ErrorResponse(
 			code: .temporarilyUnavailable,
 			description: "error description",
-			url: URL(string: "https://example.com/error")!,
+			url: "https://example.com/error",
 			state: "some state"
 		))
 	}

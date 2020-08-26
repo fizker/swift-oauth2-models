@@ -79,13 +79,13 @@ final class ErrorResponseTests: XCTestCase {
 				ErrorResponse(
 					code: .accessDenied,
 					description: "foo",
-					url: URL(string: "https://example.com")!,
+					url: "https://example.com",
 					state: "bar"
 				),
 				ErrorResponse(
 					code: .accessDenied,
 					description: "foo",
-					url: URL(string: "http://example.com")!,
+					url: "http://example.com",
 					state: "bar"
 				),
 				false
@@ -94,7 +94,7 @@ final class ErrorResponseTests: XCTestCase {
 				ErrorResponse(
 					code: .invalidScope,
 					description: "foo",
-					url: URL(string: "https://example.com")!,
+					url: "https://example.com",
 					state: "bar"
 				),
 				ErrorResponse(
@@ -158,7 +158,7 @@ final class ErrorResponseTests: XCTestCase {
 		XCTAssertEqual(object, ErrorResponse(
 			code: .serverError,
 			description: "some description",
-			url: URL(string: "https://example.com")!,
+			url: "https://example.com",
 			state: "some state"
 		))
 	}

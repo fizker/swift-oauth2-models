@@ -144,6 +144,24 @@ public struct ErrorResponse: Error, Codable, Equatable {
 	/// Creates a new `ErrorResponse`.
 	///
 	/// - Parameter code: A machine-readable error code.
+	/// - Parameter state: The exact value received from the client.
+	/// - Parameter description: A human-readable description.
+	/// - Parameter url: A URL to a human-readable web page.
+	public init(
+		code: ErrorCode,
+		description: ErrorDescription?,
+		url: ErrorURL? = nil,
+		state: String? = nil
+	) {
+		self.code = code
+		self.description = description?.value
+		self.url = url?.value
+		self.state = state
+	}
+
+	/// Creates a new `ErrorResponse`.
+	///
+	/// - Parameter code: A machine-readable error code.
 	/// - Parameter request: The `AuthRequest` that spawned the error.
 	/// - Parameter description: A human-readable description.
 	/// - Parameter url: A URL to a human-readable web page.
@@ -151,7 +169,7 @@ public struct ErrorResponse: Error, Codable, Equatable {
 		code: ErrorCode,
 		request: AuthRequest,
 		description: ErrorDescription?,
-		url: ErrorURL?
+		url: ErrorURL? = nil
 	) {
 		self.code = code
 		self.description = description?.value
