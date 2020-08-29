@@ -1,7 +1,7 @@
 import XCTest
 import OAuth2Models
 
-final class AuthResponseTests: XCTestCase {
+final class AuthCodeAuthResponseTests: XCTestCase {
 	typealias JSON = [AuthCodeAuthResponse.CodingKeys: String]
 	var json: JSON = [:]
 	var request = AuthRequest(clientID: "", state: nil)
