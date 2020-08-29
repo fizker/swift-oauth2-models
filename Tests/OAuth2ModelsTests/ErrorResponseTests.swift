@@ -4,7 +4,7 @@ import OAuth2Models
 final class ErrorResponseTests: XCTestCase {
 	typealias JSON = [ErrorResponse.CodingKeys: String]
 	var json: JSON = [:]
-	var request = AuthRequest(clientID: "", state: nil)
+	var request = AuthRequest(responseType: .code, clientID: "", state: nil)
 
 	override func setUpWithError() throws {
 		json = [
@@ -14,7 +14,7 @@ final class ErrorResponseTests: XCTestCase {
 			.state: "some state",
 		]
 
-		request = AuthRequest(clientID: "client id", state: nil)
+		request = AuthRequest(responseType: .code, clientID: "client id", state: nil)
 	}
 
 	func test__equalsOperator() throws {
@@ -23,6 +23,7 @@ final class ErrorResponseTests: XCTestCase {
 				ErrorResponse(
 					code: .accessDenied,
 					request: AuthRequest(
+						responseType: .code,
 						clientID: "clietn 1",
 						redirectURL: URL(string: "https://example.com")!,
 						state: "the state",
@@ -34,6 +35,7 @@ final class ErrorResponseTests: XCTestCase {
 				ErrorResponse(
 					code: .accessDenied,
 					request: AuthRequest(
+						responseType: .code,
 						clientID: "client 2",
 						state: "the state",
 						scope: Scope()
@@ -47,6 +49,7 @@ final class ErrorResponseTests: XCTestCase {
 				ErrorResponse(
 					code: .accessDenied,
 					request: AuthRequest(
+						responseType: .code,
 						clientID: "clietn 1",
 						redirectURL: URL(string: "https://example.com")!,
 						state: "the state",

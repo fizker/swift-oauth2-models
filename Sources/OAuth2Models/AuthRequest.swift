@@ -15,9 +15,14 @@ public struct AuthRequest: Codable, Equatable {
 	}
 
 	/// Available response types.
-	public enum ResponseType: String, Codable { case code }
+	public enum ResponseType: String, Codable {
+		/// 4.1.1. Authorization Code Grant
+		case code
+		/// 4.2.1. Implicit Grant
+		case token
+	}
 
-	/// REQUIRED.  Value MUST be set to "code".
+	/// REQUIRED
 	public var responseType: ResponseType
 
 	/// REQUIRED.  The client identifier as described in Section 2.2.
@@ -45,7 +50,7 @@ public struct AuthRequest: Codable, Equatable {
 	/// - Parameter state: A state property that the response should include.
 	/// - Parameter scope: The scope of the access request.
 	public init(
-		responseType: ResponseType = .code,
+		responseType: ResponseType,
 		clientID: String,
 		redirectURL: URL,
 		state: String?,
@@ -65,7 +70,7 @@ public struct AuthRequest: Codable, Equatable {
 	/// - Parameter state: A state property that the response should include.
 	/// - Parameter scope: The scope of the access request.
 	public init(
-		responseType: ResponseType = .code,
+		responseType: ResponseType,
 		clientID: String,
 		state: String?,
 		scope: Scope = Scope()

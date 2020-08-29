@@ -19,12 +19,14 @@ final class AuthRequestTests: XCTestCase {
 		let tests = [
 			(
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
 					scope: "some scope"
 				),
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
@@ -34,12 +36,31 @@ final class AuthRequestTests: XCTestCase {
 			),
 			(
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
 					scope: "some scope"
 				),
 				AuthRequest(
+					responseType: .token,
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				false
+			),
+			(
+				AuthRequest(
+					responseType: .code,
+					clientID: "client",
+					redirectURL: URL(string: "https://example.com")!,
+					state: "some state",
+					scope: "some scope"
+				),
+				AuthRequest(
+					responseType: .code,
 					clientID: "client2",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
@@ -49,12 +70,14 @@ final class AuthRequestTests: XCTestCase {
 			),
 			(
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
 					scope: "some scope"
 				),
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					state: "some state",
 					scope: "some scope"
@@ -63,12 +86,14 @@ final class AuthRequestTests: XCTestCase {
 			),
 			(
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
 					scope: "some scope"
 				),
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com/foo")!,
 					state: "some state",
@@ -78,12 +103,14 @@ final class AuthRequestTests: XCTestCase {
 			),
 			(
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
 					scope: "some scope"
 				),
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://foo.com")!,
 					state: "some state",
@@ -93,12 +120,14 @@ final class AuthRequestTests: XCTestCase {
 			),
 			(
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
 					scope: "some scope"
 				),
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some other state",
@@ -108,12 +137,14 @@ final class AuthRequestTests: XCTestCase {
 			),
 			(
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
 					scope: "some scope"
 				),
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: nil,
@@ -123,12 +154,14 @@ final class AuthRequestTests: XCTestCase {
 			),
 			(
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
 					scope: "some scope"
 				),
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
@@ -138,12 +171,14 @@ final class AuthRequestTests: XCTestCase {
 			),
 			(
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
 					scope: "some scope"
 				),
 				AuthRequest(
+					responseType: .code,
 					clientID: "client",
 					redirectURL: URL(string: "https://example.com")!,
 					state: "some state",
@@ -179,7 +214,7 @@ final class AuthRequestTests: XCTestCase {
 		))
 	}
 
-	func test__decodable__minimumObject__decodesAsExpected() throws {
+	func test__decodable__authCode_minimumObject__decodesAsExpected() throws {
 		json.removeValue(forKey: .redirectURL)
 		json.removeValue(forKey: .scope)
 		json.removeValue(forKey: .state)
@@ -195,12 +230,43 @@ final class AuthRequestTests: XCTestCase {
 		))
 	}
 
-	func test__decodable__fullObject__decodesAsExpected() throws {
+	func test__decodable__authCode_fullObject__decodesAsExpected() throws {
 		let data = try encode(json)
 		let object = try decode(data) as AuthRequest
 
 		XCTAssertEqual(object, AuthRequest(
 			responseType: .code,
+			clientID: "client",
+			redirectURL: URL(string: "https://example.com")!,
+			state: "some state",
+			scope: "some scope"
+		))
+	}
+
+	func test__decodable__implicitGrant_minimumObject__decodesAsExpected() throws {
+		json[.responseType] = "token"
+		json.removeValue(forKey: .redirectURL)
+		json.removeValue(forKey: .scope)
+		json.removeValue(forKey: .state)
+
+		let data = try encode(json)
+		let object = try decode(data) as AuthRequest
+
+		XCTAssertEqual(object, AuthRequest(
+			responseType: .token,
+			clientID: "client",
+			state: nil,
+			scope: Scope()
+		))
+	}
+
+	func test__decodable__implicitGrant_fullObject__decodesAsExpected() throws {
+		json[.responseType] = "token"
+		let data = try encode(json)
+		let object = try decode(data) as AuthRequest
+
+		XCTAssertEqual(object, AuthRequest(
+			responseType: .token,
 			clientID: "client",
 			redirectURL: URL(string: "https://example.com")!,
 			state: "some state",
@@ -223,8 +289,9 @@ final class AuthRequestTests: XCTestCase {
 		XCTAssertThrowsError(try decode(data) as AuthRequest)
 	}
 
-	func test__encodable__fullObject__encodesAsJSON() throws {
+	func test__encodable__authCode_fullObject__encodesAsJSON() throws {
 		let object = AuthRequest(
+			responseType: .code,
 			clientID: "client",
 			redirectURL: URL(string: "https://example.com")!,
 			state: "some state",
@@ -247,8 +314,9 @@ final class AuthRequestTests: XCTestCase {
 		XCTAssertEqual(actualScope?.sorted(), expectedScope.sorted())
 	}
 
-	func test__encodable__minimumObject__encodesAsJSON() throws {
+	func test__encodable__authCode_minimumObject__encodesAsJSON() throws {
 		let object = AuthRequest(
+			responseType: .code,
 			clientID: "client",
 			state: nil,
 			scope: Scope()
@@ -264,8 +332,52 @@ final class AuthRequestTests: XCTestCase {
 		XCTAssertEqual(actual, expected)
 	}
 
+	func test__encodable__implicitGrant_fullObject__encodesAsJSON() throws {
+		let object = AuthRequest(
+			responseType: .token,
+			clientID: "client",
+			redirectURL: URL(string: "https://example.com")!,
+			state: "some state",
+			scope: "some scope"
+		)
+		let data = try encode(object)
+		var actual = try decode(data) as [String: String]
+
+		let expected: [String: String] = [
+			"client_id": "client",
+			"response_type": "token",
+			"redirect_uri": "https://example.com",
+			"state": "some state",
+		]
+
+		let expectedScope = ["some", "scope"]
+		let actualScope = actual.removeValue(forKey: "scope")?.split(separator: " ").map(String.init)
+
+		XCTAssertEqual(actual, expected)
+		XCTAssertEqual(actualScope?.sorted(), expectedScope.sorted())
+	}
+
+	func test__encodable__implicitGrant_minimumObject__encodesAsJSON() throws {
+		let object = AuthRequest(
+			responseType: .token,
+			clientID: "client",
+			state: nil,
+			scope: Scope()
+		)
+		let data = try encode(object)
+		let actual = try decode(data) as [String: String]
+
+		let expected: [String: String] = [
+			"client_id": "client",
+			"response_type": "token",
+		]
+
+		XCTAssertEqual(actual, expected)
+	}
+
 	func test__response__minimalObject__returnsAuthResponse() throws {
 		let request = AuthRequest(
+			responseType: .code,
 			clientID: "client id",
 			state: nil,
 			scope: Scope()
@@ -278,6 +390,7 @@ final class AuthRequestTests: XCTestCase {
 
 	func test__response__fullObject__returnsAuthResponse() throws {
 		let request = AuthRequest(
+			responseType: .code,
 			clientID: "client id",
 			redirectURL: URL(string: "https://example.com")!,
 			state: "some state",
@@ -291,6 +404,7 @@ final class AuthRequestTests: XCTestCase {
 
 	func test__error__minimalObject_minimalError__returnsErrorResponse() throws {
 		let request = AuthRequest(
+			responseType: .code,
 			clientID: "client id",
 			state: nil,
 			scope: Scope()
@@ -311,6 +425,7 @@ final class AuthRequestTests: XCTestCase {
 
 	func test__error__fullObject_minimalError__returnsErrorResponse() throws {
 		let request = AuthRequest(
+			responseType: .code,
 			clientID: "client id",
 			redirectURL: URL(string: "https://example.com")!,
 			state: "some state",
@@ -332,6 +447,7 @@ final class AuthRequestTests: XCTestCase {
 
 	func test__error__minimalObject_fullError__returnsErrorResponse() throws {
 		let request = AuthRequest(
+			responseType: .code,
 			clientID: "client id",
 			state: nil,
 			scope: Scope()
@@ -353,6 +469,7 @@ final class AuthRequestTests: XCTestCase {
 
 	func test__error__fullObject_fullError__returnsErrorResponse() throws {
 		let request = AuthRequest(
+			responseType: .code,
 			clientID: "client id",
 			state: "some state",
 			scope: "some scope"
