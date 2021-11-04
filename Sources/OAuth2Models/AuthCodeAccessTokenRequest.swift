@@ -17,7 +17,7 @@ public struct AuthCodeAccessTokenRequest: Codable, Equatable {
 	/// The available grant types.
 	public enum GrantType: String, Codable { case authorizationCode = "authorization_code" }
 
-	/// REQUIRED.  Value MUST be set to ``GrantType/authorizationCode``.
+	/// REQUIRED.  Value MUST be set to ``GrantType-swift.enum/authorizationCode``.
 	public var grantType: GrantType = .authorizationCode
 
 	/// REQUIRED.  The authorization code received from the authorization server.
@@ -34,7 +34,7 @@ public struct AuthCodeAccessTokenRequest: Codable, Equatable {
 
 	/// Creates a new ``AuthCodeAccessTokenRequest``.
 	///
-	/// - Parameter grantType: The type. Defaults to ``GrantType/authorizationCode``.
+	/// - Parameter grantType: The type. Defaults to ``GrantType-swift.enum/authorizationCode``.
 	/// - Parameter code: The authorization code.
 	/// - Parameter redirectURL: The URL that a successful ``AccessTokenResponse`` must be delivered to.
 	/// - Parameter clientID: The ID of the client that is requesting the  ``AccessTokenResponse``.

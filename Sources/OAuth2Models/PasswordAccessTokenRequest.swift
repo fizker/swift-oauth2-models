@@ -16,7 +16,7 @@ public struct PasswordAccessTokenRequest: Codable, Equatable {
 
 	public enum GrantType: String, Codable { case password }
 
-	/// REQUIRED.  Value MUST be set to ``GrantType/password``.
+	/// REQUIRED.  Value MUST be set to ``GrantType-swift.enum/password``.
 	public var grantType: GrantType
 
 	/// REQUIRED.  The resource owner username.
@@ -29,7 +29,7 @@ public struct PasswordAccessTokenRequest: Codable, Equatable {
 	public var scope: Scope
 
 	/// Creates a new ``PasswordAccessTokenRequest``.
-	/// - Parameter grantType: Value MUST be set to ``GrantType/password``.
+	/// - Parameter grantType: Value MUST be set to ``GrantType-swift.enum/password``.
 	/// - Parameter username: The resource owner username.
 	/// - Parameter password: The resource owner password.
 	/// - Parameter scope: The scope of the access request as described by Section 3.3.
