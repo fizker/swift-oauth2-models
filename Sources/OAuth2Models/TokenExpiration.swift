@@ -2,9 +2,10 @@ import Foundation
 
 /// The duration that a token is valid.
 public struct TokenExpiration: Codable, Equatable, Comparable {
+	/// The seconds until the token expires.
 	var seconds: Int
 
-	/// Creates a TokenExpiration in seconds.
+	/// Creates a ``TokenExpiration`` in seconds.
 	/// - Parameter seconds: The number of seconds.
 	public init(seconds: Int) {
 		self.seconds = seconds
@@ -13,51 +14,51 @@ public struct TokenExpiration: Codable, Equatable, Comparable {
 
 // Convenience init
 extension TokenExpiration {
-	/// Creates a TokenExpiration in minutes.
+	/// Creates a ``TokenExpiration`` in minutes.
 	/// - Parameter minutes: The number of minutes.
 	public init(minutes: Int) {
 		self = .init(seconds: minutes * 60)
 	}
 
-	/// Creates a TokenExpiration in hours.
+	/// Creates a ``TokenExpiration`` in hours.
 	/// - Parameter hours: The number of hours.
 	public init(hours: Int) {
 		self = .init(minutes: hours * 60)
 	}
 
-	/// Creates a TokenExpiration in days.
+	/// Creates a ``TokenExpiration`` in days.
 	/// - Parameter days: The number of days.
 	public init(days: Int) {
 		self = .init(hours: days * 24)
 	}
 
-	/// Creates a TokenExpiration in seconds.
+	/// Creates a ``TokenExpiration`` in seconds.
 	/// - Parameter seconds: The number of seconds.
 	public static func seconds(_ seconds: Int) -> TokenExpiration {
 		.init(seconds: seconds)
 	}
 
-	/// Creates a TokenExpiration in minutes.
+	/// Creates a ``TokenExpiration`` in minutes.
 	/// - Parameter minutes: The number of minutes.
 	public static func minutes(_ minutes: Int) -> TokenExpiration {
 		.init(minutes: minutes)
 	}
 
-	/// Creates a TokenExpiration in hours.
+	/// Creates a ``TokenExpiration`` in hours.
 	/// - Parameter hours: The number of hours.
 	public static func hours(_ hours: Int) -> TokenExpiration {
 		.init(hours: hours)
 	}
 
-	/// Creates a TokenExpiration in days.
+	/// Creates a ``TokenExpiration`` in days.
 	/// - Parameter days: The number of days.
 	public static func days(_ days: Int) -> TokenExpiration {
 		.init(days: days)
 	}
 
-	/// Convenience creator for an expiration of a single hour.
+	/// Convenience instance for a ``TokenExpiration`` of a single hour.
 	public static let oneHour: TokenExpiration = .hours(1)
-	/// Convenience creator for an expiration of a single day.
+	/// Convenience instance for an ``TokenExpiration`` of a single day.
 	public static let oneDay: TokenExpiration = .days(1)
 }
 

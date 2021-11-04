@@ -70,10 +70,10 @@ public struct ErrorResponse: Error, Codable, Equatable {
 		/// authentication method).  The authorization server MAY
 		/// return an HTTP 401 (Unauthorized) status code to indicate
 		/// which HTTP authentication schemes are supported.  If the
-		/// client attempted to authenticate via the "Authorization"
+		/// client attempted to authenticate via the `Authorization`
 		/// request header field, the authorization server MUST
 		/// respond with an HTTP 401 (Unauthorized) status code and
-		/// include the "WWW-Authenticate" response header field
+		/// include the `WWW-Authenticate` response header field
 		/// matching the authentication scheme used by the client.
 		case invalidClient = "invalid_client"
 
@@ -124,24 +124,24 @@ public struct ErrorResponse: Error, Codable, Equatable {
 	/// OPTIONAL.  Human-readable ASCII [USASCII] text providing
 	/// additional information, used to assist the client developer in
 	/// understanding the error that occurred.
-	/// Values for the "error_description" parameter MUST NOT include
+	/// Values for the ``description`` parameter MUST NOT include
 	/// characters outside the set %x20-21 / %x23-5B / %x5D-7E.
 	public var description: String?
 
 	/// OPTIONAL.  A URI identifying a human-readable web page with
 	/// information about the error, used to provide the client
 	/// developer with additional information about the error.
-	/// Values for the "error_uri" parameter MUST conform to the
+	/// Values for the ``url`` parameter MUST conform to the
 	/// URI-reference syntax and thus MUST NOT include characters
 	/// outside the set %x21 / %x23-5B / %x5D-7E.
 	public var url: URL?
 
-	/// REQUIRED if a "state" parameter was present in the client
+	/// REQUIRED if a ``state`` parameter was present in the client
 	/// authorization request.  The exact value received from the
 	/// client.
 	public var state: String?
 
-	/// Creates a new `ErrorResponse`.
+	/// Creates a new ``ErrorResponse``.
 	///
 	/// - Parameter code: A machine-readable error code.
 	/// - Parameter state: The exact value received from the client.
@@ -159,10 +159,10 @@ public struct ErrorResponse: Error, Codable, Equatable {
 		self.state = state
 	}
 
-	/// Creates a new `ErrorResponse`.
+	/// Creates a new ``ErrorResponse``.
 	///
 	/// - Parameter code: A machine-readable error code.
-	/// - Parameter request: The `AuthRequest` that spawned the error.
+	/// - Parameter request: The ``AuthRequest`` that spawned the error.
 	/// - Parameter description: A human-readable description.
 	/// - Parameter url: A URL to a human-readable web page.
 	public init(

@@ -4,7 +4,7 @@ import Foundation
 ///
 /// If the authorization server issued a refresh token to the client, the
 /// client makes a refresh request to the token endpoint by adding the
-/// following parameters using the "application/x-www-form-urlencoded"
+/// following parameters using the `application/x-www-form-urlencoded`
 /// format per Appendix B with a character encoding of UTF-8 in the HTTP
 /// request entity-body:
 public struct RefreshTokenRequest: Codable, Equatable {
@@ -17,7 +17,7 @@ public struct RefreshTokenRequest: Codable, Equatable {
 	/// Available grant types
 	public enum GrantType: String, Codable { case refreshToken = "refresh_token" }
 
-	/// REQUIRED.  Value MUST be set to "refresh_token".
+	/// REQUIRED.  Value MUST be set to ``GrantType/refreshToken``.
 	public var grantType: GrantType
 
 	/// REQUIRED.  The refresh token issued to the client.
@@ -30,7 +30,7 @@ public struct RefreshTokenRequest: Codable, Equatable {
 	/// resource owner.
 	public var scope: Scope
 
-	/// Creates a new `RefreshTokenRequest`.
+	/// Creates a new ``RefreshTokenRequest``.
 	/// - Parameter grantType: The type of grant.
 	/// - Parameter refreshToken: The refresh token issued to the client.
 	/// - Parameter scope: The scope of the access request.

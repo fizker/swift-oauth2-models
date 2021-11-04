@@ -27,7 +27,7 @@ public struct AccessTokenResponse: Codable, Equatable {
 	public var type: AccessTokenType
 
 	/// RECOMMENDED.  The lifetime in seconds of the access token.  For
-	/// example, the value "3600" denotes that the access token will
+	/// example, the value `3600` denotes that the access token will
 	/// expire in one hour from the time the response was generated.
 	/// If omitted, the authorization server SHOULD provide the
 	/// expiration time via other means or document the default value.
@@ -43,7 +43,7 @@ public struct AccessTokenResponse: Codable, Equatable {
 	/// described by Section 3.3.
 	public var scope: Scope
 
-	/// Creates a new `AccessTokenResponse`.
+	/// Creates a new ``AccessTokenResponse``.
 	///
 	/// - Parameter accessToken: The access token issued by the authorization server.
 	/// - Parameter type: The type of access token.

@@ -3,7 +3,7 @@ import Foundation
 /// [4.4.2](https://tools.ietf.org/html/rfc6749#section-4.4.2). Client Credentials Access Token Request
 ///
 ///  The client makes a request to the token endpoint by adding the
-///  following parameters using the "application/x-www-form-urlencoded"
+///  following parameters using the `application/x-www-form-urlencoded`
 ///  format per Appendix B with a character encoding of UTF-8 in the HTTP
 ///  request entity-body:
 ///
@@ -18,14 +18,14 @@ public struct ClientCredentialsAccessTokenRequest: Codable, Equatable {
 		case clientCredentials = "client_credentials"
 	}
 
-	/// REQUIRED.  Value MUST be set to "client_credentials".
+	/// REQUIRED.  Value MUST be set to ``GrantType/clientCredentials``.
 	public var grantType: GrantType
 
 	/// OPTIONAL.  The scope of the access request as described by Section 3.3.
 	public var scope: Scope
 
-	/// Creates a new `ClientCredentialsAccessTokenRequest`
-	/// - Parameter grantType: Value MUST be set to "client_credentials".
+	/// Creates a new ``ClientCredentialsAccessTokenRequest``
+	/// - Parameter grantType: Value MUST be set to ``GrantType/clientCredentials``.
 	/// - Parameter scope: The scope of the access request as described by Section 3.3.
 	public init(grantType: GrantType = .clientCredentials, scope: Scope = Scope()) {
 		self.grantType = grantType

@@ -4,7 +4,7 @@ import Foundation
 ///
 /// The client constructs the request URI by adding the following
 /// parameters to the query component of the authorization endpoint URI
-/// using the "application/x-www-form-urlencoded" format, per Appendix B.
+/// using the `application/x-www-form-urlencoded` format, per Appendix B.
 public struct AuthRequest: Codable, Equatable {
 	public enum CodingKeys: String, CodingKey {
 		case clientID = "client_id"
@@ -42,7 +42,7 @@ public struct AuthRequest: Codable, Equatable {
 	/// cross-site request forgery as described in Section 10.12.
 	public var state: String?
 
-	/// Creates a new `AuthRequest`.
+	/// Creates a new ``AuthRequest``.
 	///
 	/// - Parameter responseType: The type of the response.
 	/// - Parameter clientID: The client identifier.
@@ -63,7 +63,7 @@ public struct AuthRequest: Codable, Equatable {
 		self.scope = scope
 	}
 
-	/// Creates a new `AuthRequest` without a redirect URL.
+	/// Creates a new ``AuthRequest`` without a redirect URL.
 	///
 	/// - Parameter responseType: The type of the response.
 	/// - Parameter clientID: The client identifier.
@@ -82,14 +82,14 @@ public struct AuthRequest: Codable, Equatable {
 		self.scope = scope
 	}
 
-	/// Creates a new `AuthCodeAuthResponse` based on this request.
+	/// Creates a new ``AuthCodeAuthResponse`` based on this request.
 	///
 	/// - Parameter code: The authorization code to use when requesting an access token.
 	public func response(code: String) -> AuthCodeAuthResponse {
 		AuthCodeAuthResponse(code: code, request: self)
 	}
 
-	/// Creates a new `ErrorResponse` based on this request.
+	/// Creates a new ``ErrorResponse`` based on this request.
 	///
 	/// - Parameter code: A machine-readable error code.
 	/// - Parameter description: A human-readable description.

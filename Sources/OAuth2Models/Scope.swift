@@ -1,6 +1,8 @@
+/// Represents a list of scopes. The items are distinct.
 public struct Scope {
 	private(set) var items: Set<String>
 
+	/// Creates an empty scope.
 	public init() {
 		items = []
 	}
@@ -13,6 +15,12 @@ public struct Scope {
 		items = Self.splitStringInput(unvalidatedString)
 	}
 
+	/// Parses and creates a scope from a string.
+	///
+	/// The input string is split on white-space, so that `"foo bar baz"` becomes the scopes `["foo", "bar", "baz"]`.
+	///
+	/// The resulting list is distinct, so that `"foo bar foo"` becomes the scopes `["foo", "bar"]`.
+	/// - throws: If the string is empty, ``CharacterSetValidationError/emptyValue`` is thrown. If the string contains any invalid characters, ``CharacterSetValidationError/containsInvalidCharacters(_:)`` is thrown with the violating characters.
 	public init(string: String) throws {
 		if string.isEmpty {
 			throw CharacterSetValidationError.emptyValue
@@ -22,9 +30,14 @@ public struct Scope {
 		try self.init(items: items)
 	}
 
+	/// Creates a Scope list from the given `Sequence`.
+	/// - throws: If the string is empty, ``CharacterSetValidationError/emptyValue`` is thrown. If the string contains any invalid characters, ``CharacterSetValidationError/containsInvalidCharacters(_:)`` is thrown with the violating characters.
 	public init<T: Sequence>(items: T) throws where T.Element == String {
 		try self.init(items: Set(items))
 	}
+
+	/// Creates a Scope list from the given `Set`.
+	/// - throws: If the string is empty, ``CharacterSetValidationError/emptyValue`` is thrown. If the string contains any invalid characters, ``CharacterSetValidationError/containsInvalidCharacters(_:)`` is thrown with the violating characters.
 	public init(items: Set<String>) throws {
 		for item in items {
 			try Self.assert(item)
@@ -36,14 +49,27 @@ public struct Scope {
 	fileprivate static func assert(_ item: String) throws { try OAuth2Models.assert(item, charset: Self.validCharacters) }
 	fileprivate static let validCharacters = ValidCharacterSet.excludingSpace
 
+	/// Checks that all the items are valid.
+	/// - returns: True if all items are valid, otherwise false.
 	public var isValid: Bool { items.allSatisfy(Self.validCharacters.isValid(_:)) }
 }
 
 public extension Scope {
-	func contains(_ value: String) -> Bool { items.contains(value) }
-	mutating func insert(_ newElement: String) throws -> (Bool, String) {
-		try Self.assert(newElement)
-		return items.insert(newElement)
+	/// Returns a Boolean value that indicates whether the given element exists in the set.
+	///
+	/// Complexity: O(1)
+	///
+	/// - parameter member: An element to look for in the set.
+	/// - returns: `true` if member exists in the set; otherwise, `false`.
+	func contains(_ member: String) -> Bool { items.contains(member) }
+
+	/// Inserts the given element in the set if it is not already present.
+	///
+	/// - parameter newMember: An element to insert into the set.
+	/// - returns: `(true, newMember)` if `newMember` was not contained in the set. If an element equal to `newMember` was already contained in the set, the method returns `(false, oldMember)`.
+	mutating func insert(_ newMember: String) throws -> (Bool, String) {
+		try Self.assert(newMember)
+		return items.insert(newMember)
 	}
 }
 extension Scope: Sequence {

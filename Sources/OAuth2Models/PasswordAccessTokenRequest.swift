@@ -3,7 +3,7 @@ import Foundation
 /// [4.3.2](https://tools.ietf.org/html/rfc6749#section-4.3.2). Resource Owner Password Credentials Access Token Request
 ///
 /// The client makes a request to the token endpoint by adding the
-/// following parameters using the "application/x-www-form-urlencoded"
+/// following parameters using the `application/x-www-form-urlencoded`
 /// format per Appendix B with a character encoding of UTF-8 in the HTTP
 /// request entity-body
 public struct PasswordAccessTokenRequest: Codable, Equatable {
@@ -16,8 +16,8 @@ public struct PasswordAccessTokenRequest: Codable, Equatable {
 
 	public enum GrantType: String, Codable { case password }
 
-	/// REQUIRED.  Value MUST be set to "password".
-	public var grantType: GrantType = .password
+	/// REQUIRED.  Value MUST be set to ``GrantType/password``.
+	public var grantType: GrantType
 
 	/// REQUIRED.  The resource owner username.
 	public var username: String
@@ -28,8 +28,8 @@ public struct PasswordAccessTokenRequest: Codable, Equatable {
 	/// OPTIONAL.  The scope of the access request as described by Section 3.3.
 	public var scope: Scope
 
-	/// Creates a new `PasswordAccessTokenRequest`.
-	/// - Parameter grantType: Value MUST be set to "password".
+	/// Creates a new ``PasswordAccessTokenRequest``.
+	/// - Parameter grantType: Value MUST be set to ``GrantType/password``.
 	/// - Parameter username: The resource owner username.
 	/// - Parameter password: The resource owner password.
 	/// - Parameter scope: The scope of the access request as described by Section 3.3.

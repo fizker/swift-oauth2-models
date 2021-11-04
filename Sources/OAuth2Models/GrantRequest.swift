@@ -1,19 +1,19 @@
 import Foundation
 
-/// Convenience Decodable to make it easier to have a single endpoint support all grant types.
+/// Convenience `Decodable` to make it easier to have a single endpoint support all grant types.
 public enum GrantRequest: Decodable, Equatable {
-	/// The grant is for AccessTokenRequest.
+	/// The grant is for ``AuthCodeAccessTokenRequest``.
 	case authCodeAccessToken(AuthCodeAccessTokenRequest)
-	/// The grant is for ClientCredentialsAccessTokenRequest
+	/// The grant is for ``ClientCredentialsAccessTokenRequest``
 	case clientCredentialsAccessToken(ClientCredentialsAccessTokenRequest)
-	/// The grant is for PasswordAccessTokenRequest.
+	/// The grant is for ``PasswordAccessTokenRequest``.
 	case passwordAccessToken(PasswordAccessTokenRequest)
-	/// The grant is for RefreshTokenRequest.
+	/// The grant is for ``RefreshTokenRequest``.
 	case refreshToken(RefreshTokenRequest)
 
-	/// The errors that can happen when decoding a GrantRequest.
+	/// The errors that can happen when decoding a ``GrantRequest``.
 	public enum Error: Swift.Error {
-		/// Error thrown when the grant_type does not match a known grant type.
+		/// Error thrown when the `grant_type` does not match a known grant type.
 		case unknownGrantType(String)
 	}
 

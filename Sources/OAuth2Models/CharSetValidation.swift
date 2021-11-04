@@ -45,8 +45,7 @@ public struct ErrorDescription {
 
 	/// Initializes the wrapper.
 	/// - Parameter string: The value to wrap
-	/// - Throws: `CharacterSetValidationError.containsInvalidCharacters(_)` if any characters were invalid.
-	///
+	/// - Throws: ``CharacterSetValidationError/containsInvalidCharacters(_:)`` if any characters were invalid.
 	public init(_ string: String) throws {
 		self.value = string
 
@@ -60,8 +59,7 @@ public struct ErrorURL {
 
 	/// Initializes the wrapper.
 	/// - Parameter url: The value to wrap
-	/// - Throws: `CharacterSetValidationError.containsInvalidCharacters(_)` if any characters were invalid.
-	///
+	/// - Throws: ``CharacterSetValidationError/containsInvalidCharacters(_:)`` if any characters were invalid.
 	public init(_ url: URL) throws {
 		self.value = url
 

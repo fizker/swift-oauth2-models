@@ -2,10 +2,10 @@ import Foundation
 
 /// [4.1.2.](https://tools.ietf.org/html/rfc6749#section-4.1.2) Authorization Response
 ///
-/// If the resource owner grants the access request, the authorizatio
-/// server issues an authorization code and delivers it to the client b
-/// adding the following parameters to the query component of th
-/// redirection URI using the "application/x-www-form-urlencoded" format
+/// If the resource owner grants the access request, the authorization
+/// server issues an authorization code and delivers it to the client by
+/// adding the following parameters to the query component of the
+/// redirection URI using the `application/x-www-form-urlencoded` format,
 /// per Appendix B.
 public struct AuthCodeAuthResponse: Codable, Equatable {
 	public enum CodingKeys: String, CodingKey {
@@ -25,15 +25,15 @@ public struct AuthCodeAuthResponse: Codable, Equatable {
 	/// the client identifier and redirection URI.
 	public var code: String
 
-	/// REQUIRED if the "state" parameter was present in the client
+	/// REQUIRED if the ``state`` parameter was present in the client
 	/// authorization request.  The exact value received from the
 	/// client.
 	public var state: String?
 
-	/// Creates a new AuthCodeAuthResponse.
+	/// Creates a new ``AuthCodeAuthResponse``.
 	///
 	/// - Parameter code: The authorization code to use when requesting an access token.
-	/// - Parameter request: The `AuthRequest` that spawned the response.
+	/// - Parameter request: The ``AuthRequest`` that spawned the response.
 	public init(code: String, request: AuthRequest) {
 		self.code = code
 		self.state = request.state
