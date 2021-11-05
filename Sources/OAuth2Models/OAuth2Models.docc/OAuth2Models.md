@@ -14,15 +14,16 @@ different requests, if the server should support multiple types.
 
 ### Initiating a request
 
+- <doc:ChoosingRequest>
 - ``AuthCodeAccessTokenRequest``
 - ``AuthRequest``
 - ``ClientCredentialsAccessTokenRequest``
 - ``PasswordAccessTokenRequest``
 - ``RefreshTokenRequest``
-- ``GrantRequest``
 
 ### Responding to a request
 
+- ``GrantRequest``
 - ``AccessTokenError``
 - ``AccessTokenResponse``
 - ``AuthCodeAuthResponse``
