@@ -32,6 +32,7 @@ different requests, if the server should support multiple types.
 
 ### Miscellaneous
 
+- <doc:CustomTypes>
 - ``CharacterSetValidationError``
 - ``ErrorDescription``
 - ``ErrorURL``

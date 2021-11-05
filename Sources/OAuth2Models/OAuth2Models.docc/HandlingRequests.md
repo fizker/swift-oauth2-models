@@ -58,31 +58,3 @@ app.post("token") { req -> String in
 	}
 }
 ```
-
-
-### Custom Grant Types
-
-The OAuth2 standard is open-ended, so that new `Grant Type`s can be added as necessary.
-This does mean that it is possible to require types that this library does not support.
-
-In that case, the solution is simple. The ``GrantRequest`` throws an error if an
-unknown `Grant Type` is detected.
-
-```swift
-app.post("token") { req -> String in
-	do {
-		let grant = try req.content.decode(GrantRequest.self)
-		...
-
-	} catch let GrantRequest.Error.unknownGrantType(type)
-		where type == "my-custom-grant-type"
-	{
-		let customRequest = try req.content.decode(MyCustomType.self)
-		...
-	}
-}
-```
-
-Alternatively, the custom type could be handled first, and only try the ``OAuth2Models``
-types if the custom type cannot decode. Care should be taken though to ensure that
-the custom type is as strict as possible, so that it does not absorb values of the other types.
