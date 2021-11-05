@@ -23,6 +23,7 @@ different requests, if the server should support multiple types.
 
 ### Responding to a request
 
+- <doc:HandlingRequests>
 - ``GrantRequest``
 - ``AccessTokenError``
 - ``AccessTokenResponse``
