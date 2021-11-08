@@ -67,6 +67,12 @@ final class TokenExpirationTests: XCTestCase {
 		}
 	}
 
+	func test__initWithDate__dateIsInFuture__returnsExpectedValue() throws {
+		let date = Date(timeIntervalSinceNow: 30)
+		let item = TokenExpiration(date: date)
+		XCTAssertEqual(item.inSeconds, 30, accuracy: 1)
+	}
+
 	var codingTests: [( item: TokenExpiration, json: String )] {
 		convertToSecondsTests.map { (item, seconds) in
 			(item, "\(seconds)")

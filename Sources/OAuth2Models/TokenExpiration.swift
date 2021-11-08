@@ -32,6 +32,12 @@ extension TokenExpiration {
 		self = .init(hours: days * 24)
 	}
 
+	/// Creates a ``TokenExpiration`` based on a `Date`, relative to now.
+	/// - Parameter date: The expiration date.
+	public init(date: Date) {
+		self.init(seconds: Int(date.timeIntervalSinceNow))
+	}
+
 	/// Creates a ``TokenExpiration`` in seconds.
 	/// - Parameter seconds: The number of seconds.
 	public static func seconds(_ seconds: Int) -> TokenExpiration {
