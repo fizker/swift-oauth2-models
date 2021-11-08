@@ -20,6 +20,7 @@ func encode<T:RawRepresentable>(_ data: [T:String]) throws -> Data where T.RawVa
 }
 func encode<T: Encodable>(_ data: T) throws -> Data {
 	let encoder = JSONEncoder()
+	encoder.outputFormatting = .sortedKeys
 	let json = try encoder.encode(data)
 	return json
 }
