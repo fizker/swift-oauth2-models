@@ -17,7 +17,7 @@ public struct RefreshTokenRequest: Codable, Equatable {
 	/// Available grant types
 	public enum GrantType: String, Codable { case refreshToken = "refresh_token" }
 
-	/// REQUIRED.  Value MUST be set to ``GrantType/refreshToken``.
+	/// REQUIRED.  Value MUST be set to ``GrantType-swift.enum/refreshToken``.
 	public var grantType: GrantType
 
 	/// REQUIRED.  The refresh token issued to the client.

@@ -18,14 +18,14 @@ public struct ClientCredentialsAccessTokenRequest: Codable, Equatable {
 		case clientCredentials = "client_credentials"
 	}
 
-	/// REQUIRED.  Value MUST be set to ``GrantType/clientCredentials``.
+	/// REQUIRED.  Value MUST be set to ``GrantType-swift.enum/clientCredentials``.
 	public var grantType: GrantType
 
 	/// OPTIONAL.  The scope of the access request as described by Section 3.3.
 	public var scope: Scope
 
 	/// Creates a new ``ClientCredentialsAccessTokenRequest``
-	/// - Parameter grantType: Value MUST be set to ``GrantType/clientCredentials``.
+	/// - Parameter grantType: Value MUST be set to ``GrantType-swift.enum/clientCredentials``.
 	/// - Parameter scope: The scope of the access request as described by Section 3.3.
 	public init(grantType: GrantType = .clientCredentials, scope: Scope = Scope()) {
 		self.grantType = grantType
