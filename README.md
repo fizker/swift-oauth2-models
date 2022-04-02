@@ -4,6 +4,8 @@ Swift models compatible with the [RFC 6749 OAuth2 spec](https://tools.ietf.org/h
 
 There is no logic outside of validations for data content and parsing of the raw JSON models into Swifty types.
 
+DocC documentation for the project can be found at [https://fizker.github.io/swift-oauth2-models/documentation/oauth2models/](https://fizker.github.io/swift-oauth2-models/documentation/oauth2models/).
+
 
 ## How to use
 
