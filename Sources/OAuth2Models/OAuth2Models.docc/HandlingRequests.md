@@ -6,7 +6,7 @@ How to handle an incoming request and sending the appropriate response.
 
 ### Handling a specific request
 
-Typically, handling an incoming request starts at an endpoint. For example, an app
+Typically, handling an incoming request starts at an endpoint. For example, a client
 could post a ``PasswordAccessTokenRequest`` to a `/token` endpoint.
 
 To decode such a request using [Vapor](https://vapor.codes):
@@ -29,7 +29,7 @@ Often, a server has to support multiple different Request types. For example, th
 server could support one `AccessTokenRequest` and the ``RefreshTokenRequest``.
 Or it could support multiple `AccessTokenRequest`s.
 
-The simplest way would be to catch the `DecodingError` thrown by the decode attempt, and then try another request:
+The naive way would be to catch the `DecodingError` thrown by the decode attempt, and then try another request:
 
 ```swift
 app.post("token") { req in
@@ -58,3 +58,9 @@ app.post("token") { req -> String in
 	}
 }
 ```
+
+
+### Handling custom or unsupported request types
+
+To handle custom request types or request types not supported by this library,
+see <doc:CustomTypes> for more details.

@@ -12,7 +12,7 @@ different requests, if the server should support multiple types.
 
 ## Topics
 
-### Initiating a request
+### Initiating a request (client)
 
 - <doc:ChoosingRequest>
 - ``AuthCodeAccessTokenRequest``
@@ -21,7 +21,7 @@ different requests, if the server should support multiple types.
 - ``PasswordAccessTokenRequest``
 - ``RefreshTokenRequest``
 
-### Responding to a request
+### Responding to a request (server)
 
 - <doc:HandlingRequests>
 - ``GrantRequest``
