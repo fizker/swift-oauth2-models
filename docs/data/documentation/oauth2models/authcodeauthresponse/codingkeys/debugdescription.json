@@ -1,0 +1,285 @@
+{
+  "abstract" : [
+    {
+      "text" : "Inherited from ",
+      "type" : "text"
+    },
+    {
+      "code" : "CodingKey.debugDescription",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse\/CodingKeys",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse\/CodingKeys\/CodingKey-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse\/CodingKeys\/debugDescription"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "Swift",
+    "externalID" : "s:s9CodingKeyPsE16debugDescriptionSSvp::SYNTHESIZED::s:12OAuth2Models08AuthCodeC8ResponseV10CodingKeysO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "debugDescription"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "debugDescription"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "debugDescription"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/debugdescription"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAuthResponse": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " Authorization Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAuthResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAuthResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthCodeAuthResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeauthresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAuthResponse/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthCodeAuthResponse.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAuthResponse/CodingKeys/CodingKey-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse\/CodingKeys\/CodingKey-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CodingKey Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/codingkey-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAuthResponse/CodingKeys/debugDescription": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "debugDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse\/CodingKeys\/debugDescription",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "debugDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/debugdescription"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.2": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2",
+  "title" : "4.1.2.",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.2.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2"
+}
+}
+}

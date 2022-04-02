@@ -1,0 +1,312 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " in hours.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/hours(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "OAuth2Models",
+    "externalID" : "s:12OAuth2Models15TokenExpirationV5hoursyACSiFZ",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "static"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "hours"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models15TokenExpirationV",
+        "text" : "TokenExpiration"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Type Method",
+    "symbolKind" : "method",
+    "title" : "hours(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "static"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "hours"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "hours"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> "
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models15TokenExpirationV",
+              "text" : "TokenExpiration"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The number of hours.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "hours"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/tokenexpiration\/hours(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration": {
+  "abstract" : [
+    {
+      "text" : "The duration that a token is valid.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TokenExpiration",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/hours(_:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " in hours.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hours"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models15TokenExpirationV",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/hours(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hours(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/hours(_:)"
+}
+}
+}

@@ -1,0 +1,457 @@
+{
+  "abstract" : [
+    {
+      "text" : "Client authentication failed (e.g., unknown client, no",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "client authentication included, or unsupported",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "authentication method).  The authorization server MAY",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "return an HTTP 401 (Unauthorized) status code to indicate",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "which HTTP authentication schemes are supported.  If the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "client attempted to authenticate via the ",
+      "type" : "text"
+    },
+    {
+      "code" : "Authorization",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "request header field, the authorization server MUST",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "respond with an HTTP 401 (Unauthorized) status code and",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "include the ",
+      "type" : "text"
+    },
+    {
+      "code" : "WWW-Authenticate",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " response header field",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "matching the authentication scheme used by the client.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/invalidClient"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models13ErrorResponseV0C4CodeO13invalidClientyA2EmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "invalidClient"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "ErrorResponse.ErrorCode.invalidClient"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "invalidClient"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/errorresponse\/errorcode\/invalidclient"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse": {
+  "abstract" : [
+    {
+      "text" : "Error Response for all error codes in use by RFC 6749.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "This covers ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ",",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode": {
+  "abstract" : [
+    {
+      "text" : "The available error codes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorCode"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorCode"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/invalidClient": {
+  "abstract" : [
+    {
+      "text" : "Client authentication failed (e.g., unknown client, no",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "client authentication included, or unsupported",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "authentication method).  The authorization server MAY",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "return an HTTP 401 (Unauthorized) status code to indicate",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "which HTTP authentication schemes are supported.  If the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "client attempted to authenticate via the ",
+      "type" : "text"
+    },
+    {
+      "code" : "Authorization",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "request header field, the authorization server MUST",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "respond with an HTTP 401 (Unauthorized) status code and",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "include the ",
+      "type" : "text"
+    },
+    {
+      "code" : "WWW-Authenticate",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " response header field",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "matching the authentication scheme used by the client.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invalidClient"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/invalidClient",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode.invalidClient",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/invalidclient"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.2.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1",
+  "title" : "4.1.2.1 Authorization Code Grant",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.2.1 Authorization Code Grant",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.2.2.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+  "title" : "4.2.2.1 Implicit Grant",
+  "titleInlineContent" : [
+    {
+      "text" : "4.2.2.1 Implicit Grant",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-5.2": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+  "title" : "5.2 for other uses",
+  "titleInlineContent" : [
+    {
+      "text" : "5.2 for other uses",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2"
+}
+}
+}

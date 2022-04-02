@@ -1,0 +1,225 @@
+{
+  "abstract" : [
+    {
+      "text" : "No overview available.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/AccessTokenType"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/AccessTokenType\/bearer"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models19AccessTokenResponseV0cD4TypeO6beareryA2EmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "bearer"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "AccessTokenResponse.AccessTokenType.bearer"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "bearer"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/bearer"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "  Successful Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AccessTokenResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse/AccessTokenType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenType"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/AccessTokenType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AccessTokenResponse.AccessTokenType",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse/AccessTokenType/bearer": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "bearer"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/AccessTokenType\/bearer",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "AccessTokenResponse.AccessTokenType.bearer",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/bearer"
+},
+"https://tools.ietf.org/html/rfc6749#section-5.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1",
+  "title" : "5.1.",
+  "titleInlineContent" : [
+    {
+      "text" : "5.1.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1"
+}
+}
+}

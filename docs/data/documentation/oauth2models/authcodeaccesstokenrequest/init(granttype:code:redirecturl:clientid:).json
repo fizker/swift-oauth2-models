@@ -1,0 +1,633 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/init(grantType:code:redirectURL:clientID:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV9grantType4code11redirectURL8clientIDA2C05GrantI0O_SS10Foundation0L0VSgSSSgtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "grantType"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV",
+        "text" : "AuthCodeAccessTokenRequest"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV9GrantTypeO",
+        "text" : "GrantType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "code"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "redirectURL"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation3URLV",
+        "text" : "URL"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "clientID"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(grantType:code:redirectURL:clientID:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "grantType"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV",
+              "text" : "AuthCodeAccessTokenRequest"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/GrantType-swift.enum",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV9GrantTypeO",
+              "text" : "GrantType"
+            },
+            {
+              "kind" : "text",
+              "text" : " = .authorizationCode, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "code"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "redirectURL"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:10Foundation3URLV",
+              "text" : "URL"
+            },
+            {
+              "kind" : "text",
+              "text" : "?, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "clientID"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "?)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The type. Defaults to ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/GrantType-swift.enum\/authorizationCode",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "grantType"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The authorization code.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "code"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The URL that a successful ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " must be delivered to.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "redirectURL"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The ID of the client that is requesting the  ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "clientID"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/init(granttype:code:redirecturl:clientid:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "  Successful Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AccessTokenResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAccessTokenRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.3",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".  Access Token Request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAccessTokenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAccessTokenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthCodeAccessTokenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAccessTokenRequest/GrantType-swift.enum": {
+  "abstract" : [
+    {
+      "text" : "The available grant types.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GrantType"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/GrantType-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GrantType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthCodeAccessTokenRequest.GrantType",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAccessTokenRequest/GrantType-swift.enum/authorizationCode": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "authorizationCode"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/GrantType-swift.enum\/authorizationCode",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "AuthCodeAccessTokenRequest.GrantType.authorizationCode",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum\/authorizationcode"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAccessTokenRequest/init(grantType:code:redirectURL:clientID:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "grantType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV",
+      "text" : "AuthCodeAccessTokenRequest"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV9GrantTypeO",
+      "text" : "GrantType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "code"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "redirectURL"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation3URLV",
+      "text" : "URL"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "clientID"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/init(grantType:code:redirectURL:clientID:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(grantType:code:redirectURL:clientID:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/init(granttype:code:redirecturl:clientid:)"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.3": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.3",
+  "title" : "4.1.3",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.3",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.3"
+},
+"https://tools.ietf.org/html/rfc6749#section-5.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1",
+  "title" : "5.1.",
+  "titleInlineContent" : [
+    {
+      "text" : "5.1.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1"
+}
+}
+}

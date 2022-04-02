@@ -1,0 +1,535 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError\/init(code:description:url:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models16AccessTokenErrorV4code11description3urlA2C0E4CodeO_AA0E11DescriptionVSgAA0E3URLVSgtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "code"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models16AccessTokenErrorV",
+        "text" : "AccessTokenError"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models16AccessTokenErrorV0E4CodeO",
+        "text" : "ErrorCode"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "description"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models16ErrorDescriptionV",
+        "text" : "ErrorDescription"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "url"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models8ErrorURLV",
+        "text" : "ErrorURL"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(code:description:url:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "code"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models16AccessTokenErrorV",
+              "text" : "AccessTokenError"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError\/ErrorCode",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models16AccessTokenErrorV0E4CodeO",
+              "text" : "ErrorCode"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "description"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorDescription",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models16ErrorDescriptionV",
+              "text" : "ErrorDescription"
+            },
+            {
+              "kind" : "text",
+              "text" : "?, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "url"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorURL",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models8ErrorURLV",
+              "text" : "ErrorURL"
+            },
+            {
+              "kind" : "text",
+              "text" : "?)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Machine-readable error code.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "code"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Human-readable description of the error.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "description"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "URL for human-readable error page.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "url"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/accesstokenerror\/init(code:description:url:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenError": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " Error Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenError"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AccessTokenError",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenerror"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenError/ErrorCode": {
+  "abstract" : [
+    {
+      "text" : "The available error codes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorCode"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError\/ErrorCode",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorCode"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AccessTokenError.ErrorCode",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenerror\/errorcode"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenError/init(code:description:url:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "code"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models16AccessTokenErrorV",
+      "text" : "AccessTokenError"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models16AccessTokenErrorV0E4CodeO",
+      "text" : "ErrorCode"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models16ErrorDescriptionV",
+      "text" : "ErrorDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models8ErrorURLV",
+      "text" : "ErrorURL"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError\/init(code:description:url:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(code:description:url:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenerror\/init(code:description:url:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorDescription": {
+  "abstract" : [
+    {
+      "text" : "Wraps the description field of the error models and ensures that it contains only the characters that the spec allows.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorDescription",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorDescription"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errordescription"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorURL": {
+  "abstract" : [
+    {
+      "text" : "Wraps the URL field of the error models and ensures that it contains only the characters that the spec allows.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorURL"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorURL",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorURL"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorURL",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorurl"
+},
+"https://tools.ietf.org/html/rfc6749#section-5.2": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+  "title" : "5.2.",
+  "titleInlineContent" : [
+    {
+      "text" : "5.2.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2"
+}
+}
+}

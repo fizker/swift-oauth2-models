@@ -1,0 +1,375 @@
+{
+  "abstract" : [
+    {
+      "text" : "The codes that are valid according to section ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/valid4_2_2_1Codes"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models13ErrorResponseV0C4CodeO17valid4_2_2_1CodesSayAEGvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "valid4_2_2_1Codes"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV",
+        "text" : "ErrorResponse"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV0C4CodeO",
+        "text" : "ErrorCode"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "valid4_2_2_1Codes"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "valid4_2_2_1Codes"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV",
+              "text" : "ErrorResponse"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV0C4CodeO",
+              "text" : "ErrorCode"
+            },
+            {
+              "kind" : "text",
+              "text" : "] { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/errorresponse\/errorcode\/valid4_2_2_1codes"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse": {
+  "abstract" : [
+    {
+      "text" : "Error Response for all error codes in use by RFC 6749.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "This covers ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ",",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode": {
+  "abstract" : [
+    {
+      "text" : "The available error codes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorCode"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorCode"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/valid4_2_2_1Codes": {
+  "abstract" : [
+    {
+      "text" : "The codes that are valid according to section ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "valid4_2_2_1Codes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV",
+      "text" : "ErrorResponse"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV0C4CodeO",
+      "text" : "ErrorCode"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/valid4_2_2_1Codes",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "valid4_2_2_1Codes",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/valid4_2_2_1codes"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.2.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1",
+  "title" : "4.1.2.1 Authorization Code Grant",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.2.1 Authorization Code Grant",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.2.2.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+  "title" : "4.2.2.1 Implicit Grant",
+  "titleInlineContent" : [
+    {
+      "text" : "4.2.2.1 Implicit Grant",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-5.2": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+  "title" : "5.2 for other uses",
+  "titleInlineContent" : [
+    {
+      "text" : "5.2 for other uses",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2"
+}
+}
+}

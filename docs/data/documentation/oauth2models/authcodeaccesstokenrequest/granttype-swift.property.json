@@ -1,0 +1,329 @@
+{
+  "abstract" : [
+    {
+      "text" : "REQUIRED.  Value MUST be set to ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/GrantType-swift.enum\/authorizationCode",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/grantType-swift.property"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV9grantTypeAC05GrantI0Ovp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "grantType"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV",
+        "text" : "AuthCodeAccessTokenRequest"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV9GrantTypeO",
+        "text" : "GrantType"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "grantType"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "grantType"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV",
+              "text" : "AuthCodeAccessTokenRequest"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/GrantType-swift.enum",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV9GrantTypeO",
+              "text" : "GrantType"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.property"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAccessTokenRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.3",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".  Access Token Request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAccessTokenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAccessTokenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthCodeAccessTokenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAccessTokenRequest/GrantType-swift.enum": {
+  "abstract" : [
+    {
+      "text" : "The available grant types.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GrantType"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/GrantType-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GrantType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthCodeAccessTokenRequest.GrantType",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAccessTokenRequest/GrantType-swift.enum/authorizationCode": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "authorizationCode"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/GrantType-swift.enum\/authorizationCode",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "AuthCodeAccessTokenRequest.GrantType.authorizationCode",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum\/authorizationcode"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAccessTokenRequest/grantType-swift.property": {
+  "abstract" : [
+    {
+      "text" : "REQUIRED.  Value MUST be set to ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/GrantType-swift.enum\/authorizationCode",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "grantType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV",
+      "text" : "AuthCodeAccessTokenRequest"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV9GrantTypeO",
+      "text" : "GrantType"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest\/grantType-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "grantType",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.property"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.3": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.3",
+  "title" : "4.1.3",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.3",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.3"
+}
+}
+}

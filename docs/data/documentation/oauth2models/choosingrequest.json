@@ -1,0 +1,1053 @@
+{
+  "abstract" : [
+    {
+      "text" : "Choosing the correct Request type is essential.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ChoosingRequest"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "role" : "article",
+    "roleHeading" : "Article",
+    "title" : "Choosing a Request type"
+  },
+  "primaryContentSections" : [
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "OAuth2 supports a range of different types of grant requests. It is important to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "choose the correct type for the situation.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Note that for any of the requests, it is possible to get an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " back.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Username-+-password",
+          "level" : 3,
+          "text" : "Username + password",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/PasswordAccessTokenRequest",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " requires a username and password. It is specially",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "designed for this usecase.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " also works, if the server supports it.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "In this case, submit the request authentication using the HTTP Basic authentication scheme.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "On success of either type, the server will respond with a ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Pre-agreed-auth-token",
+          "level" : 3,
+          "text" : "Pre-agreed auth token",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If the app have a pre-agreed auth token, such as a certificate or",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/datatracker.ietf.org\/doc\/html\/rfc7519",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ", use",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The authentication can be negotiated with the server in any way that the server wants.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "The HTTP ",
+              "type" : "text"
+            },
+            {
+              "code" : "Authorization",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " header is often the preferred mechanism.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "On success, the server will respond with a ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Requesting-auth-from-user",
+          "level" : 3,
+          "text" : "Requesting auth from user",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In most OAuth2 situations, the user is asked to grant the app permission. This is done using the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "It supports either the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Implicit Grant",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " or the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Authorization Code Grant",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " types.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Authorization Code Grant",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", set the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/responseType-swift.property",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "property to ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/ResponseType-swift.enum\/code",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ". After the user have authorized,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "a request will be made with an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " containing the code from the server.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "The app then have to exchange this code by sending an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "On success, the server will respond with an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " with the token.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Implicit Grant",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " type, after the user have authorized the app, an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "will be sent immediately.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Refreshing-an-access-token",
+          "level" : 3,
+          "text" : "Refreshing an access token",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To refresh an access token, the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " type is used. On success,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the server will respond with an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/PasswordAccessTokenRequest",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest"
+      ],
+      "title" : "Initiating a request (client)"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/choosingrequest"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "  Successful Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AccessTokenResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAccessTokenRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.3",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".  Access Token Request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAccessTokenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAccessTokenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthCodeAccessTokenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAuthResponse": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " Authorization Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAuthResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAuthResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthCodeAuthResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeauthresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " Authorization Request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AuthRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AuthRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/ResponseType-swift.enum/code": {
+  "abstract" : [
+    {
+      "text" : "4.1.1. Authorization Code Grant",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/ResponseType-swift.enum\/code",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "AuthRequest.ResponseType.code",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum\/code"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/responseType-swift.property": {
+  "abstract" : [
+    {
+      "text" : "REQUIRED",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "responseType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models11AuthRequestV",
+      "text" : "AuthRequest"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models11AuthRequestV12ResponseTypeO",
+      "text" : "ResponseType"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/responseType-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "responseType",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.property"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ClientCredentialsAccessTokenRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.4.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". Client Credentials Access Token Request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ClientCredentialsAccessTokenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ClientCredentialsAccessTokenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ClientCredentialsAccessTokenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse": {
+  "abstract" : [
+    {
+      "text" : "Error Response for all error codes in use by RFC 6749.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "This covers ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ",",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/PasswordAccessTokenRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.3.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". Resource Owner Password Credentials Access Token Request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PasswordAccessTokenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/PasswordAccessTokenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PasswordAccessTokenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PasswordAccessTokenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/passwordaccesstokenrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/RefreshTokenRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-6",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " Refreshing an Access Token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RefreshTokenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RefreshTokenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RefreshTokenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/refreshtokenrequest"
+},
+"https://datatracker.ietf.org/doc/html/rfc7519": {
+  "identifier" : "https:\/\/datatracker.ietf.org\/doc\/html\/rfc7519",
+  "title" : "JSON Web Tokens",
+  "titleInlineContent" : [
+    {
+      "text" : "JSON Web Tokens",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/datatracker.ietf.org\/doc\/html\/rfc7519"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.1",
+  "title" : "4.1.1.",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.1.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.2": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2",
+  "title" : "4.1.2.",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.2.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.2.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1",
+  "title" : "4.1.2.1 Authorization Code Grant",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.2.1 Authorization Code Grant",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.3": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.3",
+  "title" : "4.1.3",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.3",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.3"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.2.2.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+  "title" : "4.2.2.1 Implicit Grant",
+  "titleInlineContent" : [
+    {
+      "text" : "4.2.2.1 Implicit Grant",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.3.2": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.3.2",
+  "title" : "4.3.2",
+  "titleInlineContent" : [
+    {
+      "text" : "4.3.2",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.3.2"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.4.2": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.4.2",
+  "title" : "4.4.2",
+  "titleInlineContent" : [
+    {
+      "text" : "4.4.2",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.4.2"
+},
+"https://tools.ietf.org/html/rfc6749#section-5.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1",
+  "title" : "5.1.",
+  "titleInlineContent" : [
+    {
+      "text" : "5.1.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-5.2": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+  "title" : "5.2 for other uses",
+  "titleInlineContent" : [
+    {
+      "text" : "5.2 for other uses",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2"
+},
+"https://tools.ietf.org/html/rfc6749#section-6": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-6",
+  "title" : "6.",
+  "titleInlineContent" : [
+    {
+      "text" : "6.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-6"
+}
+}
+}

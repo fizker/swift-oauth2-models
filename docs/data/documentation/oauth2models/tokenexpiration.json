@@ -1,0 +1,1263 @@
+{
+  "abstract" : [
+    {
+      "text" : "The duration that a token is valid.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models15TokenExpirationV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "TokenExpiration"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "TokenExpiration"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "TokenExpiration"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "TokenExpiration"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/SL",
+        "doc:\/\/OAuth2Models\/Se",
+        "doc:\/\/OAuth2Models\/SE",
+        "doc:\/\/OAuth2Models\/SQ"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/CustomTypes",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/CharacterSetValidationError",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorDescription",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorURL",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/Scope"
+      ],
+      "title" : "Miscellaneous"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/init(date:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/init(days:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/init(hours:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/init(minutes:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/init(seconds:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/asTimeInterval",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/inSeconds"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/date(in:)"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/oneDay",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/oneHour"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/days(_:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/hours(_:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/minutes(_:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/seconds(_:)"
+      ],
+      "title" : "Type Methods"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/RelativeDateDirection"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/-Implementations",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/-Implementations",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Comparable-Implementations",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Decodable-Implementations",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Encodable-Implementations",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/tokenexpiration"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/SE": {
+  "identifier" : "doc:\/\/OAuth2Models\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/SL": {
+  "identifier" : "doc:\/\/OAuth2Models\/SL",
+  "title" : "Swift.Comparable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/SQ": {
+  "identifier" : "doc:\/\/OAuth2Models\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/Se": {
+  "identifier" : "doc:\/\/OAuth2Models\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/CharacterSetValidationError": {
+  "abstract" : [
+    {
+      "text" : "Error thrown when a string includes invalid characters.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CharacterSetValidationError"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/CharacterSetValidationError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CharacterSetValidationError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CharacterSetValidationError",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/charactersetvalidationerror"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/CustomTypes": {
+  "abstract" : [
+    {
+      "text" : "The OAuth2 standard is open, meaning that new Grant Types and custom properties are allowed.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/CustomTypes",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Custom Grant Types and Properties",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/customtypes"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorDescription": {
+  "abstract" : [
+    {
+      "text" : "Wraps the description field of the error models and ensures that it contains only the characters that the spec allows.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorDescription",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorDescription"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errordescription"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorURL": {
+  "abstract" : [
+    {
+      "text" : "Wraps the URL field of the error models and ensures that it contains only the characters that the spec allows.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorURL"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorURL",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorURL"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorURL",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorurl"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/Scope": {
+  "abstract" : [
+    {
+      "text" : "Represents a list of scopes. The items are distinct.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Scope"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/Scope",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Scope"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Scope",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/scope"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration": {
+  "abstract" : [
+    {
+      "text" : "The duration that a token is valid.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TokenExpiration",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : " Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/Comparable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Comparable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Comparable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/comparable-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/Decodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Decodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Decodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/decodable-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/Encodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Encodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Encodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/encodable-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/equatable-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/RelativeDateDirection": {
+  "abstract" : [
+    {
+      "text" : "Represents a direction that a date can be in.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RelativeDateDirection"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/RelativeDateDirection",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RelativeDateDirection"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TokenExpiration.RelativeDateDirection",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/relativedatedirection"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/asTimeInterval": {
+  "abstract" : [
+    {
+      "text" : "Returns the expiration as a ",
+      "type" : "text"
+    },
+    {
+      "code" : "TimeInterval",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "asTimeInterval"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:@T@NSTimeInterval",
+      "text" : "TimeInterval"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/asTimeInterval",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "asTimeInterval",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/astimeinterval"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/date(in:)": {
+  "abstract" : [
+    {
+      "text" : "Returns the date relative to now that the token would expire.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "date"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "in"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models15TokenExpirationV",
+      "text" : "TokenExpiration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models15TokenExpirationV21RelativeDateDirectionO",
+      "text" : "RelativeDateDirection"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/date(in:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "date(in:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/date(in:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/days(_:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " in days.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "days"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models15TokenExpirationV",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/days(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "days(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/days(_:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/hours(_:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " in hours.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hours"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models15TokenExpirationV",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/hours(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hours(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/hours(_:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/inSeconds": {
+  "abstract" : [
+    {
+      "text" : "Returns the expiration in full seconds.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "inSeconds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/inSeconds",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "inSeconds",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/inseconds"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/init(date:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " based on a ",
+      "type" : "text"
+    },
+    {
+      "code" : "Date",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", relative to now.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "date"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/init(date:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(date:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/init(date:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/init(days:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " in days.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "days"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/init(days:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(days:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/init(days:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/init(hours:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " in hours.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "hours"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/init(hours:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(hours:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/init(hours:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/init(minutes:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " in minutes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "minutes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/init(minutes:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(minutes:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/init(minutes:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/init(seconds:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " in seconds.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "seconds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/init(seconds:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(seconds:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/init(seconds:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/minutes(_:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " in minutes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "minutes"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models15TokenExpirationV",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/minutes(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "minutes(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/minutes(_:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/oneDay": {
+  "abstract" : [
+    {
+      "text" : "Convenience instance for an ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " of a single day.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "oneDay"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models15TokenExpirationV",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/oneDay",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "oneDay",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/oneday"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/oneHour": {
+  "abstract" : [
+    {
+      "text" : "Convenience instance for a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " of a single hour.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "oneHour"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models15TokenExpirationV",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/oneHour",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "oneHour",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/onehour"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/seconds(_:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " in seconds.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "seconds"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models15TokenExpirationV",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/seconds(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "seconds(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/seconds(_:)"
+}
+}
+}

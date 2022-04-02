@@ -1,0 +1,364 @@
+{
+  "abstract" : [
+    {
+      "text" : "Wraps the description field of the error models and ensures that it contains only the characters that the spec allows.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorDescription"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models16ErrorDescriptionV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ErrorDescription"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "ErrorDescription"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "ErrorDescription"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ErrorDescription"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/CustomTypes",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/CharacterSetValidationError",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorURL",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/Scope",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration"
+      ],
+      "title" : "Miscellaneous"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorDescription\/init(_:)"
+      ],
+      "title" : "Initializers"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/errordescription"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/CharacterSetValidationError": {
+  "abstract" : [
+    {
+      "text" : "Error thrown when a string includes invalid characters.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CharacterSetValidationError"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/CharacterSetValidationError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CharacterSetValidationError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CharacterSetValidationError",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/charactersetvalidationerror"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/CustomTypes": {
+  "abstract" : [
+    {
+      "text" : "The OAuth2 standard is open, meaning that new Grant Types and custom properties are allowed.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/CustomTypes",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Custom Grant Types and Properties",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/customtypes"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorDescription": {
+  "abstract" : [
+    {
+      "text" : "Wraps the description field of the error models and ensures that it contains only the characters that the spec allows.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorDescription",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorDescription"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errordescription"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorDescription/init(_:)": {
+  "abstract" : [
+    {
+      "text" : "Initializes the wrapper.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorDescription\/init(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errordescription\/init(_:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorURL": {
+  "abstract" : [
+    {
+      "text" : "Wraps the URL field of the error models and ensures that it contains only the characters that the spec allows.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorURL"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorURL",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorURL"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorURL",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorurl"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/Scope": {
+  "abstract" : [
+    {
+      "text" : "Represents a list of scopes. The items are distinct.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Scope"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/Scope",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Scope"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Scope",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/scope"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration": {
+  "abstract" : [
+    {
+      "text" : "The duration that a token is valid.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TokenExpiration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TokenExpiration",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration"
+}
+}
+}

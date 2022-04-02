@@ -1,0 +1,557 @@
+{
+  "abstract" : [
+    {
+      "text" : "No overview available.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models11AuthRequestV10CodingKeysO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "AuthRequest.CodingKeys"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "CodingKeys"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/s9CodingKeyP",
+        "doc:\/\/OAuth2Models\/s28CustomDebugStringConvertibleP",
+        "doc:\/\/OAuth2Models\/s23CustomStringConvertibleP",
+        "doc:\/\/OAuth2Models\/SQ",
+        "doc:\/\/OAuth2Models\/SH",
+        "doc:\/\/OAuth2Models\/SY",
+        "doc:\/\/OAuth2Models\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/clientID",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/redirectURL",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/responseType",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/scope",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/state"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/init(intValue:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/init(rawValue:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/init(stringValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/CodingKey-Implementations",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/Equatable-Implementations",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/authrequest\/codingkeys"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/SH": {
+  "identifier" : "doc:\/\/OAuth2Models\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/SQ": {
+  "identifier" : "doc:\/\/OAuth2Models\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/SY": {
+  "identifier" : "doc:\/\/OAuth2Models\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " Authorization Request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AuthRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AuthRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthRequest.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys/CodingKey-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/CodingKey-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CodingKey Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/codingkey-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/equatable-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/rawrepresentable-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys/clientID": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "clientID"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/clientID",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "AuthRequest.CodingKeys.clientID",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/clientid"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys/init(intValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "intValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/init(intValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(intValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/init(intvalue:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/init(rawvalue:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys/init(stringValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "stringValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/init(stringValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(stringValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/init(stringvalue:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys/redirectURL": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "redirectURL"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/redirectURL",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "AuthRequest.CodingKeys.redirectURL",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/redirecturl"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys/responseType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "responseType"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/responseType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "AuthRequest.CodingKeys.responseType",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/responsetype"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys/scope": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scope"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/scope",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "AuthRequest.CodingKeys.scope",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/scope"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthRequest/CodingKeys/state": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "state"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthRequest\/CodingKeys\/state",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "AuthRequest.CodingKeys.state",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/state"
+},
+"doc://OAuth2Models/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/OAuth2Models\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/s28CustomDebugStringConvertibleP": {
+  "identifier" : "doc:\/\/OAuth2Models\/s28CustomDebugStringConvertibleP",
+  "title" : "Swift.CustomDebugStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/s8SendableP": {
+  "identifier" : "doc:\/\/OAuth2Models\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/s9CodingKeyP": {
+  "identifier" : "doc:\/\/OAuth2Models\/s9CodingKeyP",
+  "title" : "Swift.CodingKey",
+  "type" : "unresolvable"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.1",
+  "title" : "4.1.1.",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.1.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.1"
+}
+}
+}

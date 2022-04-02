@@ -1,0 +1,329 @@
+{
+  "abstract" : [
+    {
+      "text" : "REQUIRED.  Value MUST be set to ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest\/GrantType-swift.enum\/refreshToken",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest\/grantType-swift.property"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models19RefreshTokenRequestV9grantTypeAC05GrantG0Ovp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "grantType"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models19RefreshTokenRequestV",
+        "text" : "RefreshTokenRequest"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12OAuth2Models19RefreshTokenRequestV9GrantTypeO",
+        "text" : "GrantType"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "grantType"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "grantType"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models19RefreshTokenRequestV",
+              "text" : "RefreshTokenRequest"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest\/GrantType-swift.enum",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12OAuth2Models19RefreshTokenRequestV9GrantTypeO",
+              "text" : "GrantType"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.property"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/RefreshTokenRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-6",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " Refreshing an Access Token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RefreshTokenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RefreshTokenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RefreshTokenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/refreshtokenrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/RefreshTokenRequest/GrantType-swift.enum": {
+  "abstract" : [
+    {
+      "text" : "Available grant types",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GrantType"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest\/GrantType-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GrantType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RefreshTokenRequest.GrantType",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/RefreshTokenRequest/GrantType-swift.enum/refreshToken": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "refreshToken"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest\/GrantType-swift.enum\/refreshToken",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "RefreshTokenRequest.GrantType.refreshToken",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum\/refreshtoken"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/RefreshTokenRequest/grantType-swift.property": {
+  "abstract" : [
+    {
+      "text" : "REQUIRED.  Value MUST be set to ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest\/GrantType-swift.enum\/refreshToken",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "grantType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models19RefreshTokenRequestV",
+      "text" : "RefreshTokenRequest"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models19RefreshTokenRequestV9GrantTypeO",
+      "text" : "GrantType"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest\/grantType-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "grantType",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.property"
+},
+"https://tools.ietf.org/html/rfc6749#section-6": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-6",
+  "title" : "6.",
+  "titleInlineContent" : [
+    {
+      "text" : "6.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-6"
+}
+}
+}

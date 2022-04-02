@@ -1,0 +1,948 @@
+{
+  "abstract" : [
+    {
+      "text" : "Convenience ",
+      "type" : "text"
+    },
+    {
+      "code" : "Decodable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to make it easier to have a single endpoint support all grant types.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models12GrantRequestO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "GrantRequest"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "GrantRequest"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "GrantRequest"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "GrantRequest"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/Se",
+        "doc:\/\/OAuth2Models\/SQ"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/HandlingRequests",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse"
+      ],
+      "title" : "Responding to a request (server)"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/authCodeAccessToken(_:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/clientCredentialsAccessToken(_:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/passwordAccessToken(_:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/refreshToken(_:)"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/Error"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/grantrequest"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/SQ": {
+  "identifier" : "doc:\/\/OAuth2Models\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/Se": {
+  "identifier" : "doc:\/\/OAuth2Models\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenError": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " Error Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenError"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AccessTokenError",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenerror"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "  Successful Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AccessTokenResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AccessTokenResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAccessTokenRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.3",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".  Access Token Request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAccessTokenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAccessTokenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthCodeAccessTokenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AuthCodeAuthResponse": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " Authorization Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAuthResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AuthCodeAuthResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuthCodeAuthResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/authcodeauthresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ClientCredentialsAccessTokenRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.4.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". Client Credentials Access Token Request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ClientCredentialsAccessTokenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ClientCredentialsAccessTokenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ClientCredentialsAccessTokenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse": {
+  "abstract" : [
+    {
+      "text" : "Error Response for all error codes in use by RFC 6749.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "This covers ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ",",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/GrantRequest": {
+  "abstract" : [
+    {
+      "text" : "Convenience ",
+      "type" : "text"
+    },
+    {
+      "code" : "Decodable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to make it easier to have a single endpoint support all grant types.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GrantRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GrantRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "GrantRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/grantrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/GrantRequest/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/grantrequest\/equatable-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/GrantRequest/Error": {
+  "abstract" : [
+    {
+      "text" : "The errors that can happen when decoding a ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Error"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/Error",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Error"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "GrantRequest.Error",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/grantrequest\/error"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/GrantRequest/authCodeAccessToken(_:)": {
+  "abstract" : [
+    {
+      "text" : "The grant is for ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAccessTokenRequest",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "authCodeAccessToken"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models26AuthCodeAccessTokenRequestV",
+      "text" : "AuthCodeAccessTokenRequest"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/authCodeAccessToken(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "GrantRequest.authCodeAccessToken(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/grantrequest\/authcodeaccesstoken(_:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/GrantRequest/clientCredentialsAccessToken(_:)": {
+  "abstract" : [
+    {
+      "text" : "The grant is for ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest",
+      "isActive" : true,
+      "type" : "reference"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "clientCredentialsAccessToken"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models35ClientCredentialsAccessTokenRequestV",
+      "text" : "ClientCredentialsAccessTokenRequest"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/clientCredentialsAccessToken(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "GrantRequest.clientCredentialsAccessToken(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/grantrequest\/clientcredentialsaccesstoken(_:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/GrantRequest/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/grantrequest\/init(from:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/GrantRequest/passwordAccessToken(_:)": {
+  "abstract" : [
+    {
+      "text" : "The grant is for ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/PasswordAccessTokenRequest",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "passwordAccessToken"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models26PasswordAccessTokenRequestV",
+      "text" : "PasswordAccessTokenRequest"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/passwordAccessToken(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "GrantRequest.passwordAccessToken(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/grantrequest\/passwordaccesstoken(_:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/GrantRequest/refreshToken(_:)": {
+  "abstract" : [
+    {
+      "text" : "The grant is for ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "refreshToken"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models19RefreshTokenRequestV",
+      "text" : "RefreshTokenRequest"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest\/refreshToken(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "GrantRequest.refreshToken(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/grantrequest\/refreshtoken(_:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/HandlingRequests": {
+  "abstract" : [
+    {
+      "text" : "How to handle an incoming request and sending the appropriate response.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/HandlingRequests",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Handling an incoming request",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/handlingrequests"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/PasswordAccessTokenRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.3.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". Resource Owner Password Credentials Access Token Request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PasswordAccessTokenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/PasswordAccessTokenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PasswordAccessTokenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PasswordAccessTokenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/passwordaccesstokenrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/RefreshTokenRequest": {
+  "abstract" : [
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-6",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " Refreshing an Access Token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RefreshTokenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/RefreshTokenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RefreshTokenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RefreshTokenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/refreshtokenrequest"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.2": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2",
+  "title" : "4.1.2.",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.2.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.2.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1",
+  "title" : "4.1.2.1 Authorization Code Grant",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.2.1 Authorization Code Grant",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.2.2.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+  "title" : "4.2.2.1 Implicit Grant",
+  "titleInlineContent" : [
+    {
+      "text" : "4.2.2.1 Implicit Grant",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-5.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1",
+  "title" : "5.1.",
+  "titleInlineContent" : [
+    {
+      "text" : "5.1.",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-5.2": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+  "title" : "5.2 for other uses",
+  "titleInlineContent" : [
+    {
+      "text" : "5.2 for other uses",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2"
+}
+}
+}

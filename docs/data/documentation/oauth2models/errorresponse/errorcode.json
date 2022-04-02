@@ -1,0 +1,1093 @@
+{
+  "abstract" : [
+    {
+      "text" : "The available error codes.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12OAuth2Models13ErrorResponseV0C4CodeO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ErrorCode"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "OAuth2Models"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "ErrorCode"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "ErrorResponse.ErrorCode"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ErrorCode"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/Se",
+        "doc:\/\/OAuth2Models\/SE",
+        "doc:\/\/OAuth2Models\/SQ",
+        "doc:\/\/OAuth2Models\/SH",
+        "doc:\/\/OAuth2Models\/SY"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/accessDenied",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/invalidClient",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/invalidGrant",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/invalidRequest",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/invalidScope",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/serverError",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/temporarilyUnavailable",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/unauthorizedClient",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/unsupportedGrantType",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/unsupportedResponseType"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/valid4_1_2_1Codes",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/valid4_2_2_1Codes",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/valid5_2Codes"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/Equatable-Implementations",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/oauth2models\/errorresponse\/errorcode"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://OAuth2Models/SE": {
+  "identifier" : "doc:\/\/OAuth2Models\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/SH": {
+  "identifier" : "doc:\/\/OAuth2Models\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/SQ": {
+  "identifier" : "doc:\/\/OAuth2Models\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/SY": {
+  "identifier" : "doc:\/\/OAuth2Models\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/Se": {
+  "identifier" : "doc:\/\/OAuth2Models\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://OAuth2Models/documentation/OAuth2Models": {
+  "abstract" : [
+    {
+      "code" : "Codable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " models for handling OAuth2 requests.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "OAuth2Models",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse": {
+  "abstract" : [
+    {
+      "text" : "Error Response for all error codes in use by RFC 6749.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "This covers ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ",",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode": {
+  "abstract" : [
+    {
+      "text" : "The available error codes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ErrorCode"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ErrorCode"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/equatable-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/rawrepresentable-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/accessDenied": {
+  "abstract" : [
+    {
+      "text" : "The resource owner or authorization server denied the request.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "accessDenied"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/accessDenied",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode.accessDenied",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/accessdenied"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/init(rawvalue:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/invalidClient": {
+  "abstract" : [
+    {
+      "text" : "Client authentication failed (e.g., unknown client, no",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "client authentication included, or unsupported",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "authentication method).  The authorization server MAY",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "return an HTTP 401 (Unauthorized) status code to indicate",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "which HTTP authentication schemes are supported.  If the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "client attempted to authenticate via the ",
+      "type" : "text"
+    },
+    {
+      "code" : "Authorization",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "request header field, the authorization server MUST",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "respond with an HTTP 401 (Unauthorized) status code and",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "include the ",
+      "type" : "text"
+    },
+    {
+      "code" : "WWW-Authenticate",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " response header field",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "matching the authentication scheme used by the client.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invalidClient"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/invalidClient",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode.invalidClient",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/invalidclient"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/invalidGrant": {
+  "abstract" : [
+    {
+      "text" : "The provided authorization grant (e.g., authorization",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "code, resource owner credentials) or refresh token is",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "invalid, expired, revoked, does not match the redirection",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "URI used in the authorization request, or was issued to",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "another client.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invalidGrant"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/invalidGrant",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode.invalidGrant",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/invalidgrant"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/invalidRequest": {
+  "abstract" : [
+    {
+      "text" : "The request is missing a required parameter, includes an",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "unsupported parameter value (other than grant type),",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "repeats a parameter, includes multiple credentials,",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "utilizes more than one mechanism for authenticating the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "client, or is otherwise malformed.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invalidRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/invalidRequest",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode.invalidRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/invalidrequest"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/invalidScope": {
+  "abstract" : [
+    {
+      "text" : "The requested scope is invalid, unknown, or malformed, or",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "exceeds the scope granted by the resource owner.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invalidScope"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/invalidScope",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode.invalidScope",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/invalidscope"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/serverError": {
+  "abstract" : [
+    {
+      "text" : "The authorization server encountered an unexpected",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "condition that prevented it from fulfilling the request.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "(This error code is needed because a 500 Internal Server",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "Error HTTP status code cannot be returned to the client",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "via an HTTP redirect.)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "serverError"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/serverError",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode.serverError",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/servererror"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/temporarilyUnavailable": {
+  "abstract" : [
+    {
+      "text" : "The authorization server is currently unable to handle",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "the request due to a temporary overloading or maintenance",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "of the server.  (This error code is needed because a 503",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "Service Unavailable HTTP status code cannot be returned",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "to the client via an HTTP redirect.)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "temporarilyUnavailable"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/temporarilyUnavailable",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode.temporarilyUnavailable",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/temporarilyunavailable"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/unauthorizedClient": {
+  "abstract" : [
+    {
+      "text" : "The client is not authorized to request an authorization",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "code using this method.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "unauthorizedClient"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/unauthorizedClient",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode.unauthorizedClient",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/unauthorizedclient"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/unsupportedGrantType": {
+  "abstract" : [
+    {
+      "text" : "The authorization grant type is not supported by the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "authorization server.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "unsupportedGrantType"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/unsupportedGrantType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode.unsupportedGrantType",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/unsupportedgranttype"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/unsupportedResponseType": {
+  "abstract" : [
+    {
+      "text" : "The authorization server does not support obtaining an",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "authorization code using this method.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "unsupportedResponseType"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/unsupportedResponseType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ErrorResponse.ErrorCode.unsupportedResponseType",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/unsupportedresponsetype"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/valid4_1_2_1Codes": {
+  "abstract" : [
+    {
+      "text" : "The codes that are valid according to section ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "valid4_1_2_1Codes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV",
+      "text" : "ErrorResponse"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV0C4CodeO",
+      "text" : "ErrorCode"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/valid4_1_2_1Codes",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "valid4_1_2_1Codes",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/valid4_1_2_1codes"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/valid4_2_2_1Codes": {
+  "abstract" : [
+    {
+      "text" : "The codes that are valid according to section ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+      "isActive" : true,
+      "type" : "reference"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "valid4_2_2_1Codes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV",
+      "text" : "ErrorResponse"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV0C4CodeO",
+      "text" : "ErrorCode"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/valid4_2_2_1Codes",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "valid4_2_2_1Codes",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/valid4_2_2_1codes"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ErrorResponse/ErrorCode/valid5_2Codes": {
+  "abstract" : [
+    {
+      "text" : "The codes that are valid according to section ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+      "isActive" : true,
+      "type" : "reference"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "valid5_2Codes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV",
+      "text" : "ErrorResponse"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12OAuth2Models13ErrorResponseV0C4CodeO",
+      "text" : "ErrorCode"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse\/ErrorCode\/valid5_2Codes",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "valid5_2Codes",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/valid5_2codes"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.1.2.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1",
+  "title" : "4.1.2.1 Authorization Code Grant Error Response",
+  "titleInlineContent" : [
+    {
+      "text" : "4.1.2.1 Authorization Code Grant Error Response",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.1.2.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-4.2.2.1": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1",
+  "title" : "4.2.2.1 Implicit Grant Error Response",
+  "titleInlineContent" : [
+    {
+      "text" : "4.2.2.1 Implicit Grant Error Response",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-4.2.2.1"
+},
+"https://tools.ietf.org/html/rfc6749#section-5.2": {
+  "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
+  "title" : "5.2 Error Response",
+  "titleInlineContent" : [
+    {
+      "text" : "5.2 Error Response",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2"
+}
+}
+}
