@@ -2,11 +2,10 @@
 
 The OAuth2 standard is open, meaning that new Grant Types and custom properties are allowed.
 
-## Overview
-
 The standard allows for adding custom Grant Types and custom properties.
 
-### Custom Grant Types
+
+## Custom Grant Types
 
 The OAuth2 standard is open-ended, so that new `Grant Type`s can be added as necessary.
 This does mean that it is possible to require types that this library does not support.
@@ -34,7 +33,7 @@ types if the custom type cannot decode. Care should be taken though to ensure th
 the custom type is as strict as possible, so that it does not absorb values of the other types.
 
 
-### Decoding custom properties
+## Decoding custom properties
 
 Decoding custom properties is simple, because of the way that Swift handle decoding.
 The basic concept is to make a type containing only the custom properties, and then
@@ -54,7 +53,7 @@ app.post("token") { req in
 ```
 
 
-### Encoding custom properties
+## Encoding custom properties
 
 Encoding customer properties are a tad more complicated than decoding, because
 each encoding would create an isolated result. So instead, a wrapper type is required:

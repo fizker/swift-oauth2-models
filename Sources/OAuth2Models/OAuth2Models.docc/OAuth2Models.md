@@ -2,8 +2,6 @@
 
 `Codable` models for handling OAuth2 requests.
 
-## Overview
-
 OAuth2Models defines a set of Request, Response and Error models as specified in [RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749).
 
 The models enforce certain aspects, like enforcing an appropriate `grantType` value,

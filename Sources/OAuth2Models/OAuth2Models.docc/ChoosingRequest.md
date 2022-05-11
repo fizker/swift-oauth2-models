@@ -2,16 +2,13 @@
 
 Choosing the correct Request type is essential.
 
-
-## Overview
-
 OAuth2 supports a range of different types of grant requests. It is important to
 choose the correct type for the situation.
 
 Note that for any of the requests, it is possible to get an ``ErrorResponse`` back.
 
 
-### Username + password
+## Username + password
 
 The ``PasswordAccessTokenRequest`` requires a username and password. It is specially
 designed for this usecase.
@@ -22,7 +19,7 @@ In this case, submit the request authentication using the HTTP Basic authenticat
 On success of either type, the server will respond with a ``AccessTokenResponse``.
 
 
-### Pre-agreed auth token
+## Pre-agreed auth token
 
 If the app have a pre-agreed auth token, such as a certificate or
 [JSON Web Tokens](https://datatracker.ietf.org/doc/html/rfc7519), use
@@ -34,7 +31,7 @@ The HTTP `Authorization` header is often the preferred mechanism.
 On success, the server will respond with a ``AccessTokenResponse``.
 
 
-### Requesting auth from user
+## Requesting auth from user
 
 In most OAuth2 situations, the user is asked to grant the app permission. This is done using the ``AuthRequest``.
 It supports either the `Implicit Grant` or the `Authorization Code Grant` types.
@@ -49,7 +46,7 @@ For the `Implicit Grant` type, after the user have authorized the app, an ``Acce
 will be sent immediately.
 
 
-### Refreshing an access token
+## Refreshing an access token
 
 To refresh an access token, the ``RefreshTokenRequest`` type is used. On success,
 the server will respond with an ``AccessTokenResponse``.

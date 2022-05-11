@@ -2,9 +2,7 @@
 
 How to handle an incoming request and sending the appropriate response.
 
-## Overview
-
-### Handling a specific request
+## Handling a specific request
 
 Typically, handling an incoming request starts at an endpoint. For example, a client
 could post a ``PasswordAccessTokenRequest`` to a `/token` endpoint.
@@ -23,7 +21,7 @@ client sent a ``ClientCredentialsAccessTokenRequest`` instead, the decoding woul
 fail and an error would be thrown.
 
 
-### Supporting multiple Request types
+## Supporting multiple Request types
 
 Often, a server has to support multiple different Request types. For example, the
 server could support one `AccessTokenRequest` and the ``RefreshTokenRequest``.
@@ -60,7 +58,7 @@ app.post("token") { req -> String in
 ```
 
 
-### Handling custom or unsupported request types
+## Handling custom or unsupported request types
 
 To handle custom request types or request types not supported by this library,
 see <doc:CustomTypes> for more details.
