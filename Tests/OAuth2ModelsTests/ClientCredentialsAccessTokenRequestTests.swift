@@ -52,13 +52,15 @@ class ClientCredentialsAccessTokenRequestTests: XCTestCase {
 	}
 
 	func test__encodable__fullObject__encodesAsExpected() throws {
-		let object = ClientCredentialsAccessTokenRequest(grantType: .clientCredentials, scope: "abc")
+		let object = ClientCredentialsAccessTokenRequest(grantType: .clientCredentials, scope: "abc", clientID: "id", clientSecret: "secret")
 		let data = try encode(object)
 		let actual = try decode(data) as [String: String]
 
 		let expected = [
 			"grant_type": "client_credentials",
 			"scope": "abc",
+			"client_id": "id",
+			"client_secret": "secret",
 		]
 		XCTAssertEqual(actual, expected)
 	}
@@ -87,6 +89,46 @@ class ClientCredentialsAccessTokenRequestTests: XCTestCase {
 		XCTAssertEqual(["bar", "foo"], try Scope(string: actual["scope"] ?? ""))
 		actual.removeValue(forKey: "scope")
 
+		XCTAssertEqual(actual, expected)
+	}
+
+	func test__encodable__clientIDIsPresent_clientSecretIsNot__encodesAsExpected() throws {
+		let object = ClientCredentialsAccessTokenRequest(grantType: .clientCredentials, scope: "abc", clientID: "id")
+		let data = try encode(object)
+		let actual = try decode(data) as [String: String]
+
+		let expected = [
+			"grant_type": "client_credentials",
+			"scope": "abc",
+			"client_id": "id",
+		]
+		XCTAssertEqual(actual, expected)
+	}
+
+	func test__encodable__clientIDIsNotPresent_clientSecretIsPresent__encodesAsExpected() throws {
+		let object = ClientCredentialsAccessTokenRequest(grantType: .clientCredentials, scope: "abc", clientSecret: "secret")
+		let data = try encode(object)
+		let actual = try decode(data) as [String: String]
+
+		let expected = [
+			"grant_type": "client_credentials",
+			"scope": "abc",
+			"client_secret": "secret",
+		]
+		XCTAssertEqual(actual, expected)
+	}
+
+	func test__encodable__clientSecretIsEmptyString__clientSecretIsIncluded() throws {
+		let object = ClientCredentialsAccessTokenRequest(grantType: .clientCredentials, scope: "abc", clientID: "id", clientSecret: "")
+		let data = try encode(object)
+		let actual = try decode(data) as [String: String]
+
+		let expected = [
+			"grant_type": "client_credentials",
+			"scope": "abc",
+			"client_id": "id",
+			"client_secret": "",
+		]
 		XCTAssertEqual(actual, expected)
 	}
 }
