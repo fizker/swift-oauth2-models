@@ -2,6 +2,43 @@ import XCTest
 import OAuth2Models
 
 final class AccessTokenResponseTests: XCTestCase {
+	func test__decodable_result__validResponse__decodesCorrectly() async throws {
+		let data = try json()
+		let object = try OAuth2ModelsTests.decode(data) as AccessTokenResponse.Result
+
+		switch object {
+		case let .success(object):
+			XCTAssertEqual(object.accessToken, "access token value")
+			XCTAssertEqual(object.type, .bearer)
+			XCTAssertEqual(object.expiration, .seconds(123))
+			XCTAssertEqual(object.refreshToken, "refresh token value")
+			XCTAssertEqual(object.scope, "some scope")
+		case .failure(_):
+			XCTFail("failed")
+		}
+	}
+
+	func test__decodable_result__errorResponse__decodesCorrectly() async throws {
+		let data = #"""
+			{
+				"error":"unauthorized_client",
+				"error_description":"Some description",
+				"error_uri":"https://login.microsoftonline.com/error?code=700016"
+			}
+			"""#
+			.data(using: .utf8)!
+		let object = try OAuth2ModelsTests.decode(data) as AccessTokenResponse.Result
+
+		switch object {
+		case .success(_):
+			XCTFail("failed")
+		case let .failure(object):
+			XCTAssertEqual(object.code, .unauthorizedClient)
+			XCTAssertEqual(object.description, "Some description")
+			XCTAssertEqual(object.url, URL(string: "https://login.microsoftonline.com/error?code=700016")!)
+		}
+	}
+
 	func test__decodable__fullObject__decodesAsExpected() throws {
 		let data = try json()
 		let object = try decode(data)

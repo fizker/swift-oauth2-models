@@ -8,6 +8,9 @@ import Foundation
 /// redirection URI using the `application/x-www-form-urlencoded` format,
 /// per Appendix B.
 public struct AuthCodeAuthResponse: Codable, Equatable {
+	/// Convenience type for referencing a Codable `Result<Self, ErrorResponse>`.
+	public typealias Result = Swift.Result<Self, ErrorResponse>
+
 	public enum CodingKeys: String, CodingKey {
 		case code, state
 	}

@@ -6,6 +6,9 @@ import Foundation
 /// token, and constructs the response by adding the following parameters
 /// to the entity-body of the HTTP response with a 200 (OK) status code:
 public struct AccessTokenResponse: Codable, Equatable {
+	/// Convenience type for referencing a Codable `Result<Self, ErrorResponse>`.
+	public typealias Result = Swift.Result<Self, ErrorResponse>
+
 	public enum CodingKeys: String, CodingKey {
 		case accessToken = "access_token"
 		case type = "token_type"
