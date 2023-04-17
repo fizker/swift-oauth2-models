@@ -15,8 +15,23 @@ public struct AccessTokenResponse: Codable, Equatable {
 	}
 
 	// The available token types.
-	public enum AccessTokenType: String, Codable {
+	public enum AccessTokenType: String, Codable, CaseIterable {
 		case bearer, mac
+
+		public init(from decoder: Decoder) throws {
+			let container = try decoder.singleValueContainer()
+			let value = try container.decode(String.self)
+			let lowercased = value.lowercased()
+
+			for `case` in Self.allCases {
+				if `case`.rawValue == lowercased {
+					self = `case`
+					return
+				}
+			}
+
+			throw DecodingError.dataCorruptedError(in: container, debugDescription: "Unknown AccessTokenType: \(value)")
+		}
 	}
 
 	/// REQUIRED.  The access token issued by the authorization server.

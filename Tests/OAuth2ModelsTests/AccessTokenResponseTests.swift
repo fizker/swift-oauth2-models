@@ -38,6 +38,13 @@ final class AccessTokenResponseTests: XCTestCase {
 		XCTAssertEqual(object.type, .mac)
 	}
 
+	func test__decodable__bearerTokenTypeIsCapitalized__decodesAsExpected() async throws {
+		let data = try json(tokenType: "Bearer")
+		let object = try decode(data)
+
+		XCTAssertEqual(object.type, .bearer)
+	}
+
 	func test__decodable__invalidExpiresIn__throws() throws {
 		let data = try json(expiresIn: #""abc""#)
 		XCTAssertThrowsError(try decode(data))
