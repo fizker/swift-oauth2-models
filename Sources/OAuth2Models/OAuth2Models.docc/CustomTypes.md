@@ -55,7 +55,7 @@ app.post("token") { req in
 
 ## Encoding custom properties
 
-Encoding customer properties are a tad more complicated than decoding, because
+Encoding custom properties are a tad more complicated than decoding, because
 each encoding would create an isolated result. So instead, a wrapper type is required:
 
 ```swift
