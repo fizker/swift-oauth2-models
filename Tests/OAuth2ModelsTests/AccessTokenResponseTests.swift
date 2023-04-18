@@ -58,7 +58,7 @@ final class AccessTokenResponseTests: XCTestCase {
 		XCTAssertEqual(object.type, .bearer)
 		XCTAssertNil(object.expiration)
 		XCTAssertNil(object.refreshToken)
-		XCTAssertTrue(object.scope.isEmpty)
+		XCTAssertNil(object.scope)
 	}
 
 	func test__decodable__decimalExpiration__decodesAsExpected() throws {

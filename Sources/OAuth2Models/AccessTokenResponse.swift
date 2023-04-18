@@ -59,7 +59,7 @@ public struct AccessTokenResponse: Codable, Equatable {
 	/// OPTIONAL, if identical to the scope requested by the client;
 	/// otherwise, REQUIRED.  The scope of the access token as
 	/// described by Section 3.3.
-	public var scope: Scope
+	public var scope: Scope?
 
 	/// Creates a new ``AccessTokenResponse``.
 	///
@@ -89,7 +89,7 @@ public struct AccessTokenResponse: Codable, Equatable {
 		type = try container.decode(forKey: .type)
 		expiration = try container.decodeIfPresent(forKey: .expiration)
 		refreshToken = try container.decodeIfPresent(forKey: .refreshToken)
-		scope = try container.decodeIfPresent(forKey: .scope) ?? Scope()
+		scope = try container.decodeIfPresent(forKey: .scope)
 	}
 
 	public func encode(to encoder: Encoder) throws {
@@ -98,7 +98,7 @@ public struct AccessTokenResponse: Codable, Equatable {
 		try container.encode(type, forKey: .type)
 		try expiration.map { try container.encode($0, forKey: .expiration) }
 		try refreshToken.map { try container.encode($0, forKey: .refreshToken) }
-		if !scope.isEmpty {
+		if let scope, !scope.isEmpty {
 			try container.encode(scope, forKey: .scope)
 		}
 	}
