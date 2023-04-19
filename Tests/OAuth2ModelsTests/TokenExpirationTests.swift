@@ -67,6 +67,18 @@ final class TokenExpirationTests: XCTestCase {
 		}
 	}
 
+	func test__isValid__tokenIsNotExpired__returnsTrue() {
+		let createdDate = Date(timeIntervalSinceNow: -1800)
+		let expiration = TokenExpiration(seconds: 3600)
+		XCTAssertTrue(expiration.isValid(whenCreatedAt: createdDate))
+	}
+
+	func test__isValid__tokenIsExpired__returnsFalse() {
+		let createdDate = Date(timeIntervalSinceNow: -3650)
+		let expiration = TokenExpiration(seconds: 3600)
+		XCTAssertFalse(expiration.isValid(whenCreatedAt: createdDate))
+	}
+
 	func test__initWithDate__dateIsInFuture__returnsExpectedValue() throws {
 		let date = Date(timeIntervalSinceNow: 30)
 		let item = TokenExpiration(date: date)

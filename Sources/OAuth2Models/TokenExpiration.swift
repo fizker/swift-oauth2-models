@@ -110,6 +110,14 @@ extension TokenExpiration {
 	public var asTimeInterval: TimeInterval {
 		return TimeInterval(inSeconds)
 	}
+
+	/// Returns in the token is currently valid by comparing the current time and the token expiration against the time that the token was created.
+	///
+	/// - parameter whenCreatedAt: The date that the token was created.
+	/// - returns: True if the token has not yet expired.
+	public func isValid(whenCreatedAt date: Date) -> Bool {
+		self.date(in: .thePast) < date
+	}
 }
 
 extension TokenExpiration {
