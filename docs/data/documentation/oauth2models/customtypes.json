@@ -31,7 +31,7 @@
     {
       "content" : [
         {
-          "anchor" : "Overview",
+          "anchor" : "overview",
           "level" : 2,
           "text" : "Overview",
           "type" : "heading"
@@ -47,7 +47,7 @@
         },
         {
           "anchor" : "Custom-Grant-Types",
-          "level" : 3,
+          "level" : 2,
           "text" : "Custom Grant Types",
           "type" : "heading"
         },
@@ -160,7 +160,7 @@
         },
         {
           "anchor" : "Decoding-custom-properties",
-          "level" : 3,
+          "level" : 2,
           "text" : "Decoding custom properties",
           "type" : "heading"
         },
@@ -207,14 +207,14 @@
         },
         {
           "anchor" : "Encoding-custom-properties",
-          "level" : 3,
+          "level" : 2,
           "text" : "Encoding custom properties",
           "type" : "heading"
         },
         {
           "inlineContent" : [
             {
-              "text" : "Encoding customer properties are a tad more complicated than decoding, because",
+              "text" : "Encoding custom properties are a tad more complicated than decoding, because",
               "type" : "text"
             },
             {
@@ -254,7 +254,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [

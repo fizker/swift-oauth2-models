@@ -37,7 +37,7 @@
     {
       "content" : [
         {
-          "anchor" : "Overview",
+          "anchor" : "overview",
           "level" : 2,
           "text" : "Overview",
           "type" : "heading"
@@ -108,7 +108,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -130,7 +130,6 @@
       "identifiers" : [
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/HandlingRequests",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest",
-        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse"
@@ -180,45 +179,6 @@
   "title" : "OAuth2Models",
   "type" : "topic",
   "url" : "\/documentation\/oauth2models"
-},
-"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenError": {
-  "abstract" : [
-    {
-      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
-      "isActive" : true,
-      "type" : "reference"
-    },
-    {
-      "text" : " Error Response",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "AccessTokenError"
-    }
-  ],
-  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "AccessTokenError"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "AccessTokenError",
-  "type" : "topic",
-  "url" : "\/documentation\/oauth2models\/accesstokenerror"
 },
 "doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse": {
   "abstract" : [

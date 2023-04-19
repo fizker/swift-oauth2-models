@@ -1,0 +1,3301 @@
+{
+  "interfaceLanguages" : {
+    "swift" : [
+      {
+        "children" : [
+          {
+            "title" : "Initiating a request (client)",
+            "type" : "groupMarker"
+          },
+          {
+            "path" : "\/documentation\/oauth2models\/choosingrequest",
+            "title" : "Choosing a Request type",
+            "type" : "article"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/init(from:)",
+                "title" : "init(from: Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/init(granttype:code:redirecturl:clientid:)",
+                "title" : "init(grantType: AuthCodeAccessTokenRequest.GrantType, code: String, redirectURL: URL?, clientID: String?)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/clientid",
+                "title" : "var clientID: String?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/code",
+                "title" : "var code: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.property",
+                "title" : "var grantType: AuthCodeAccessTokenRequest.GrantType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/redirecturl",
+                "title" : "var redirectURL: URL?",
+                "type" : "property"
+              },
+              {
+                "title" : "Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/clientid",
+                    "title" : "case clientID",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/code",
+                    "title" : "case code",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/granttype",
+                    "title" : "case grantType",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/redirecturl",
+                    "title" : "case redirectURL",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/init(intvalue:)",
+                    "title" : "init?(intValue: Int)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/init(stringvalue:)",
+                    "title" : "init?(stringValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/debugdescription",
+                        "title" : "var debugDescription: String",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/description",
+                        "title" : "var description: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/codingkey-implementations",
+                    "title" : "CodingKey Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/codingkeys",
+                "title" : "AuthCodeAccessTokenRequest.CodingKeys",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum\/authorizationcode",
+                    "title" : "case authorizationCode",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum\/init(from:)",
+                        "title" : "init(from: Decoder) throws",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum\/encode(to:)",
+                        "title" : "func encode(to: Encoder) throws",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/granttype-swift.enum",
+                "title" : "AuthCodeAccessTokenRequest.GrantType",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/authcodeaccesstokenrequest",
+            "title" : "AuthCodeAccessTokenRequest",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authrequest\/init(from:)",
+                "title" : "init(from: Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authrequest\/init(responsetype:clientid:redirecturl:state:scope:)",
+                "title" : "init(responseType: AuthRequest.ResponseType, clientID: String, redirectURL: URL, state: String?, scope: Scope)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authrequest\/init(responsetype:clientid:state:scope:)",
+                "title" : "init(responseType: AuthRequest.ResponseType, clientID: String, state: String?, scope: Scope)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authrequest\/clientid",
+                "title" : "var clientID: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authrequest\/redirecturl",
+                "title" : "var redirectURL: URL?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.property",
+                "title" : "var responseType: AuthRequest.ResponseType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authrequest\/scope",
+                "title" : "var scope: Scope",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authrequest\/state",
+                "title" : "var state: String?",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authrequest\/encode(to:)",
+                "title" : "func encode(to: Encoder) throws",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authrequest\/error(code:description:url:)",
+                "title" : "func error(code: ErrorResponse.ErrorCode, description: ErrorDescription?, url: ErrorURL?) -> ErrorResponse",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authrequest\/response(code:)",
+                "title" : "func response(code: String) -> AuthCodeAuthResponse",
+                "type" : "method"
+              },
+              {
+                "title" : "Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/clientid",
+                    "title" : "case clientID",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/redirecturl",
+                    "title" : "case redirectURL",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/responsetype",
+                    "title" : "case responseType",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/scope",
+                    "title" : "case scope",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/state",
+                    "title" : "case state",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/init(intvalue:)",
+                    "title" : "init?(intValue: Int)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/init(stringvalue:)",
+                    "title" : "init?(stringValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/debugdescription",
+                        "title" : "var debugDescription: String",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/description",
+                        "title" : "var description: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/codingkey-implementations",
+                    "title" : "CodingKey Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/authrequest\/codingkeys",
+                "title" : "AuthRequest.CodingKeys",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum\/code",
+                    "title" : "case code",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum\/token",
+                    "title" : "case token",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum\/init(from:)",
+                        "title" : "init(from: Decoder) throws",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum\/encode(to:)",
+                        "title" : "func encode(to: Encoder) throws",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/authrequest\/responsetype-swift.enum",
+                "title" : "AuthRequest.ResponseType",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authrequest\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/authrequest\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/authrequest",
+            "title" : "AuthRequest",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/init(from:)",
+                "title" : "init(from: Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/init(granttype:scope:clientid:clientsecret:)",
+                "title" : "init(grantType: ClientCredentialsAccessTokenRequest.GrantType, scope: Scope, clientID: String?, clientSecret: String?)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/clientid",
+                "title" : "var clientID: String?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/clientsecret",
+                "title" : "var clientSecret: String?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/granttype-swift.property",
+                "title" : "var grantType: ClientCredentialsAccessTokenRequest.GrantType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/scope",
+                "title" : "var scope: Scope",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/encode(to:)",
+                "title" : "func encode(to: Encoder) throws",
+                "type" : "method"
+              },
+              {
+                "title" : "Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/clientid",
+                    "title" : "case clientID",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/clientsecret",
+                    "title" : "case clientSecret",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/granttype",
+                    "title" : "case grantType",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/scope",
+                    "title" : "case scope",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/init(intvalue:)",
+                    "title" : "init?(intValue: Int)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/init(stringvalue:)",
+                    "title" : "init?(stringValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/debugdescription",
+                        "title" : "var debugDescription: String",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/description",
+                        "title" : "var description: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/codingkey-implementations",
+                    "title" : "CodingKey Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys",
+                "title" : "ClientCredentialsAccessTokenRequest.CodingKeys",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/granttype-swift.enum\/clientcredentials",
+                    "title" : "case clientCredentials",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/granttype-swift.enum\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/granttype-swift.enum\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/granttype-swift.enum\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/granttype-swift.enum\/init(from:)",
+                        "title" : "init(from: Decoder) throws",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/granttype-swift.enum\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/granttype-swift.enum\/encode(to:)",
+                        "title" : "func encode(to: Encoder) throws",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/granttype-swift.enum\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/granttype-swift.enum\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/granttype-swift.enum",
+                "title" : "ClientCredentialsAccessTokenRequest.GrantType",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest",
+            "title" : "ClientCredentialsAccessTokenRequest",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/init(from:)",
+                "title" : "init(from: Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/init(granttype:username:password:scope:)",
+                "title" : "init(grantType: PasswordAccessTokenRequest.GrantType, username: String, password: String, scope: Scope)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/granttype-swift.property",
+                "title" : "var grantType: PasswordAccessTokenRequest.GrantType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/password",
+                "title" : "var password: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/scope",
+                "title" : "var scope: Scope",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/username",
+                "title" : "var username: String",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/encode(to:)",
+                "title" : "func encode(to: Encoder) throws",
+                "type" : "method"
+              },
+              {
+                "title" : "Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/granttype",
+                    "title" : "case grantType",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/password",
+                    "title" : "case password",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/scope",
+                    "title" : "case scope",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/username",
+                    "title" : "case username",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/init(intvalue:)",
+                    "title" : "init?(intValue: Int)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/init(stringvalue:)",
+                    "title" : "init?(stringValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/debugdescription",
+                        "title" : "var debugDescription: String",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/description",
+                        "title" : "var description: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/codingkey-implementations",
+                    "title" : "CodingKey Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/codingkeys",
+                "title" : "PasswordAccessTokenRequest.CodingKeys",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/granttype-swift.enum\/password",
+                    "title" : "case password",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/granttype-swift.enum\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/granttype-swift.enum\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/granttype-swift.enum\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/granttype-swift.enum\/init(from:)",
+                        "title" : "init(from: Decoder) throws",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/granttype-swift.enum\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/granttype-swift.enum\/encode(to:)",
+                        "title" : "func encode(to: Encoder) throws",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/granttype-swift.enum\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/granttype-swift.enum\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/granttype-swift.enum",
+                "title" : "PasswordAccessTokenRequest.GrantType",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/passwordaccesstokenrequest",
+            "title" : "PasswordAccessTokenRequest",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/init(from:)",
+                "title" : "init(from: Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/init(granttype:refreshtoken:scope:)",
+                "title" : "init(grantType: RefreshTokenRequest.GrantType, refreshToken: String, scope: Scope)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.property",
+                "title" : "var grantType: RefreshTokenRequest.GrantType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/refreshtoken",
+                "title" : "var refreshToken: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/scope",
+                "title" : "var scope: Scope",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/encode(to:)",
+                "title" : "func encode(to: Encoder) throws",
+                "type" : "method"
+              },
+              {
+                "title" : "Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/granttype",
+                    "title" : "case grantType",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/refreshtoken",
+                    "title" : "case refreshToken",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/scope",
+                    "title" : "case scope",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/init(intvalue:)",
+                    "title" : "init?(intValue: Int)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/init(stringvalue:)",
+                    "title" : "init?(stringValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/debugdescription",
+                        "title" : "var debugDescription: String",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/description",
+                        "title" : "var description: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/codingkey-implementations",
+                    "title" : "CodingKey Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/codingkeys",
+                "title" : "RefreshTokenRequest.CodingKeys",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum\/refreshtoken",
+                    "title" : "case refreshToken",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum\/init(from:)",
+                        "title" : "init(from: Decoder) throws",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum\/encode(to:)",
+                        "title" : "func encode(to: Encoder) throws",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/granttype-swift.enum",
+                "title" : "RefreshTokenRequest.GrantType",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/refreshtokenrequest\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/refreshtokenrequest",
+            "title" : "RefreshTokenRequest",
+            "type" : "struct"
+          },
+          {
+            "title" : "Responding to a request (server)",
+            "type" : "groupMarker"
+          },
+          {
+            "path" : "\/documentation\/oauth2models\/handlingrequests",
+            "title" : "Handling an incoming request",
+            "type" : "article"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Enumeration Cases",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/grantrequest\/authcodeaccesstoken(_:)",
+                "title" : "case authCodeAccessToken(AuthCodeAccessTokenRequest)",
+                "type" : "case"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/grantrequest\/clientcredentialsaccesstoken(_:)",
+                "title" : "case clientCredentialsAccessToken(ClientCredentialsAccessTokenRequest)",
+                "type" : "case"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/grantrequest\/passwordaccesstoken(_:)",
+                "title" : "case passwordAccessToken(PasswordAccessTokenRequest)",
+                "type" : "case"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/grantrequest\/refreshtoken(_:)",
+                "title" : "case refreshToken(RefreshTokenRequest)",
+                "type" : "case"
+              },
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/grantrequest\/init(from:)",
+                "title" : "init(from: Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "title" : "Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/grantrequest\/error\/unknowngranttype(_:)",
+                    "title" : "case unknownGrantType(String)",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/grantrequest\/error\/localizeddescription",
+                        "title" : "var localizedDescription: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/grantrequest\/error\/error-implementations",
+                    "title" : "Error Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/grantrequest\/error",
+                "title" : "GrantRequest.Error",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/grantrequest\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/grantrequest\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/grantrequest",
+            "title" : "GrantRequest",
+            "type" : "enum"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/init(accesstoken:type:expiresin:refreshtoken:scope:)",
+                "title" : "init(accessToken: String, type: AccessTokenResponse.AccessTokenType, expiresIn: TokenExpiration?, refreshToken: String?, scope: Scope)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/init(from:)",
+                "title" : "init(from: Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstoken",
+                "title" : "var accessToken: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/expiration",
+                "title" : "var expiration: TokenExpiration?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/refreshtoken",
+                "title" : "var refreshToken: String?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/scope",
+                "title" : "var scope: Scope?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/type",
+                "title" : "var type: AccessTokenResponse.AccessTokenType",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/encode(to:)",
+                "title" : "func encode(to: Encoder) throws",
+                "type" : "method"
+              },
+              {
+                "title" : "Type Aliases",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/result",
+                "title" : "AccessTokenResponse.Result",
+                "type" : "typealias"
+              },
+              {
+                "title" : "Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/bearer",
+                    "title" : "case bearer",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/mac",
+                    "title" : "case mac",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/init(from:)-3zn8o",
+                    "title" : "init(from: Decoder) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/init(from:)-8ivgd",
+                        "title" : "init(from: Decoder) throws",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/encode(to:)",
+                        "title" : "func encode(to: Encoder) throws",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype",
+                "title" : "AccessTokenResponse.AccessTokenType",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/accesstoken",
+                    "title" : "case accessToken",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/expiration",
+                    "title" : "case expiration",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/refreshtoken",
+                    "title" : "case refreshToken",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/scope",
+                    "title" : "case scope",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/type",
+                    "title" : "case type",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/init(intvalue:)",
+                    "title" : "init?(intValue: Int)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/init(stringvalue:)",
+                    "title" : "init?(stringValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/debugdescription",
+                        "title" : "var debugDescription: String",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/description",
+                        "title" : "var description: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/codingkey-implementations",
+                    "title" : "CodingKey Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/codingkeys",
+                "title" : "AccessTokenResponse.CodingKeys",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/accesstokenresponse\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/accesstokenresponse\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/accesstokenresponse",
+            "title" : "AccessTokenResponse",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/init(code:request:)",
+                "title" : "init(code: String, request: AuthRequest)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/init(from:)",
+                "title" : "init(from: Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/code",
+                "title" : "var code: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/state",
+                "title" : "var state: String?",
+                "type" : "property"
+              },
+              {
+                "title" : "Type Aliases",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/result",
+                "title" : "AuthCodeAuthResponse.Result",
+                "type" : "typealias"
+              },
+              {
+                "title" : "Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/code",
+                    "title" : "case code",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/state",
+                    "title" : "case state",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/init(intvalue:)",
+                    "title" : "init?(intValue: Int)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/init(stringvalue:)",
+                    "title" : "init?(stringValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/debugdescription",
+                        "title" : "var debugDescription: String",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/description",
+                        "title" : "var description: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/codingkey-implementations",
+                    "title" : "CodingKey Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/codingkeys",
+                "title" : "AuthCodeAuthResponse.CodingKeys",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/authcodeauthresponse\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/authcodeauthresponse",
+            "title" : "AuthCodeAuthResponse",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/errorresponse\/init(code:description:url:state:)",
+                "title" : "init(code: ErrorResponse.ErrorCode, description: ErrorDescription?, url: ErrorURL?, state: String?)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/errorresponse\/init(code:request:description:url:)",
+                "title" : "init(code: ErrorResponse.ErrorCode, request: AuthRequest, description: ErrorDescription?, url: ErrorURL?)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/errorresponse\/init(from:)",
+                "title" : "init(from: Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/errorresponse\/code",
+                "title" : "var code: ErrorResponse.ErrorCode",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/errorresponse\/description",
+                "title" : "var description: String?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/errorresponse\/state",
+                "title" : "var state: String?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/errorresponse\/url",
+                "title" : "var url: URL?",
+                "type" : "property"
+              },
+              {
+                "title" : "Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/code",
+                    "title" : "case code",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/description-swift.enum.case",
+                    "title" : "case description",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/state",
+                    "title" : "case state",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/url",
+                    "title" : "case url",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/init(intvalue:)",
+                    "title" : "init?(intValue: Int)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/init(stringvalue:)",
+                    "title" : "init?(stringValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/debugdescription",
+                        "title" : "var debugDescription: String",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/description-swift.property",
+                        "title" : "var description: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/codingkey-implementations",
+                    "title" : "CodingKey Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/errorresponse\/codingkeys",
+                "title" : "ErrorResponse.CodingKeys",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/accessdenied",
+                    "title" : "case accessDenied",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/invalidclient",
+                    "title" : "case invalidClient",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/invalidgrant",
+                    "title" : "case invalidGrant",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/invalidrequest",
+                    "title" : "case invalidRequest",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/invalidscope",
+                    "title" : "case invalidScope",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/servererror",
+                    "title" : "case serverError",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/temporarilyunavailable",
+                    "title" : "case temporarilyUnavailable",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/unauthorizedclient",
+                    "title" : "case unauthorizedClient",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/unsupportedgranttype",
+                    "title" : "case unsupportedGrantType",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/unsupportedresponsetype",
+                    "title" : "case unsupportedResponseType",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/init(rawvalue:)",
+                    "title" : "init?(rawValue: String)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/valid4_1_2_1codes",
+                    "title" : "var valid4_1_2_1Codes: [ErrorResponse.ErrorCode]",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/valid4_2_2_1codes",
+                    "title" : "var valid4_2_2_1Codes: [ErrorResponse.ErrorCode]",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/valid5_2codes",
+                    "title" : "var valid5_2Codes: [ErrorResponse.ErrorCode]",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/init(from:)",
+                        "title" : "init(from: Decoder) throws",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/encode(to:)",
+                        "title" : "func encode(to: Encoder) throws",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/errorresponse\/errorcode",
+                "title" : "ErrorResponse.ErrorCode",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/errorresponse\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/errorresponse\/localizeddescription",
+                    "title" : "var localizedDescription: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/errorresponse\/error-implementations",
+                "title" : "Error Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/errorresponse",
+            "title" : "ErrorResponse",
+            "type" : "struct"
+          },
+          {
+            "title" : "Miscellaneous",
+            "type" : "groupMarker"
+          },
+          {
+            "path" : "\/documentation\/oauth2models\/customtypes",
+            "title" : "Custom Grant Types and Properties",
+            "type" : "article"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Enumeration Cases",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/charactersetvalidationerror\/containsinvalidcharacters(_:)",
+                "title" : "case containsInvalidCharacters(String)",
+                "type" : "case"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/charactersetvalidationerror\/emptyvalue",
+                "title" : "case emptyValue",
+                "type" : "case"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/charactersetvalidationerror\/localizeddescription",
+                    "title" : "var localizedDescription: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/charactersetvalidationerror\/error-implementations",
+                "title" : "Error Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/charactersetvalidationerror",
+            "title" : "CharacterSetValidationError",
+            "type" : "enum"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/errordescription\/init(_:)",
+                "title" : "init(String) throws",
+                "type" : "init"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/errordescription",
+            "title" : "ErrorDescription",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/errorurl\/init(_:)",
+                "title" : "init(URL) throws",
+                "type" : "init"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/errorurl",
+            "title" : "ErrorURL",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Operators",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/scope\/==(_:_:)-6398l",
+                "title" : "static func == <T>(Scope, T) -> Bool",
+                "type" : "op"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/scope\/==(_:_:)-7fam4",
+                "title" : "static func == <T>(T, Scope) -> Bool",
+                "type" : "op"
+              },
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/scope\/init()",
+                "title" : "init()",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/scope\/init(items:)-5jbxu",
+                "title" : "init(items: Set<String>) throws",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/scope\/init(items:)-5x57w",
+                "title" : "init<T>(items: T) throws",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/scope\/init(string:)",
+                "title" : "init(string: String) throws",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/scope\/isvalid",
+                "title" : "var isValid: Bool",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/scope\/contains(_:)",
+                "title" : "func contains(String) -> Bool",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/scope\/insert(_:)",
+                "title" : "func insert(String) throws -> (Bool, String)",
+                "type" : "method"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/count-5z7s9",
+                    "title" : "var count: Int",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/count-6s20l",
+                    "title" : "var count: Int",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/endindex",
+                    "title" : "var endIndex: Scope.Index",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/first",
+                    "title" : "var first: Self.Element?",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/indices-swift.property",
+                    "title" : "var indices: Scope.Indices",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/isempty-1j2eg",
+                    "title" : "var isEmpty: Bool",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/isempty-6nvxg",
+                    "title" : "var isEmpty: Bool",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/startindex",
+                    "title" : "var startIndex: Set<String>.Index",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/underestimatedcount-93tio",
+                    "title" : "var underestimatedCount: Int",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/distance(from:to:)",
+                    "title" : "func distance(from: Self.Index, to: Self.Index) -> Int",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/drop(while:)",
+                    "title" : "func drop(while: (Self.Element) throws -> Bool) rethrows -> Self.SubSequence",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/dropfirst(_:)",
+                    "title" : "func dropFirst(Int) -> Self.SubSequence",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/droplast(_:)",
+                    "title" : "func dropLast(Int) -> Self.SubSequence",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/firstindex(of:)",
+                    "title" : "func firstIndex(of: Self.Element) -> Self.Index?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/firstindex(where:)",
+                    "title" : "func firstIndex(where: (Self.Element) throws -> Bool) rethrows -> Self.Index?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/firstrange(of:)",
+                    "title" : "func firstRange<C>(of: C) -> Range<Self.Index>?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/formindex(_:offsetby:)",
+                    "title" : "func formIndex(inout Self.Index, offsetBy: Int)",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/formindex(_:offsetby:limitedby:)",
+                    "title" : "func formIndex(inout Self.Index, offsetBy: Int, limitedBy: Self.Index) -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/formindex(after:)",
+                    "title" : "func formIndex(after: inout Self.Index)",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/index(_:offsetby:)",
+                    "title" : "func index(Self.Index, offsetBy: Int) -> Self.Index",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/index(_:offsetby:limitedby:)",
+                    "title" : "func index(Self.Index, offsetBy: Int, limitedBy: Self.Index) -> Self.Index?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/index(after:)",
+                    "title" : "func index(after: Set<String>.Index) -> Set<String>.Index",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/index(of:)",
+                    "title" : "func index(of: Self.Element) -> Self.Index?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/map(_:)-uc0c",
+                    "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/prefix(_:)",
+                    "title" : "func prefix(Int) -> Self.SubSequence",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/prefix(through:)",
+                    "title" : "func prefix(through: Self.Index) -> Self.SubSequence",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/prefix(upto:)",
+                    "title" : "func prefix(upTo: Self.Index) -> Self.SubSequence",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/prefix(while:)",
+                    "title" : "func prefix(while: (Self.Element) throws -> Bool) rethrows -> Self.SubSequence",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/randomelement()",
+                    "title" : "func randomElement() -> Self.Element?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/randomelement(using:)",
+                    "title" : "func randomElement<T>(using: inout T) -> Self.Element?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/ranges(of:)",
+                    "title" : "func ranges<C>(of: C) -> [Range<Self.Index>]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/split(maxsplits:omittingemptysubsequences:whereseparator:)",
+                    "title" : "func split(maxSplits: Int, omittingEmptySubsequences: Bool, whereSeparator: (Self.Element) throws -> Bool) rethrows -> [Self.SubSequence]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/split(separator:maxsplits:omittingemptysubsequences:)",
+                    "title" : "func split(separator: Self.Element, maxSplits: Int, omittingEmptySubsequences: Bool) -> [Self.SubSequence]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/suffix(_:)",
+                    "title" : "func suffix(Int) -> Self.SubSequence",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/suffix(from:)",
+                    "title" : "func suffix(from: Self.Index) -> Self.SubSequence",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/trimmingprefix(_:)",
+                    "title" : "func trimmingPrefix<Prefix>(Prefix) -> Self.SubSequence",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/trimmingprefix(while:)",
+                    "title" : "func trimmingPrefix(while: (Self.Element) throws -> Bool) rethrows -> Self.SubSequence",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Subscripts",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/subscript(_:)-2id2a",
+                    "title" : "subscript((UnboundedRange_) -> ()) -> Self.SubSequence",
+                    "type" : "subscript"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/subscript(_:)-3jbid",
+                    "title" : "subscript(Set<String>.Index) -> String",
+                    "type" : "subscript"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/subscript(_:)-6sloy",
+                    "title" : "subscript<R>(R) -> Self.SubSequence",
+                    "type" : "subscript"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/subscript(_:)-944q9",
+                    "title" : "subscript(Range<Scope.Index>) -> Scope.SubSequence",
+                    "type" : "subscript"
+                  },
+                  {
+                    "title" : "Type Aliases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/index",
+                    "title" : "Scope.Index",
+                    "type" : "typealias"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/indices-swift.typealias",
+                    "title" : "Scope.Indices",
+                    "type" : "typealias"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/subsequence",
+                    "title" : "Scope.SubSequence",
+                    "type" : "typealias"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/scope\/collection-implementations",
+                "title" : "Collection Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/init(from:)",
+                    "title" : "init(from: Decoder) throws",
+                    "type" : "init"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/scope\/decodable-implementations",
+                "title" : "Decodable Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/encode(to:)",
+                    "title" : "func encode(to: Encoder) throws",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/scope\/encodable-implementations",
+                "title" : "Encodable Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/scope\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/lazy",
+                    "title" : "var lazy: LazySequence<Self>",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/publisher",
+                    "title" : "var publisher: Publishers.Sequence<Self, Never>",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/underestimatedcount-25jzm",
+                    "title" : "var underestimatedCount: Int",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/allsatisfy(_:)",
+                    "title" : "func allSatisfy((Self.Element) throws -> Bool) rethrows -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/compactmap(_:)",
+                    "title" : "func compactMap<ElementOfResult>((Self.Element) throws -> ElementOfResult?) rethrows -> [ElementOfResult]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/compare(_:_:)",
+                    "title" : "func compare<Comparator>(Comparator.Compared, Comparator.Compared) -> ComparisonResult",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/contains(where:)",
+                    "title" : "func contains(where: (Self.Element) throws -> Bool) rethrows -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/elementsequal(_:)",
+                    "title" : "func elementsEqual<OtherSequence>(OtherSequence) -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/elementsequal(_:by:)",
+                    "title" : "func elementsEqual<OtherSequence>(OtherSequence, by: (Self.Element, OtherSequence.Element) throws -> Bool) rethrows -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/enumerated()",
+                    "title" : "func enumerated() -> EnumeratedSequence<Self>",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/filter(_:)",
+                    "title" : "func filter((Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/first(where:)",
+                    "title" : "func first(where: (Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/flatmap(_:)-4u7ko",
+                    "title" : "func flatMap<ElementOfResult>((Self.Element) throws -> ElementOfResult?) rethrows -> [ElementOfResult]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/flatmap(_:)-5kemd",
+                    "title" : "func flatMap<SegmentOfResult>((Self.Element) throws -> SegmentOfResult) rethrows -> [SegmentOfResult.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/foreach(_:)",
+                    "title" : "func forEach((Self.Element) throws -> Void) rethrows",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/formatted()",
+                    "title" : "func formatted() -> String",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/formatted(_:)",
+                    "title" : "func formatted<S>(S) -> S.FormatOutput",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/joined()",
+                    "title" : "func joined() -> FlattenSequence<Self>",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/joined(separator:)",
+                    "title" : "func joined(separator: String) -> String",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/lexicographicallyprecedes(_:)",
+                    "title" : "func lexicographicallyPrecedes<OtherSequence>(OtherSequence) -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/lexicographicallyprecedes(_:by:)",
+                    "title" : "func lexicographicallyPrecedes<OtherSequence>(OtherSequence, by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/makeiterator()",
+                    "title" : "func makeIterator() -> Scope.Iterator",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/map(_:)-8ee5t",
+                    "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/max()",
+                    "title" : "func max() -> Self.Element?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/max(by:)",
+                    "title" : "func max(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/min()",
+                    "title" : "func min() -> Self.Element?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/min(by:)",
+                    "title" : "func min(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/reduce(_:_:)",
+                    "title" : "func reduce<Result>(Result, (Result, Self.Element) throws -> Result) rethrows -> Result",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/reduce(into:_:)",
+                    "title" : "func reduce<Result>(into: Result, (inout Result, Self.Element) throws -> ()) rethrows -> Result",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/reversed()",
+                    "title" : "func reversed() -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/shuffled()",
+                    "title" : "func shuffled() -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/shuffled(using:)",
+                    "title" : "func shuffled<T>(using: inout T) -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/sorted()",
+                    "title" : "func sorted() -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/sorted(by:)",
+                    "title" : "func sorted(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/sorted(using:)-50gds",
+                    "title" : "func sorted<S, Comparator>(using: S) -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/sorted(using:)-6wgm2",
+                    "title" : "func sorted<Comparator>(using: Comparator) -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/starts(with:)",
+                    "title" : "func starts<PossiblePrefix>(with: PossiblePrefix) -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/starts(with:by:)",
+                    "title" : "func starts<PossiblePrefix>(with: PossiblePrefix, by: (Self.Element, PossiblePrefix.Element) throws -> Bool) rethrows -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/withcontiguousstorageifavailable(_:)",
+                    "title" : "func withContiguousStorageIfAvailable<R>((UnsafeBufferPointer<Self.Element>) throws -> R) rethrows -> R?",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Type Aliases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/element",
+                    "title" : "Scope.Element",
+                    "type" : "typealias"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/scope\/iterator",
+                    "title" : "Scope.Iterator",
+                    "type" : "typealias"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/scope\/sequence-implementations",
+                "title" : "Sequence Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/scope",
+            "title" : "Scope",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/init(date:)",
+                "title" : "init(date: Date)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/init(days:)",
+                "title" : "init(days: Int)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/init(hours:)",
+                "title" : "init(hours: Int)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/init(minutes:)",
+                "title" : "init(minutes: Int)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/init(seconds:)",
+                "title" : "init(seconds: Int)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/astimeinterval",
+                "title" : "var asTimeInterval: TimeInterval",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/inseconds",
+                "title" : "var inSeconds: Int",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/date(in:)",
+                "title" : "func date(in: TokenExpiration.RelativeDateDirection) -> Date",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/isvalid(whencreatedat:)",
+                "title" : "func isValid(whenCreatedAt: Date) -> Bool",
+                "type" : "method"
+              },
+              {
+                "title" : "Type Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/oneday",
+                "title" : "static let oneDay: TokenExpiration",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/onehour",
+                "title" : "static let oneHour: TokenExpiration",
+                "type" : "property"
+              },
+              {
+                "title" : "Type Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/days(_:)",
+                "title" : "static func days(Int) -> TokenExpiration",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/hours(_:)",
+                "title" : "static func hours(Int) -> TokenExpiration",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/minutes(_:)",
+                "title" : "static func minutes(Int) -> TokenExpiration",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/seconds(_:)",
+                "title" : "static func seconds(Int) -> TokenExpiration",
+                "type" : "method"
+              },
+              {
+                "title" : "Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/relativedatedirection\/thefuture",
+                    "title" : "case theFuture",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/relativedatedirection\/thepast",
+                    "title" : "case thePast",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/oauth2models\/tokenexpiration\/relativedatedirection\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/relativedatedirection\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/relativedatedirection",
+                "title" : "TokenExpiration.RelativeDateDirection",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/'...(_:)-3vp0j",
+                    "title" : "static func ... (Self) -> PartialRangeThrough<Self>",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/'...(_:)-9yev0",
+                    "title" : "static func ... (Self) -> PartialRangeFrom<Self>",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/'...(_:_:)",
+                    "title" : "static func ... (Self, Self) -> ClosedRange<Self>",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/'.._(_:)",
+                    "title" : "static func ..< (Self) -> PartialRangeUpTo<Self>",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/'.._(_:_:)",
+                    "title" : "static func ..< (Self, Self) -> Range<Self>",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/_(_:_:)-8u85v",
+                    "title" : "static func < (TokenExpiration, TokenExpiration) -> Bool",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/_(_:_:)-s8qu",
+                    "title" : "static func > (Self, Self) -> Bool",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/_=(_:_:)-7iew3",
+                    "title" : "static func <= (Self, Self) -> Bool",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/_=(_:_:)-cvdn",
+                    "title" : "static func >= (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/comparable-implementations",
+                "title" : "Comparable Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/init(from:)",
+                    "title" : "init(from: Decoder) throws",
+                    "type" : "init"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/decodable-implementations",
+                "title" : "Decodable Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/encode(to:)",
+                    "title" : "func encode(to: Encoder) throws",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/encodable-implementations",
+                "title" : "Encodable Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/oauth2models\/tokenexpiration\/==(_:_:)",
+                    "title" : "static func == (TokenExpiration, TokenExpiration) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/oauth2models\/tokenexpiration\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/oauth2models\/tokenexpiration",
+            "title" : "TokenExpiration",
+            "type" : "struct"
+          }
+        ],
+        "path" : "\/documentation\/oauth2models",
+        "title" : "OAuth2Models",
+        "type" : "module"
+      }
+    ]
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 1,
+    "patch" : 1
+  }
+}

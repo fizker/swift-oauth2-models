@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "No overview available.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -97,7 +91,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -106,6 +100,8 @@
   "topicSections" : [
     {
       "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest\/CodingKeys\/clientID",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest\/CodingKeys\/clientSecret",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest\/CodingKeys\/grantType",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest\/CodingKeys\/scope"
       ],
@@ -278,6 +274,56 @@
   "title" : "RawRepresentable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/rawrepresentable-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ClientCredentialsAccessTokenRequest/CodingKeys/clientID": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "clientID"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest\/CodingKeys\/clientID",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ClientCredentialsAccessTokenRequest.CodingKeys.clientID",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/clientid"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/ClientCredentialsAccessTokenRequest/CodingKeys/clientSecret": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "clientSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ClientCredentialsAccessTokenRequest\/CodingKeys\/clientSecret",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ClientCredentialsAccessTokenRequest.CodingKeys.clientSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/clientcredentialsaccesstokenrequest\/codingkeys\/clientsecret"
 },
 "doc://OAuth2Models/documentation/OAuth2Models/ClientCredentialsAccessTokenRequest/CodingKeys/grantType": {
   "abstract" : [

@@ -31,7 +31,7 @@
     {
       "content" : [
         {
-          "anchor" : "Overview",
+          "anchor" : "overview",
           "level" : 2,
           "text" : "Overview",
           "type" : "heading"
@@ -73,7 +73,7 @@
         },
         {
           "anchor" : "Username-+-password",
-          "level" : 3,
+          "level" : 2,
           "text" : "Username + password",
           "type" : "heading"
         },
@@ -149,7 +149,7 @@
         },
         {
           "anchor" : "Pre-agreed-auth-token",
-          "level" : 3,
+          "level" : 2,
           "text" : "Pre-agreed auth token",
           "type" : "heading"
         },
@@ -233,7 +233,7 @@
         },
         {
           "anchor" : "Requesting-auth-from-user",
-          "level" : 3,
+          "level" : 2,
           "text" : "Requesting auth from user",
           "type" : "heading"
         },
@@ -401,7 +401,7 @@
         },
         {
           "anchor" : "Refreshing-an-access-token",
-          "level" : 3,
+          "level" : 2,
           "text" : "Refreshing an access token",
           "type" : "heading"
         },
@@ -446,7 +446,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [

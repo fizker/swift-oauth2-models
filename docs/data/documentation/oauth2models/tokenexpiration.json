@@ -93,7 +93,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -132,7 +132,8 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/date(in:)"
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/date(in:)",
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/isValid(whenCreatedAt:)"
       ],
       "title" : "Instance Methods"
     },
@@ -161,8 +162,6 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/-Implementations",
-        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/-Implementations",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Comparable-Implementations",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Decodable-Implementations",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Encodable-Implementations",
@@ -406,17 +405,6 @@
   "title" : "TokenExpiration",
   "type" : "topic",
   "url" : "\/documentation\/oauth2models\/tokenexpiration"
-},
-"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : " Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/oauth2models\/tokenexpiration\/-implementations"
 },
 "doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/Comparable-Implementations": {
   "abstract" : [
@@ -1024,6 +1012,60 @@
   "title" : "init(seconds:)",
   "type" : "topic",
   "url" : "\/documentation\/oauth2models\/tokenexpiration\/init(seconds:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/isValid(whenCreatedAt:)": {
+  "abstract" : [
+    {
+      "text" : "Returns in the token is currently valid by comparing the current time and the token expiration against the time that the token was created.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "isValid"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "whenCreatedAt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/isValid(whenCreatedAt:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "isValid(whenCreatedAt:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/isvalid(whencreatedat:)"
 },
 "doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/minutes(_:)": {
   "abstract" : [

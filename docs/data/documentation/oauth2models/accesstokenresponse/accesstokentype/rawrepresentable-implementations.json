@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "No overview available.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -30,7 +24,7 @@
   },
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -40,7 +34,7 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/AccessTokenType\/init(from:)"
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/AccessTokenType\/init(from:)-8ivgd"
       ],
       "title" : "Initializers"
     },
@@ -444,7 +438,7 @@
   "type" : "topic",
   "url" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/hashvalue"
 },
-"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse/AccessTokenType/init(from:)": {
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse/AccessTokenType/init(from:)-8ivgd": {
   "abstract" : [
 
   ],
@@ -527,12 +521,12 @@
       "text" : "throws"
     }
   ],
-  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/AccessTokenType\/init(from:)",
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/AccessTokenType\/init(from:)-8ivgd",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(from:)",
   "type" : "topic",
-  "url" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/init(from:)"
+  "url" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/init(from:)-8ivgd"
 },
 "https://tools.ietf.org/html/rfc6749#section-5.1": {
   "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1",

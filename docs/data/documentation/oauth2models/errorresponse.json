@@ -215,7 +215,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -227,7 +227,6 @@
       "identifiers" : [
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/HandlingRequests",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest",
-        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse"
       ],
@@ -314,45 +313,6 @@
   "title" : "OAuth2Models",
   "type" : "topic",
   "url" : "\/documentation\/oauth2models"
-},
-"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenError": {
-  "abstract" : [
-    {
-      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
-      "isActive" : true,
-      "type" : "reference"
-    },
-    {
-      "text" : " Error Response",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "AccessTokenError"
-    }
-  ],
-  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "AccessTokenError"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "AccessTokenError",
-  "type" : "topic",
-  "url" : "\/documentation\/oauth2models\/accesstokenerror"
 },
 "doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse": {
   "abstract" : [
@@ -1254,10 +1214,10 @@
 },
 "https://tools.ietf.org/html/rfc6749#section-5.2": {
   "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
-  "title" : "5.2.",
+  "title" : "5.2 for other uses",
   "titleInlineContent" : [
     {
-      "text" : "5.2.",
+      "text" : "5.2 for other uses",
       "type" : "text"
     }
   ],

@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "No overview available.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -82,6 +76,7 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
+        "doc:\/\/OAuth2Models\/s12CaseIterableP",
         "doc:\/\/OAuth2Models\/Se",
         "doc:\/\/OAuth2Models\/SE",
         "doc:\/\/OAuth2Models\/SQ",
@@ -95,7 +90,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -111,6 +106,7 @@
     },
     {
       "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/AccessTokenType\/init(from:)-3zn8o",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/AccessTokenType\/init(rawValue:)"
       ],
       "title" : "Initializers"
@@ -298,6 +294,48 @@
   "type" : "topic",
   "url" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/bearer"
 },
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse/AccessTokenType/init(from:)-3zn8o": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/AccessTokenType\/init(from:)-3zn8o",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/init(from:)-3zn8o"
+},
 "doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse/AccessTokenType/init(rawValue:)": {
   "abstract" : [
 
@@ -360,6 +398,11 @@
   "title" : "AccessTokenResponse.AccessTokenType.mac",
   "type" : "topic",
   "url" : "\/documentation\/oauth2models\/accesstokenresponse\/accesstokentype\/mac"
+},
+"doc://OAuth2Models/s12CaseIterableP": {
+  "identifier" : "doc:\/\/OAuth2Models\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
 },
 "https://tools.ietf.org/html/rfc6749#section-5.1": {
   "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.1",

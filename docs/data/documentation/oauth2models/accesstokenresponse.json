@@ -133,7 +133,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -145,7 +145,6 @@
       "identifiers" : [
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/HandlingRequests",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/GrantRequest",
-        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AuthCodeAuthResponse",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/ErrorResponse"
       ],
@@ -175,6 +174,12 @@
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/encode(to:)"
       ],
       "title" : "Instance Methods"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/Result"
+      ],
+      "title" : "Type Aliases"
     },
     {
       "identifiers" : [
@@ -237,45 +242,6 @@
   "title" : "OAuth2Models",
   "type" : "topic",
   "url" : "\/documentation\/oauth2models"
-},
-"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenError": {
-  "abstract" : [
-    {
-      "identifier" : "https:\/\/tools.ietf.org\/html\/rfc6749#section-5.2",
-      "isActive" : true,
-      "type" : "reference"
-    },
-    {
-      "text" : " Error Response",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "AccessTokenError"
-    }
-  ],
-  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenError",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "AccessTokenError"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "AccessTokenError",
-  "type" : "topic",
-  "url" : "\/documentation\/oauth2models\/accesstokenerror"
 },
 "doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse": {
   "abstract" : [
@@ -388,6 +354,48 @@
   "title" : "Equatable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/oauth2models\/accesstokenresponse\/equatable-implementations"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse/Result": {
+  "abstract" : [
+    {
+      "text" : "Convenience type for referencing a Codable ",
+      "type" : "text"
+    },
+    {
+      "code" : "Result<Self, ErrorResponse>",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Result"
+    }
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/Result",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Result"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AccessTokenResponse.Result",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/accesstokenresponse\/result"
 },
 "doc://OAuth2Models/documentation/OAuth2Models/AccessTokenResponse/accessToken": {
   "abstract" : [
@@ -827,6 +835,10 @@
       "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:12OAuth2Models5ScopeV",
       "text" : "Scope"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
     }
   ],
   "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/scope",

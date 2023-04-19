@@ -18,7 +18,7 @@
       [
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models",
         "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration",
-        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/-Implementations"
+        "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Comparable-Implementations"
       ]
     ]
   },
@@ -199,7 +199,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -270,17 +270,6 @@
   "title" : "TokenExpiration",
   "type" : "topic",
   "url" : "\/documentation\/oauth2models\/tokenexpiration"
-},
-"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : " Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/oauth2models\/tokenexpiration\/-implementations"
 },
 "doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/.._(_:_:)": {
   "abstract" : [
@@ -355,6 +344,17 @@
   "title" : "..<(_:_:)",
   "type" : "topic",
   "url" : "\/documentation\/oauth2models\/tokenexpiration\/'.._(_:_:)"
+},
+"doc://OAuth2Models/documentation/OAuth2Models/TokenExpiration/Comparable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/TokenExpiration\/Comparable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Comparable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/oauth2models\/tokenexpiration\/comparable-implementations"
 }
 }
 }

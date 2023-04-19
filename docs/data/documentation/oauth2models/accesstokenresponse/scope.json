@@ -35,7 +35,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:12OAuth2Models19AccessTokenResponseV5scopeAA5ScopeVvp",
+    "externalID" : "s:12OAuth2Models19AccessTokenResponseV5scopeAA5ScopeVSgvp",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -57,6 +57,10 @@
         "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:12OAuth2Models5ScopeV",
         "text" : "Scope"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
       }
     ],
     "modules" : [
@@ -101,6 +105,10 @@
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:12OAuth2Models5ScopeV",
               "text" : "Scope"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
             }
           ]
         }
@@ -110,7 +118,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -231,6 +239,10 @@
       "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:12OAuth2Models5ScopeV",
       "text" : "Scope"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
     }
   ],
   "identifier" : "doc:\/\/OAuth2Models\/documentation\/OAuth2Models\/AccessTokenResponse\/scope",
