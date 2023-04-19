@@ -94,7 +94,7 @@ final class AccessTokenResponseTests: XCTestCase {
 
 		XCTAssertEqual(jsonObject, [
 			"access_token": "foo",
-			"token_type": "mac",
+			"token_type": "MAC",
 			"expires_in": 86400,
 			"refresh_token": "ref tok",
 			"scope": "scope",
@@ -108,7 +108,7 @@ final class AccessTokenResponseTests: XCTestCase {
 
 		XCTAssertEqual(jsonObject, [
 			"access_token": "foo",
-			"token_type": "mac",
+			"token_type": "MAC",
 		])
 	}
 

@@ -19,7 +19,7 @@ public struct AccessTokenResponse: Codable, Equatable {
 
 	// The available token types.
 	public enum AccessTokenType: String, Codable, CaseIterable {
-		case bearer, mac
+		case bearer = "Bearer", mac = "MAC"
 
 		public init(from decoder: Decoder) throws {
 			let container = try decoder.singleValueContainer()
@@ -27,7 +27,7 @@ public struct AccessTokenResponse: Codable, Equatable {
 			let lowercased = value.lowercased()
 
 			for `case` in Self.allCases {
-				if `case`.rawValue == lowercased {
+				if `case`.rawValue.lowercased() == lowercased {
 					self = `case`
 					return
 				}
