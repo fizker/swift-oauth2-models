@@ -31,20 +31,13 @@ final class GrantRequestTests: XCTestCase {
 		]
 	}
 
-	func test__decodable__unknownGrantType__throws() throws {
+	func test__decodable__unknownGrantType__returnsObject() throws {
 		accessTokenRefreshJSON[.grantType] = "foo"
 		let data = try encode(accessTokenRefreshJSON)
 
-		XCTAssertThrowsError(try decode(data) as GrantRequest) { e in
-			if let e = e as? GrantRequest.Error {
-				switch e {
-				case .unknownGrantType(let type):
-					XCTAssertEqual("foo", type)
-				}
-			} else {
-				XCTFail("Unexpected error: \(e)")
-			}
-		}
+		let actual = try decode(data) as GrantRequest
+
+		XCTAssertEqual(.unknown("foo"), actual)
 	}
 
 	func test__decodable__AuthCodeGrantRefreshTokenRequest_FullData__returnsObject() throws {

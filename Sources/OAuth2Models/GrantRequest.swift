@@ -11,11 +11,8 @@ public enum GrantRequest: Decodable, Equatable {
 	/// The grant is for ``RefreshTokenRequest``.
 	case refreshToken(RefreshTokenRequest)
 
-	/// The errors that can happen when decoding a ``GrantRequest``.
-	public enum Error: Swift.Error {
-		/// Error thrown when the `grant_type` does not match a known grant type.
-		case unknownGrantType(String)
-	}
+	/// The grant is a type not known to this wrapper.
+	case unknown(String)
 
 	private struct GrantTypeWrapper: Codable {
 		enum CodingKeys: String, CodingKey {
@@ -40,7 +37,7 @@ public enum GrantRequest: Decodable, Equatable {
 			let req = try ClientCredentialsAccessTokenRequest(from: decoder)
 			self = .clientCredentialsAccessToken(req)
 		} else {
-			throw Error.unknownGrantType(wrapper.type)
+			self = .unknown(wrapper.type)
 		}
 	}
 }
