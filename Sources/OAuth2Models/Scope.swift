@@ -133,3 +133,16 @@ extension Scope: Codable {
 		}
 	}
 }
+
+extension Scope: ExpressibleByStringLiteral {
+	/// Initializes the wrapper from a `String` literal. This invokes the throwing ``init(string:)`` with `try!`, which crashes at runtime.
+	public init(stringLiteral value: StringLiteralType) {
+		try! self.init(string: value)
+	}
+}
+extension Scope: ExpressibleByArrayLiteral {
+	/// Initializes the wrapper from a `String...` literal. This invokes the throwing ``init(items:)`` with `try!`, which crashes at runtime.
+	public init(arrayLiteral elements: String...) {
+		try! self.init(items: elements)
+	}
+}

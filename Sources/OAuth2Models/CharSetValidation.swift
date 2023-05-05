@@ -53,6 +53,13 @@ public struct ErrorDescription {
 	}
 }
 
+extension ErrorDescription: ExpressibleByStringInterpolation {
+	/// Initializes the wrapper from a `String` literal. This invokes the throwing ``init(_:)`` with `try!`, which crashes at runtime.
+	public init(stringLiteral value: String) {
+		try! self.init(value)
+	}
+}
+
 /// Wraps the URL field of the error models and ensures that it contains only the characters that the spec allows.
 public struct ErrorURL {
 	let value: URL
