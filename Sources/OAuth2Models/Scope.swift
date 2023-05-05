@@ -2,6 +2,9 @@
 public struct Scope {
 	private(set) var items: Set<String>
 
+	/// Returns an empty Scope. This is equivalent to calling ``init()``.
+	public static var empty: Scope { .init() }
+
 	/// Creates an empty scope.
 	public init() {
 		items = []
