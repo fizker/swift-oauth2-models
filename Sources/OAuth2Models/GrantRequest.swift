@@ -1,7 +1,7 @@
 import Foundation
 
 /// Convenience `Decodable` to make it easier to have a single endpoint support all grant types.
-public enum GrantRequest: Decodable, Equatable {
+public enum GrantRequest: Decodable, Equatable, Sendable {
 	/// The grant is for ``AuthCodeAccessTokenRequest``.
 	case authCodeAccessToken(AuthCodeAccessTokenRequest)
 	/// The grant is for ``ClientCredentialsAccessTokenRequest``

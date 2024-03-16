@@ -1,9 +1,9 @@
 import Foundation
 
 /// The duration that a token is valid.
-public struct TokenExpiration: Codable, Equatable, Comparable {
+public struct TokenExpiration: Codable, Equatable, Comparable, Sendable {
 	/// The seconds until the token expires.
-	var seconds: Int
+	public var seconds: Int
 
 	/// Creates a ``TokenExpiration`` in seconds.
 	/// - Parameter seconds: The number of seconds.

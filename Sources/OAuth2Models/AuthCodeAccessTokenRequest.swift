@@ -6,7 +6,7 @@ import Foundation
 /// following parameters using the `application/x-www-form-urlencoded`
 /// format per Appendix B with a character encoding of UTF-8 in the HTTP
 /// request entity-body
-public struct AuthCodeAccessTokenRequest: Codable, Equatable {
+public struct AuthCodeAccessTokenRequest: Codable, Equatable, Sendable {
 	public enum CodingKeys: String, CodingKey {
 		case grantType = "grant_type"
 		case code
@@ -15,7 +15,9 @@ public struct AuthCodeAccessTokenRequest: Codable, Equatable {
 	}
 
 	/// The available grant types.
-	public enum GrantType: String, Codable { case authorizationCode = "authorization_code" }
+	public enum GrantType: String, Codable, Sendable {
+		case authorizationCode = "authorization_code"
+	}
 
 	/// REQUIRED.  Value MUST be set to ``GrantType-swift.enum/authorizationCode``.
 	public var grantType: GrantType = .authorizationCode

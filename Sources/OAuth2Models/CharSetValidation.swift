@@ -40,8 +40,9 @@ public enum CharacterSetValidationError: Swift.Error {
 }
 
 /// Wraps the description field of the error models and ensures that it contains only the characters that the spec allows.
-public struct ErrorDescription {
-	let value: String
+public struct ErrorDescription: Sendable {
+	/// The value.
+	public let value: String
 
 	/// Initializes the wrapper.
 	/// - Parameter string: The value to wrap
@@ -61,8 +62,9 @@ extension ErrorDescription: ExpressibleByStringInterpolation {
 }
 
 /// Wraps the URL field of the error models and ensures that it contains only the characters that the spec allows.
-public struct ErrorURL {
-	let value: URL
+public struct ErrorURL: Sendable {
+	/// The value.
+	public let value: URL
 
 	/// Initializes the wrapper.
 	/// - Parameter url: The value to wrap

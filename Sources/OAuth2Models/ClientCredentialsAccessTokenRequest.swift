@@ -8,7 +8,7 @@ import Foundation
 ///  request entity-body:
 ///
 /// The client MUST authenticate with the authorization server as  described in [Section 3.2.1](https://tools.ietf.org/html/rfc6749#section-3.2.1).
-public struct ClientCredentialsAccessTokenRequest: Codable, Equatable {
+public struct ClientCredentialsAccessTokenRequest: Codable, Equatable, Sendable {
 	public enum CodingKeys: String, CodingKey {
 		case grantType = "grant_type"
 		case scope
@@ -16,7 +16,7 @@ public struct ClientCredentialsAccessTokenRequest: Codable, Equatable {
 		case clientSecret = "client_secret"
 	}
 
-	public enum GrantType: String, Codable {
+	public enum GrantType: String, Codable, Sendable {
 		case clientCredentials = "client_credentials"
 	}
 

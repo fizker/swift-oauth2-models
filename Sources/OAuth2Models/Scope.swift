@@ -1,5 +1,5 @@
 /// Represents a list of scopes. The items are distinct.
-public struct Scope {
+public struct Scope: Sendable {
 	private(set) var items: Set<String>
 
 	/// Returns an empty Scope. This is equivalent to calling ``init()``.

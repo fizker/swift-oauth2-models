@@ -7,7 +7,7 @@ import Foundation
 /// following parameters using the `application/x-www-form-urlencoded`
 /// format per Appendix B with a character encoding of UTF-8 in the HTTP
 /// request entity-body:
-public struct RefreshTokenRequest: Codable, Equatable {
+public struct RefreshTokenRequest: Codable, Equatable, Sendable {
 	public enum CodingKeys: String, CodingKey {
 		case grantType = "grant_type"
 		case refreshToken = "refresh_token"
@@ -15,7 +15,9 @@ public struct RefreshTokenRequest: Codable, Equatable {
 	}
 
 	/// Available grant types
-	public enum GrantType: String, Codable { case refreshToken = "refresh_token" }
+	public enum GrantType: String, Codable, Sendable {
+		case refreshToken = "refresh_token"
+	}
 
 	/// REQUIRED.  Value MUST be set to ``GrantType-swift.enum/refreshToken``.
 	public var grantType: GrantType

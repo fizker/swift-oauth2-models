@@ -5,7 +5,7 @@ import Foundation
 /// The client constructs the request URI by adding the following
 /// parameters to the query component of the authorization endpoint URI
 /// using the `application/x-www-form-urlencoded` format, per Appendix B.
-public struct AuthRequest: Codable, Equatable {
+public struct AuthRequest: Codable, Equatable, Sendable {
 	public enum CodingKeys: String, CodingKey {
 		case clientID = "client_id"
 		case responseType = "response_type"
@@ -15,7 +15,7 @@ public struct AuthRequest: Codable, Equatable {
 	}
 
 	/// Available response types.
-	public enum ResponseType: String, Codable {
+	public enum ResponseType: String, Codable, Sendable {
 		/// 4.1.1. Authorization Code Grant
 		case code
 		/// 4.2.1. Implicit Grant

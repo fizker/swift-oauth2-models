@@ -7,7 +7,7 @@ import Foundation
 /// adding the following parameters to the query component of the
 /// redirection URI using the `application/x-www-form-urlencoded` format,
 /// per Appendix B.
-public struct AuthCodeAuthResponse: Codable, Equatable {
+public struct AuthCodeAuthResponse: Codable, Equatable, Sendable {
 	/// Convenience type for referencing a Codable `Result<Self, ErrorResponse>`.
 	public typealias Result = Swift.Result<Self, ErrorResponse>
 

@@ -5,7 +5,7 @@ import Foundation
 /// The authorization server issues an access token and optional refresh
 /// token, and constructs the response by adding the following parameters
 /// to the entity-body of the HTTP response with a 200 (OK) status code:
-public struct AccessTokenResponse: Codable, Equatable {
+public struct AccessTokenResponse: Codable, Equatable, Sendable {
 	/// Convenience type for referencing a Codable `Result<Self, ErrorResponse>`.
 	public typealias Result = Swift.Result<Self, ErrorResponse>
 
@@ -18,7 +18,7 @@ public struct AccessTokenResponse: Codable, Equatable {
 	}
 
 	// The available token types.
-	public enum AccessTokenType: String, Codable, CaseIterable {
+	public enum AccessTokenType: String, Codable, CaseIterable, Sendable {
 		case bearer = "Bearer", mac = "MAC"
 
 		public init(from decoder: Decoder) throws {
