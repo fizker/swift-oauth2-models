@@ -9,7 +9,7 @@ DocC documentation for the project can be found at [https://fizker.github.io/swi
 
 ## How to use
 
-1. Add `.package(url: "https://github.com/fizker/swift-oauth2-models.git", .upToNextMinor(from: "0.3.1"))` to the list of dependencies in your Package.swift file.
+1. Add `.package(url: "https://github.com/fizker/swift-oauth2-models.git", from: "0.4.0")` to the list of dependencies in your Package.swift file.
 2. Add `.product(name: "OAuth2Models", package: "swift-oauth2-models")` to the dependencies of the targets that need to use the models.
 3. Add `import OAuth2Models` in the file and use the types. See the examples or tests for more details at this level.
 
