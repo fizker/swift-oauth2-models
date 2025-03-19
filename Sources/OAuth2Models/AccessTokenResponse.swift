@@ -17,9 +17,17 @@ public struct AccessTokenResponse: Codable, Equatable, Sendable {
 		case scope
 	}
 
-	// The available token types.
-	public enum AccessTokenType: String, Codable, CaseIterable, Sendable {
+	/// Convenience property for returning the token in the manner expected by the `Authorization` HTTP header.
+	public var authHeaderValue: String {
+		"\(type) \(accessToken)"
+	}
+
+	/// The available token types.
+	public enum AccessTokenType: String, Codable, CaseIterable, CustomStringConvertible, Sendable {
 		case bearer = "Bearer", mac = "MAC"
+
+		// The standard is case-insensitive, but not all implementations adhere to the standard.
+		public var description: String { rawValue }
 
 		public init(from decoder: Decoder) throws {
 			let container = try decoder.singleValueContainer()

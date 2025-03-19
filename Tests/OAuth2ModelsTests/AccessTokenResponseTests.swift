@@ -112,6 +112,12 @@ final class AccessTokenResponseTests: XCTestCase {
 		])
 	}
 
+	func test__headerValue__bearerToken__encodesWithDefaultCapitalization() async throws {
+		let token = AccessTokenResponse(accessToken: "foo", type: .bearer, expiresIn: nil)
+		XCTAssertEqual("\(token.type) \(token.accessToken)", "Bearer foo")
+		XCTAssertEqual(token.authHeaderValue, "Bearer foo")
+	}
+
 	private func json(
 		accessToken: String = "access token value",
 		tokenType: String = "bearer",
