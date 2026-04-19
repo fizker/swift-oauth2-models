@@ -8,7 +8,7 @@ import Foundation
 /// format per Appendix B with a character encoding of UTF-8 in the HTTP
 /// request entity-body:
 public struct RefreshTokenRequest: Codable, Equatable, Sendable {
-	public enum CodingKeys: String, CodingKey {
+	enum CodingKeys: String, CodingKey {
 		case grantType = "grant_type"
 		case refreshToken = "refresh_token"
 		case scope

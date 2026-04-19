@@ -1,5 +1,5 @@
 import XCTest
-import OAuth2Models
+@testable import OAuth2Models
 
 final class AuthCodeGrantRefreshTokenRequestTests: XCTestCase {
 	var json: [RefreshTokenRequest.CodingKeys: String] = [:]

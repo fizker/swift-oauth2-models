@@ -1,5 +1,5 @@
 import XCTest
-import OAuth2Models
+@testable import OAuth2Models
 
 final class GrantRequestTests: XCTestCase {
 	var accessTokenJSON: [AuthCodeAccessTokenRequest.CodingKeys: String] = [:]
