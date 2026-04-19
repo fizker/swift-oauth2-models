@@ -97,10 +97,15 @@ extension Scope: Collection {
 	public func index(after i: Set<String>.Index) -> Set<String>.Index { items.index(after: i) }
 }
 extension Scope: Equatable {
-	public static func ==<T: Collection>(lhs: T, rhs: Scope) -> Bool where T.Element == String {
+	// This overload is required since Swift 6.3, or the two funcs becomes ambiguous since Scope is a Collection<String>
+	public static func ==(lhs: Self, rhs: Self) -> Bool {
+		let rhs = rhs as any Collection<String>
+		return lhs == rhs
+	}
+	public static func ==<T: Collection>(lhs: T, rhs: Self) -> Bool where T.Element == String {
 		rhs == lhs
 	}
-	public static func ==<T: Collection>(lhs: Scope, rhs: T) -> Bool where T.Element == String {
+	public static func ==<T: Collection>(lhs: Self, rhs: T) -> Bool where T.Element == String {
 		guard lhs.count == rhs.count
 		else { return false }
 
