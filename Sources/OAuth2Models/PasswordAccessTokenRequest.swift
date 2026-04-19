@@ -9,6 +9,7 @@ import Foundation
 public struct PasswordAccessTokenRequest: Codable, Equatable, Sendable {
 	public enum CodingKeys: String, CodingKey {
 		case grantType = "grant_type"
+		case clientID = "client_id"
 		case username
 		case password
 		case scope
@@ -21,6 +22,9 @@ public struct PasswordAccessTokenRequest: Codable, Equatable, Sendable {
 
 	/// REQUIRED.  Value MUST be set to ``GrantType-swift.enum/password``.
 	public var grantType: GrantType
+
+	/// OPTIONAL.
+	public var clientID: String?
 
 	/// REQUIRED.  The resource owner username.
 	public var username: String

@@ -7,7 +7,12 @@ import Foundation
 ///  format per Appendix B with a character encoding of UTF-8 in the HTTP
 ///  request entity-body:
 ///
-/// The client MUST authenticate with the authorization server as  described in [Section 3.2.1](https://tools.ietf.org/html/rfc6749#section-3.2.1).
+/// The client MUST authenticate with the authorization server as described in [Section 3.2.1](https://tools.ietf.org/html/rfc6749#section-3.2.1).
+///
+/// As an alternative to using the above-mentioned authentication, the authorization server MAY support
+/// including the client credentials in the request-body using the ``clientID`` and ``clientSecret``
+/// parameters, although this is not recommended. See [Section 2.3.1](https://datatracker.ietf.org/doc/html/rfc6749#section-2.3.1)
+/// for more details.
 public struct ClientCredentialsAccessTokenRequest: Codable, Equatable, Sendable {
 	public enum CodingKeys: String, CodingKey {
 		case grantType = "grant_type"
@@ -26,9 +31,7 @@ public struct ClientCredentialsAccessTokenRequest: Codable, Equatable, Sendable 
 	/// OPTIONAL.  The scope of the access request as described by Section 3.3.
 	public var scope: Scope
 
-	/// OPTIONAL. The authorization server MAY support including the
-	/// client credentials in the request-body using the following parameters
-	/// The client identifier issued to the client during the registration process described
+	/// OPTIONAL. The client identifier issued to the client during the registration process described
 	/// by [Section 2.2](https://datatracker.ietf.org/doc/html/rfc6749#section-2.2).
 	public var clientID: String?
 
